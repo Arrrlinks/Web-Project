@@ -5,9 +5,11 @@ h1{
     color: #146B8A
 }
 
+
+
 #login{
     width: 300px;
-    margin: 50px auto;
+    margin: 25vh auto;
     padding: 10px 20px;
     background: #fff;
     border-radius: 10px;
@@ -49,6 +51,45 @@ h1{
     transform: rotate(180deg);
     bottom: 0;
     right: 180px;
+}
+
+#tr1{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#tr2{
+    position: absolute;
+    top: 120px;
+    right: 0;
+}
+
+#tr3{
+    position: absolute;
+    top: 0;
+    right: 455px;
+}
+
+#bl1{
+    position: absolute;
+    transform: rotate(180deg);
+    bottom: 0;
+    left: 0;
+}
+
+#bl2{
+    position: absolute;
+    transform: rotate(180deg);
+    bottom: 120px;
+    left: 0;
+}
+
+#bl3{
+    position: absolute;
+    transform: rotate(180deg);
+    bottom: 0;
+    left: 455px;
 }
 
 .wave-group {
