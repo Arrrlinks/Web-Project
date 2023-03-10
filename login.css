@@ -1,11 +1,18 @@
+:root{
+    --primary-color: #515151;
+    --hovered-color: #007DAB;
+}
+
+body{
+    overflow: hidden;
+}
+
 h1{
     font-size: 2.5em;
     font-weight: 300;
     text-align: center;
     color: #146B8A
 }
-
-
 
 #login{
     width: 300px;
@@ -102,7 +109,7 @@ h1{
     display: block;
     width: 200px;
     border: none;
-    border-bottom: 1px solid #515151;
+    border-bottom: 1px solid var(--primary-color);
     background: transparent;
 }
 
@@ -130,7 +137,7 @@ h1{
 .wave-group .input:valid ~ label .label-char {
     transform: translateY(-20px);
     font-size: 14px;
-    color: #007DAB;
+    color: var(--hovered-color);
 }
 
 .wave-group .bar {
@@ -146,7 +153,7 @@ h1{
     width: 0;
     bottom: 1px;
     position: absolute;
-    background: #007DAB;
+    background: var(--hovered-color);
     transition: 0.2s ease all;
     -moz-transition: 0.2s ease all;
     -webkit-transition: 0.2s ease all;
@@ -163,4 +170,71 @@ h1{
 .wave-group .input:focus ~ .bar:before,
 .wave-group .input:focus ~ .bar:after {
     width: 50%;
+}
+
+
+button.login {
+    padding: 0;
+    border: none;
+    background: none;
+    position: relative;
+    display: flex;
+    font-weight: 200;
+    font-size: 20px;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: -30px;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+
+button.login p {
+    margin: 0;
+    position: relative;
+    font-size: 20px;
+    color: var(--primary-color)
+}
+
+button.login::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    bottom: -7px;
+    background: var(--hovered-color);
+    height: 2px;
+    transition: 0.3s ease-out;
+}
+
+button.login p::before {
+    position: absolute;
+    /*   box-sizing: border-box; */
+    content: "Login";
+    width: 0%;
+    inset: 0;
+    color: var(--hovered-color);
+    overflow: hidden;
+    transition: 0.3s ease-out;
+}
+
+button.login:hover::after {
+    width: 100%;
+}
+
+button.login:hover p::before {
+    width: 100%;
+}
+
+button.login:hover svg {
+    transform: translateX(4px);
+    color: var(--hovered-color)
+}
+
+button.login svg {
+    color: var(--primary-color);
+    transition: 0.2s;
+    position: relative;
+    width: 15px;
+    transition-delay: 0.2s;
 }
