@@ -61,7 +61,7 @@ h1{
 .input:focus, input:hover {
     outline: none;
     color: #007DAB;
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 .icon {
