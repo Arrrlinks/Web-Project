@@ -5,6 +5,10 @@ body, html{
     font-family: 'Corbel', sans-serif;
 }
 
+ion-icon{
+    pointer-events: none;
+}
+
 #tl1{
     position: absolute;
     transform: rotate(180deg);

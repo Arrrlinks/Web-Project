@@ -6,3 +6,82 @@
     align-items: end;
     margin: 30px 100px 0 0;
 }
+
+#businessChat{
+    position: absolute;
+    width: 400px;
+    left:30%;
+    top:70%;
+    transform: translate(-50%,-50%);
+}
+
+#home_image{
+    position:absolute;
+    width: 400px;
+    left: 70%;
+    top:40%;
+    transform: translate(-50%,-50%);
+}
+h1{
+    color: #146B8A;
+    position: absolute;
+    top : 18%;
+    left: 25%;
+    text-decoration: underline;
+    font-size: 50px;
+}
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: absolute;
+    left: 40%;
+    top:42%;
+    max-width: 190px;
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color:#F88459;
+    color: #0d0c22;
+    transition: .3s ease
+}
+
+.input::placeholder {
+    color: #146B8A;
+}
+
+.input:focus, input:hover {
+    outline: none;
+    color: #007DAB;
+    background-color: #fff;
+}
+
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: #146B8A;
+    width: 1rem;
+    height: 1rem;
+}
+
+#text{
+    color: #146B8A;
+    height: 150px;
+    width: 500px;
+    font-style: italic;
+    position: absolute;
+    font-size: 20px;
+    top : 30%;
+    left: 25%;
+}
+
+
+
