@@ -13,18 +13,21 @@ ion-icon{
     position: absolute;
     transform: rotate(180deg);
     top: 0;
+    user-select: none;
 }
 
 #tl2{
     position: absolute;
     top: 0;
     left:175px;
+    user-select: none;
 }
 
 #br1{
     position: absolute;
     bottom: 0;
     right: 0;
+    user-select: none;
 }
 
 #br2{
@@ -32,24 +35,28 @@ ion-icon{
     transform: rotate(180deg);
     bottom: 0;
     right: 180px;
+    user-select: none;
 }
 
 #tr1{
     position: absolute;
     top: 0;
     right: 0;
+    user-select: none;
 }
 
 #tr2{
     position: absolute;
     top: 120px;
     right: 0;
+    user-select: none;
 }
 
 #tr3{
     position: absolute;
     top: 0;
     right: 455px;
+    user-select: none;
 }
 
 #bl1{
@@ -57,6 +64,7 @@ ion-icon{
     transform: rotate(180deg);
     bottom: 0;
     left: 0;
+    user-select: none;
 }
 
 #bl2{
@@ -64,6 +72,7 @@ ion-icon{
     transform: rotate(180deg);
     bottom: 120px;
     left: 0;
+    user-select: none;
 }
 
 #bl3{
@@ -71,4 +80,5 @@ ion-icon{
     transform: rotate(180deg);
     bottom: 0;
     left: 455px;
+    user-select: none;
 }
