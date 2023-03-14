@@ -22,6 +22,9 @@
     <ion-icon name="notifications"></ion-icon>
     <ion-icon name="person-circle-outline"></ion-icon>
 </div>
+<?php
+    include 'element/burger/burger.php';
+?>
 <div id="title">
     <H1> Trouve ton stage </H1>
     <p>Cette page est reserve aux personnes et personnel du CESI pour trouver leurs stages. </p>
@@ -32,7 +35,5 @@
         </label>
     </div>
 </div>
-<img src="svgs/business_chat.svg" alt="business_chat" id="businessChat">
-<img src="svgs/home_image.svg" alt="home_image" id="home_image">
 
 </body>
