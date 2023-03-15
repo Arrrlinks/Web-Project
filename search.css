@@ -78,6 +78,7 @@
     font-size: 12px;
     margin: 0 10px;
     cursor: pointer;
+    transition: 0.1s;
 }
 
 .categorie button:hover {
@@ -146,4 +147,3 @@
 .stage .stars-icon {
     color: #999;
 }
-
