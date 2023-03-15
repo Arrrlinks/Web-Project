@@ -9,6 +9,7 @@
     background-color: #041737;
     padding-top: 50px;
     transition: left 0.5s ease;
+    user-select: none;
 }
 
 .sidenav ul.down{
@@ -27,7 +28,7 @@
     transition: 0.3s;
     background-color: #1e3d72;
     margin: 15px 25px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .sidenav a ion-icon {

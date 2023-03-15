@@ -12,10 +12,10 @@
         <li><a href="#"><ion-icon name="log-out-outline"></ion-icon>Déconnexion</a></li>
     </ul>
 </div>
-<a class="burger" href="#" id="openBtn">
+<div class="burger" id="openBtn">
     <div class="burger1" id="burger1"></div>
     <div class="burger2" id="burger2"></div>
     <div class="burger3" id="burger3"></div>
-</a>
+</div>
 <script src="/element/burger/burger.js"></script>
 </div>

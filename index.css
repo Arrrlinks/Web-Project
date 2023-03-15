@@ -1,50 +1,49 @@
-#businessChat{
-    position: absolute;
-    width: 400px;
-    left:40%;
-    top:70%;
-    transform: translate(-50%,-50%);
-    user-select: none;
-}
-
-#home_image{
-    position:absolute;
-    width: 400px;
-    left: 70%;
-    top:40%;
-    transform: translate(-50%,-50%);
-    user-select: none;
-}
-
 #title {
+    top: 35%;
+    left: 0;
+    width: 100%;
     position: absolute;
-    top : 20%;
-    left: 25%;
+    z-index: 0;
     user-select: none;
+    display: flex;
+    justify-content: center;
 }
 
-#title h1{
-    color: #146B8A;
+#title span.title{
+    color: #3963AD;
     width: 500px;
     font-size: 50px;
     position: absolute;
-    top : 18%;
-    left: 25%;
-    text-decoration: underline;
+    text-align: center;
+    font-weight: 900;
+}
+
+#title span.title span{
+    margin: 0 -5px;
+}
+
+#title span.title span:nth-child(1){
+    color: #3963AD;
+}
+
+#title span.title span:nth-child(2){
+    color: #0d3e4c;
 }
 
 #title p{
-    color: #146B8A;
+    color: #3963AD;
     height: 150px;
     width: 500px;
     font-style: italic;
     position: absolute;
-    top: 90px;
+    top: 50px;
     font-size: 20px;
+    text-align: center;
+    font-weight: 700;
 }
 
 .navbar{
-    color: #146B8A;
+    color: #3963AD;
     font-size : 50px;
     display: flex;
     justify-content: end;
@@ -61,17 +60,17 @@
     line-height: 28px;
     align-items: center;
     position: absolute;
-    top:160px;
-    left: 220px;
+    top:115px;
+    justify-content: center;
     max-width: 190px;
 }
 
 .searchbar svg {
     position: absolute;
-    left: 1rem;
     fill: #146B8A;
     width: 1rem;
     height: 1rem;
+    left: -20%;
 }
 
 .searchbar input {
