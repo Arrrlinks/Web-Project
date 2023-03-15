@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;900&display=swap');
 @import "element/burger/burger.css";
+@import "element/navbar/navbar.css";
 
 body, html{
     margin: 0;
@@ -84,4 +85,37 @@ ion-icon{
     bottom: 0;
     left: 455px;
     user-select: none;
+}
+
+@media (max-width: 768px ) {
+    #tl1{
+        display: none;
+    }
+    #tl2{
+        display: none;
+    }
+    #br1{
+        display: none;
+    }
+    #br2{
+        display: none;
+    }
+    #tr1{
+        display: none;
+    }
+    #tr2{
+        display: none;
+    }
+    #tr3{
+        display: none;
+    }
+    #bl1{
+        display: none;
+    }
+    #bl2{
+        display: none;
+    }
+    #bl3{
+        display: none;
+    }
 }

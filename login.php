@@ -22,20 +22,26 @@
 <div id="la"></div>
 <div id="login">
     <h1>Login</h1>
-    <form method="post">
+    <form action="login.php" method="post">
         <div class="wave-group">
-            <input required="" type="text" class="input">
+            <input name="id" type="text" class="input" required>
             <span class="bar"></span>
             <label class="label">
-                <span class="label-char" style="--index: 0">E</span>
-                <span class="label-char" style="--index: 1">m</span>
-                <span class="label-char" style="--index: 2">a</span>
-                <span class="label-char" style="--index: 3">i</span>
-                <span class="label-char" style="--index: 4">l</span>
+                <span class="label-char" style="--index: 0">I</span>
+                <span class="label-char" style="--index: 1">d</span>
+                <span class="label-char" style="--index: 2">e</span>
+                <span class="label-char" style="--index: 3">n</span>
+                <span class="label-char" style="--index: 4">t</span>
+                <span class="label-char" style="--index: 5">i</span>
+                <span class="label-char" style="--index: 6">f</span>
+                <span class="label-char" style="--index: 7">i</span>
+                <span class="label-char" style="--index: 8">a</span>
+                <span class="label-char" style="--index: 9">n</span>
+                <span class="label-char" style="--index: 10">t</span>
             </label>
         </div>
         <div class="wave-group" id="password">
-            <input required="" type="password" class="input">
+            <input name="password" type="password" class="input" required>
             <span class="bar"></span>
             <label class="label">
                 <span class="label-char" style="--index: 0">P</span>
@@ -55,6 +61,36 @@
             </svg>
         </button>
     </form>
+    <?php
+    if (isset($_POST['id']) && isset($_POST['password'])) {
+        $id = $_POST['id'];
+        $password = $_POST['password'];
+        $bdd = new PDO('mysql:host=localhost;dbname=users;charset=utf8', 'root', '123456789');
+        $req = $bdd->prepare('SELECT * FROM users WHERE username = :id AND password = :password');
+        $req->execute(array(
+            'id' => $id,
+            'password' => $password
+        ));
+        $resultat = $req->fetch();
+        if (!$resultat) {
+            echo '<p class="error">Mauvais identifiant ou mot de passe !</p>';
+        } else {
+            session_start();
+            $_SESSION['username'] = $resultat['username'];
+            $_SESSION['id'] = $resultat['id'];
+            $_SESSION['nom'] = $resultat['nom'];
+            $_SESSION['prenom'] = $resultat['prenom'];
+            $_SESSION['promo'] = $resultat['promo'];
+            $_SESSION['centre'] = $resultat['centre'];
+
+            header('Location: index.php');
+        }
+    }
+    ?>
+
 </div>
+<?php
+include 'element/burger/burger.php';
+?>
 </body>
 </html>

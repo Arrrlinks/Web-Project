@@ -151,7 +151,7 @@ button.login p::before {
     position: absolute;
     /*   box-sizing: border-box; */
     content: "Login";
-    width: 0%;
+    width: 0;
     inset: 0;
     color: var(--hovered-color);
     overflow: hidden;
@@ -177,4 +177,11 @@ button.login svg {
     position: relative;
     width: 15px;
     transition-delay: 0.2s;
+}
+
+.error{
+    color: red;
+    font-size: 0.8em;
+    text-align: center;
+    margin-top: -20px;
 }
