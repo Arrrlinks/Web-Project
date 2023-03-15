@@ -42,19 +42,6 @@
     font-weight: 700;
 }
 
-.navbar{
-    color: #3963AD;
-    font-size : 50px;
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    margin: 30px 100px 0 0;
-}
-
-.navbar ion-icon{
-    margin: 10px 0 0 30px;
-}
-
 .searchbar {
     display: flex;
     line-height: 28px;

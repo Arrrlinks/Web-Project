@@ -32,12 +32,8 @@
     </div>
 </div>
 </div>
-<div class = navbar>
-    <ion-icon name="heart-outline"></ion-icon>
-    <ion-icon name="notifications"></ion-icon>
-    <ion-icon name="person-circle-outline"></ion-icon>
-</div>
 <?php
+    include 'element/navbar/navbar.php';
     include 'element/burger/burger.php';
 ?>
 </body>
