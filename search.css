@@ -119,7 +119,7 @@
 
 .stage .description {
     font-size: 16px;
-    margin-right: 1px;
+    text-align : justify;
 }
 
 .stage .apply-button {
