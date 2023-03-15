@@ -1,0 +1,149 @@
+.navbar{
+    color: #3963AD;
+    font-size : 50px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    margin: 30px 100px 0 0;
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: #3963AD;
+    width: 1rem;
+    height: 1rem;
+}
+
+.group {
+    position: absolute;
+    transform: translateX(-75%);
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem 0 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color:#D9D9D9;
+    color: #0d0c22;
+    transition: .3s ease
+}
+
+.input::placeholder {
+    color: #3963AD;
+}
+
+.input:focus, input:hover {
+    outline: none;
+    color: #007DAB;
+    background-color: #fff;
+}
+
+.box-categorie{
+    position: relative;
+    width: 70%;
+    height: 66px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categorie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.categorie button{
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #fff;
+    color: #3963AD;
+    border: 2px solid #3963AD;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 12px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.categorie button:hover {
+    background-color: #3963AD;
+    color: #fff;
+}
+
+.box-stage{
+    position: relative;
+    width: 70%;
+    height: 2200px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.stage {
+    position: absolute;
+    width: 85%;
+    margin: 25px auto;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.stage .title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.stage .description {
+    font-size: 16px;
+    text-align : justify;
+}
+
+.stage .apply-button {
+    padding: 10px 20px;
+    background-color: #3963AD;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.stage .apply-button:hover {
+    background-color: #2f4a8c;
+}
+
+.stage .like-icon {
+    font-size: 80px;
+    color: #999;
+    margin: 20px;
+}
+
+.stage .stars-icon {
+    color: #999;
+}
