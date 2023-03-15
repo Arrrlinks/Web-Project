@@ -1,5 +1,5 @@
 .navbar{
-    color: #146B8A;
+    color: #3963AD;
     font-size : 50px;
     display: flex;
     justify-content: end;
@@ -11,7 +11,7 @@
 .icon {
     position: absolute;
     left: 1rem;
-    fill: #146B8A;
+    fill: #3963AD;
     width: 1rem;
     height: 1rem;
 }
@@ -39,7 +39,7 @@
 }
 
 .input::placeholder {
-    color: #146B8A;
+    color: #3963AD;
 }
 
 .input:focus, input:hover {
@@ -71,8 +71,8 @@
     display: inline-block;
     padding: 12px 24px;
     background-color: #fff;
-    color: #146B8A;
-    border: 2px solid #146B8A;
+    color: #3963AD;
+    border: 2px solid #3963AD;
     border-radius: 25px;
     text-align: center;
     font-size: 12px;
@@ -97,7 +97,7 @@
 
 .stage {
     position: absolute;
-    width: 80%;
+    width: 85%;
     margin: 25px auto;
     background-color: #f2f2f2;
     padding: 20px;
@@ -111,14 +111,14 @@
 }
 
 .stage .title {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     margin-right: 20px;
 }
 
 .stage .description {
     font-size: 16px;
-    margin: 20px;
+    margin-right: 1px;
 }
 
 .stage .apply-button {
@@ -130,6 +130,7 @@
     font-size: 16px;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-bottom: 10px;
 }
 
 .stage .apply-button:hover {
@@ -137,13 +138,12 @@
 }
 
 .stage .like-icon {
-    font-size: 20px;
+    font-size: 80px;
     color: #999;
-    margin-right: 10px;
+    margin: 20px;
 }
 
 .stage .stars-icon {
-    font-size: 20px;
     color: #999;
 }
 
