@@ -1,5 +1,5 @@
 .navbar{
-    color: #3963AD;
+    color: var(--blue);
     font-size : 50px;
     display: flex;
     justify-content: end;
@@ -10,7 +10,7 @@
 .icon {
     position: absolute;
     left: 1rem;
-    fill: #3963AD;
+    fill: var(--blue);
     width: 1rem;
     height: 1rem;
 }
@@ -30,8 +30,8 @@
     border: 2px solid transparent;
     border-radius: 8px;
     outline: none;
-    background-color:#D9D9D9;
-    color: #0d0c22;
+    background-color:var(--light-gray);
+    color: var(--text-color);
     transition: .3s ease
 }
 .input3::placeholder {
