@@ -90,10 +90,11 @@
 
 .stage .like-icon {
     font-size: 80px;
-    color: var(--gray);
+    color: var(--blue);
     margin: 20px;
 }
 
 .stage .stars-icon {
-    color: var(--gray);
+    font-size: 16px;
+    color: #F88459;
 }
