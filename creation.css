@@ -1,0 +1,135 @@
+.navbar{
+    color: #3963AD;
+    font-size : 50px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    margin: 30px 100px 0 0;
+    position: relative;
+}
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: #3963AD;
+    width: 1rem;
+    height: 1rem;
+}
+.group {
+    position: absolute;
+    transform: translateX(-75%);
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    padding-bottom: 5px;
+}
+.input3{
+    width: 100%;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem 0 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color:#D9D9D9;
+    color: #0d0c22;
+    transition: .3s ease
+}
+.input3::placeholder {
+    color: #3963AD;
+}
+.input3:focus, input:hover {
+    outline: none;
+    color: #007DAB;
+    background-color: #fff;
+}
+h1{
+ padding-left: 10px;
+ color: #146B8A;
+}
+.rectangle{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    background-color: white;
+    padding: 10px;
+    width: 75%;
+    border-radius:20px ;
+    position: relative;
+    margin: 50px auto;
+}
+.Nom{
+    padding: 20px;
+    color: #007DAB;
+    flex-direction: column;
+    border-radius: 10px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    display: flex;
+}
+.nombre{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 20px;
+    color: #007DAB;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+.Secteur{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    color: #007DAB;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+.Confidence{
+    padding: 20px;
+    color: #007DAB;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+.Adresse{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 20px;
+    color: #007DAB;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 4;
+    grid-row-end: 4;
+}
+.buton{
+    padding: 20px;
+    color: #007DAB;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 4;
+}
+.test1{
+    border-radius: 10px;
+
+}
+.test{
+
+    background-color:#1e3d72 ;
+    color: white;
+    border-radius: 10px;
+    width:30% ;
+    align-items: center;
+}
