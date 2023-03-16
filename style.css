@@ -2,6 +2,16 @@
 @import "element/burger/burger.css";
 @import "element/navbar/navbar.css";
 
+:root{
+    --white: #F7F8FD;
+    --blue: #3963AD;
+    --dark-blue: #1E3D72;
+    --light-gray: #FBFBFB;
+    --gray: #515151;
+    --text-color: #0D0C22;
+    --sidenav-bg: #041737;
+}
+
 body, html{
     margin: 0;
     padding: 0;
