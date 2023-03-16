@@ -25,29 +25,6 @@
     padding-bottom: 5px;
 }
 
-.input {
-    width: 100%;
-    height: 40px;
-    line-height: 28px;
-    padding: 0 1rem 0 2.5rem;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    outline: none;
-    background-color:#D9D9D9;
-    color: #0d0c22;
-    transition: .3s ease
-}
-
-.input::placeholder {
-    color: #3963AD;
-}
-
-.input:focus, input:hover {
-    outline: none;
-    color: #007DAB;
-    background-color: #fff;
-}
-
 .box-account{
     position: relative;
     width: 70%;
