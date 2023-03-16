@@ -6,7 +6,7 @@
         <span class="username"><?php
             session_start();
             if(isset($_SESSION['username'])) {
-                echo '<span class="username">'.ucfirst(strtolower($_SESSION['prenom'])).' '.strtoupper($_SESSION['nom']).'</span>';
+                echo '<span class="username">'.strtoupper($_SESSION['nom']).' '.ucfirst(strtolower($_SESSION['prenom'])).'</span>';
             }
             else {
                 echo '<span class="username"><a href="login.php">Connexion</a></span>';

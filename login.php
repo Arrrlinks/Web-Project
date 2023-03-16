@@ -71,13 +71,13 @@
                 echo '<p class="error">Mauvais identifiant ou mot de passe !</p>';
             } else {
                 session_start();
-                $_SESSION['username'] = $resultat['username'];
                 $_SESSION['id'] = $resultat['id'];
+                $_SESSION['username'] = $resultat['username'];
                 $_SESSION['nom'] = $resultat['nom'];
                 $_SESSION['prenom'] = $resultat['prenom'];
                 $_SESSION['promo'] = $resultat['promo'];
                 $_SESSION['centre'] = $resultat['centre'];
-
+                $_SESSION['role'] = $resultat['role'];
                 header('Location: index.php');
             }
         }

@@ -15,6 +15,7 @@
 <?php
 include 'element/burger/burger.php';
 include 'element/navbar/navbar.php';
+session_start();
 ?>
 <img src="svgs/br-tl 1.svg" alt="tl logo" id="tl1">
 <img src="svgs/br-tl 2.svg" alt="tl logo" id="tl2">
@@ -23,15 +24,43 @@ include 'element/navbar/navbar.php';
     <div></div>
   <div class="info">
       <div class="label">Nom d'utilisateur:</div>
-      <div class="value">cesi.rmorel</div>
+      <div class="value"><?php
+          if(isset($_SESSION['id'])) {
+              echo $_SESSION['username'];
+          }
+          ?></div>
       <div class="label">Nom et Prénom:</div>
-      <div class="value">MOREL Romain</div>
+      <div class="value">
+          <?php
+          if(isset($_SESSION['id'])) {
+              echo strtoupper($_SESSION['nom']).' '.ucfirst(strtolower($_SESSION['prenom']));
+          }
+          ?>
+      </div>
       <div class="label">Centre:</div>
-      <div class="value">Nancy</div>
+      <div class="value">
+          <?php
+          if(isset($_SESSION['id'])) {
+              echo $_SESSION['centre'];
+          }
+          ?>
+      </div>
       <div class="label">Promotion:</div>
-      <div class="value">CPIA2 INFO</div>
+      <div class="value">
+          <?php
+            if(isset($_SESSION['id'])) {
+                echo $_SESSION['promo'];
+            }
+          ?>
+      </div>
       <div class="label">Rôle:</div>
-      <div class="value">Etudiant</div>
+      <div class="value">
+            <?php
+            if(isset($_SESSION['id'])) {
+                echo ucfirst(strtolower($_SESSION['role']));
+            }
+            ?>
+      </div>
   </div>
     <img src="svgs/user-illustration.svg" alt="user illustration" id="user_illustration">
   </div>
