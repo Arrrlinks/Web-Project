@@ -18,7 +18,16 @@
             echo '<li><a href="/Web-Project/login.php"><ion-icon name="person-outline"></ion-icon>Mon compte</a></li>';
         }
         ?>
-        <li><a href="/Web-Project/login.php"><ion-icon name="enter-outline"></ion-icon>Connexion</a></li>
+
+        <?php
+        if(isset($_SESSION['id'])){
+            echo '<li><a href="/Web-Project/logout.php"><ion-icon name="log-out-outline"></ion-icon>Déconnexion</a></li>';
+        }
+        else{
+            echo '<li><a href="/Web-Project/login.php"><ion-icon name="enter-outline"></ion-icon>Connexion</a></li>';
+        }
+        ?>
+
     </ul>
 </div>
 <div class="burger" id="openBtn">
