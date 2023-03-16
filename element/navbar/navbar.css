@@ -1,0 +1,32 @@
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #3963AD;
+    font-size: 50px;
+    margin: 30px 30px 0 0;
+}
+
+.icon-group {
+    display: flex;
+    align-items: center;
+    margin-right: 10px; /* Espacement entre les icônes et le bloc d'info utilisateur */
+}
+
+.icon-group ion-icon {
+    margin-right: 10px; /* Espacement entre les icônes */
+}
+
+.username {
+    font-size: 1.5rem;
+    user-select: none;
+}
+
+.username a{
+    color: #3963AD;
+    text-decoration: none;
+}
+
+.username a:hover{
+    text-decoration: underline;
+}

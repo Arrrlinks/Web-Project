@@ -1,0 +1,82 @@
+.navbar{
+    color: #3963AD;
+    font-size : 50px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    margin: 30px 100px 0 0;
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: #3963AD;
+    width: 1rem;
+    height: 1rem;
+}
+
+.group {
+    position: absolute;
+    transform: translateX(-75%);
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.box-account{
+    position: relative;
+    width: 70%;
+    height: 375px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+}
+
+.box-account .title {
+    font-weight: bold;
+    margin: 40px 0 40px 40px;
+}
+
+.box-account .info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-gap: 20px;
+    margin: 0 0 40px 40px;
+}
+
+.box-account .label {
+    font-weight: bold;
+}
+
+.box-account .value {
+    margin-top: 5px;
+}
+
+.box-account #user_illustration{
+    width: 319px;
+    height: 219px;
+}
+
+@media (max-width: 768px) {
+    .box-account{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .box-account .info {
+        margin: 40px;
+    }
+    .box-account #user_illustration{
+        width: 100%;
+        height: 100%;
+    }
+}
