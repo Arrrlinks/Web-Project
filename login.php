@@ -5,6 +5,8 @@
     <title>Login</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="login.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
 <img src="svgs/br-tl 1.svg" alt="tl logo" id="tl1">
@@ -54,6 +56,32 @@
                 <span class="label-char" style="--index: 7">d</span>
             </label>
         </div>
+        <?php
+        if (isset($_POST['id']) && isset($_POST['password'])) {
+            $id = $_POST['id'];
+            $password = $_POST['password'];
+            $bdd = new PDO('mysql:host=localhost;dbname=users;charset=utf8', 'root', '123456789');
+            $req = $bdd->prepare('SELECT * FROM users WHERE username = :id AND password = :password');
+            $req->execute(array(
+                'id' => $id,
+                'password' => $password
+            ));
+            $resultat = $req->fetch();
+            if (!$resultat) {
+                echo '<p class="error">Mauvais identifiant ou mot de passe !</p>';
+            } else {
+                session_start();
+                $_SESSION['username'] = $resultat['username'];
+                $_SESSION['id'] = $resultat['id'];
+                $_SESSION['nom'] = $resultat['nom'];
+                $_SESSION['prenom'] = $resultat['prenom'];
+                $_SESSION['promo'] = $resultat['promo'];
+                $_SESSION['centre'] = $resultat['centre'];
+
+                header('Location: index.php');
+            }
+        }
+        ?>
         <button class="login" type="submit">
             <p>Login</p>
             <svg stroke-width="4" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg">
@@ -61,32 +89,6 @@
             </svg>
         </button>
     </form>
-    <?php
-    if (isset($_POST['id']) && isset($_POST['password'])) {
-        $id = $_POST['id'];
-        $password = $_POST['password'];
-        $bdd = new PDO('mysql:host=localhost;dbname=users;charset=utf8', 'root', '123456789');
-        $req = $bdd->prepare('SELECT * FROM users WHERE username = :id AND password = :password');
-        $req->execute(array(
-            'id' => $id,
-            'password' => $password
-        ));
-        $resultat = $req->fetch();
-        if (!$resultat) {
-            echo '<p class="error">Mauvais identifiant ou mot de passe !</p>';
-        } else {
-            session_start();
-            $_SESSION['username'] = $resultat['username'];
-            $_SESSION['id'] = $resultat['id'];
-            $_SESSION['nom'] = $resultat['nom'];
-            $_SESSION['prenom'] = $resultat['prenom'];
-            $_SESSION['promo'] = $resultat['promo'];
-            $_SESSION['centre'] = $resultat['centre'];
-
-            header('Location: index.php');
-        }
-    }
-    ?>
 
 </div>
 <?php
