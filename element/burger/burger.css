@@ -74,13 +74,13 @@
 }
 
 .burger {
-    position: absolute;
+    position: fixed;
     left: 43px;
     top: 37px;
     transform: scale(0.65);
     height: 65px;
     cursor: pointer;
-    z-index: 2;
+    z-index: 999;
 }
 
 .burger1,
@@ -202,4 +202,3 @@
         transform: translateY(30px);
     }
 }
-
