@@ -10,7 +10,7 @@
 }
 
 #title span.title{
-    color: #3963AD;
+    color: var(--blue);
     width: 500px;
     font-size: 50px;
     position: absolute;
@@ -23,15 +23,15 @@
 }
 
 #title span.title span:nth-child(1){
-    color: #3963AD;
+    color: var(--blue);
 }
 
 #title span.title span:nth-child(2){
-    color: #0d3e4c;
+    color: var(--home-title);
 }
 
 #title p{
-    color: #3963AD;
+    color: var(--blue);
     height: 150px;
     width: 500px;
     font-style: italic;
@@ -54,7 +54,7 @@
 
 .searchbar svg {
     position: absolute;
-    fill: #146B8A;
+    fill: var(--blue);
     width: 1rem;
     height: 1rem;
     left: -20%;
@@ -68,16 +68,16 @@
     border: 2px solid transparent;
     border-radius: 20px;
     outline: none;
-    color: #0d0c22;
+    color: var(--text-color);
     transition: .3s ease
 }
 
 .searchbar input::placeholder {
-    color: #146B8A;
+    color: var(--blue);
 }
 
 .searchbar input:focus, input:hover {
     outline: none;
-    color: #007DAB;
-    background-color: #fff;
+    color: var(--blue);
+    background-color: var(--clear-white);
 }

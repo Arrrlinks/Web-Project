@@ -6,7 +6,7 @@ h1{
     font-size: 2.5em;
     font-weight: 300;
     text-align: center;
-    color: #146B8A
+    color: var(--blue);
 }
 
 #login{
@@ -42,7 +42,7 @@ h1{
     display: block;
     width: 200px;
     border: none;
-    border-bottom: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--gray);
     background: transparent;
 }
 
@@ -70,7 +70,7 @@ h1{
 .wave-group .input:valid ~ label .label-char {
     transform: translateY(-20px);
     font-size: 14px;
-    color: var(--hovered-color);
+    color: var(--blue);
 }
 
 .wave-group .bar {
@@ -86,7 +86,7 @@ h1{
     width: 0;
     bottom: 1px;
     position: absolute;
-    background: var(--hovered-color);
+    background: var(--blue);
     transition: 0.2s ease all;
     -moz-transition: 0.2s ease all;
     -webkit-transition: 0.2s ease all;
@@ -128,7 +128,7 @@ button.login p {
     margin: 0;
     position: relative;
     font-size: 20px;
-    color: var(--primary-color)
+    color: var(--gray)
 }
 
 button.login::after {
@@ -137,7 +137,7 @@ button.login::after {
     width: 0;
     left: 0;
     bottom: -7px;
-    background: var(--hovered-color);
+    background: var(--blue);
     height: 2px;
     transition: 0.3s ease-out;
 }
@@ -148,7 +148,7 @@ button.login p::before {
     content: "Login";
     width: 0;
     inset: 0;
-    color: var(--hovered-color);
+    color: var(--blue);
     overflow: hidden;
     transition: 0.3s ease-out;
 }
@@ -163,11 +163,11 @@ button.login:hover p::before {
 
 button.login:hover svg {
     transform: translateX(4px);
-    color: var(--hovered-color)
+    color: var(--blue)
 }
 
 button.login svg {
-    color: var(--primary-color);
+    color: var(--gray);
     transition: 0.2s;
     position: relative;
     width: 15px;

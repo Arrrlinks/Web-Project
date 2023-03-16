@@ -6,7 +6,7 @@
     z-index: 1;
     top: 0;
     left: -300px;
-    background-color: #041737;
+    background-color: var(--sidenav-bg);
     padding-top: 50px;
     transition: left 0.5s ease;
     user-select: none;
@@ -23,10 +23,10 @@
     padding: 15px 8px 15px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #fff;
+    color: var(--clear-white);
     display: block;
     transition: 0.3s;
-    background-color: #1e3d72;
+    background-color: var(--dark-blue);
     margin: 5px 10px;
     border-radius: 5px;
 }
@@ -88,7 +88,7 @@
 .burger3 {
     height: 10px;
     width: 70px;
-    background: #fff;
+    background: var(--clear-white);
     border-radius: 10px;
     transition: 0.5s;
 }
