@@ -2,7 +2,7 @@
     position: relative;
     width: 70%;
     height: 66px;
-    margin: 50px auto;
+    margin: 150px auto 50px auto;
     background-color: var(--clear-white);
     border-radius: 10px;
     display: flex;

@@ -3,7 +3,7 @@
     height: 100%;
     width: 300px;
     position: fixed;
-    z-index: 1;
+    z-index: 998;
     top: 0;
     left: -300px;
     background-color: var(--sidenav-bg);

@@ -14,3 +14,4 @@
             ?></span>
     </div>
 </div>
+<script src="/element/navbar/navbar.js"></script>
