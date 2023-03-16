@@ -3,7 +3,7 @@
     width: 70%;
     height: 66px;
     margin: 50px auto;
-    background-color: #fff;
+    background-color: var(--clear-white);
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -19,10 +19,10 @@
 
 .categorie button{
     display: inline-block;
-    padding: 12px 24px;
-    background-color: #fff;
-    color: #3963AD;
-    border: 2px solid #3963AD;
+    padding: 10px 24px;
+    background-color: var(--clear-white);
+    color: var(--blue);
+    border: 1.8px solid var(--blue);
     border-radius: 25px;
     text-align: center;
     font-size: 12px;
@@ -32,8 +32,8 @@
 }
 
 .categorie button:hover {
-    background-color: #3963AD;
-    color: #fff;
+    background-color: var(--blue);
+    color: var(--clear-white);
 }
 
 .box-stage{
@@ -41,7 +41,7 @@
     width: 70%;
     height: 2200px;
     margin: 50px auto;
-    background-color: #fff;
+    background-color: var(--clear-white);
     border-radius: 20px;
     align-items: center;
 }
@@ -50,7 +50,7 @@
     position: absolute;
     width: 85%;
     margin: 25px auto;
-    background-color: #f2f2f2;
+    background-color: var(--light-gray);
     padding: 20px;
     border-radius: 20px;
     display: flex;
@@ -74,7 +74,7 @@
 
 .stage .apply-button {
     padding: 10px 20px;
-    background-color: #3963AD;
+    background-color: var(--blue);
     color: white;
     border-radius: 5px;
     border: none;
@@ -85,15 +85,15 @@
 }
 
 .stage .apply-button:hover {
-    background-color: #2f4a8c;
+    background-color: var(--dark-blue);
 }
 
 .stage .like-icon {
     font-size: 80px;
-    color: #999;
+    color: var(--gray);
     margin: 20px;
 }
 
 .stage .stars-icon {
-    color: #999;
+    color: var(--gray);
 }
