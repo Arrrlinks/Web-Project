@@ -1,30 +1,3 @@
-.navbar{
-    color: #3963AD;
-    font-size : 50px;
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    margin: 30px 100px 0 0;
-    position: relative;
-}
-
-.icon {
-    position: absolute;
-    left: 1rem;
-    fill: #3963AD;
-    width: 1rem;
-    height: 1rem;
-}
-
-.group {
-    position: absolute;
-    transform: translateX(-75%);
-    display: flex;
-    line-height: 28px;
-    align-items: center;
-    padding-bottom: 5px;
-}
-
 .box-account{
     position: relative;
     width: 70%;
