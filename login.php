@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="login.css">
@@ -61,23 +62,22 @@
             $id = $_POST['id'];
             $password = $_POST['password'];
             $bdd = new PDO('mysql:host=localhost;dbname=users;charset=utf8', 'root', '123456789');
-            $req = $bdd->prepare('SELECT * FROM users WHERE username = :id AND password = :password');
+            $req = $bdd->prepare('SELECT * FROM users WHERE username = :id');
             $req->execute(array(
-                'id' => $id,
-                'password' => $password
+                'id' => $id
             ));
             $resultat = $req->fetch();
-            if (!$resultat) {
+            if (!$resultat || !(password_verify($password, $resultat['password']))) {
                 echo '<p class="error">Mauvais identifiant ou mot de passe !</p>';
             } else {
                 session_start();
-                $_SESSION['username'] = $resultat['username'];
                 $_SESSION['id'] = $resultat['id'];
+                $_SESSION['username'] = $resultat['username'];
                 $_SESSION['nom'] = $resultat['nom'];
                 $_SESSION['prenom'] = $resultat['prenom'];
                 $_SESSION['promo'] = $resultat['promo'];
                 $_SESSION['centre'] = $resultat['centre'];
-
+                $_SESSION['role'] = $resultat['role'];
                 header('Location: index.php');
             }
         }

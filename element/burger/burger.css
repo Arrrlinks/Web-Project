@@ -3,10 +3,10 @@
     height: 100%;
     width: 300px;
     position: fixed;
-    z-index: 1;
+    z-index: 998;
     top: 0;
     left: -300px;
-    background-color: #041737;
+    background-color: var(--sidenav-bg);
     padding-top: 50px;
     transition: left 0.5s ease;
     user-select: none;
@@ -15,7 +15,7 @@
 .sidenav ul.down{
     width: 300px;
     position: fixed;
-    bottom: 0;
+    bottom: 1vh;
 }
 
 /* Sidenav menu links */
@@ -23,10 +23,10 @@
     padding: 15px 8px 15px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #fff;
+    color: var(--clear-white);
     display: block;
     transition: 0.3s;
-    background-color: #1e3d72;
+    background-color: var(--dark-blue);
     margin: 5px 10px;
     border-radius: 5px;
 }
@@ -60,27 +60,14 @@
     font-size: 36px;
 }
 
-@media screen and (max-width: 450px) {
-    .sidenav {
-        width: 100%;
-        left:-100%;
-    }
-    .sidenav ul{
-        width: 100%;
-    }
-    .sidenav a {
-        font-size: 18px;
-    }
-}
-
 .burger {
-    position: absolute;
+    position: fixed;
     left: 43px;
     top: 37px;
     transform: scale(0.65);
     height: 65px;
     cursor: pointer;
-    z-index: 2;
+    z-index: 999;
 }
 
 .burger1,
@@ -88,7 +75,7 @@
 .burger3 {
     height: 10px;
     width: 70px;
-    background: #fff;
+    background: var(--clear-white);
     border-radius: 10px;
     transition: 0.5s;
 }
@@ -203,3 +190,28 @@
     }
 }
 
+@media screen and (max-width: 450px) {
+    .sidenav {
+        width: 100vw;
+        left:-100vw;
+    }
+    .sidenav ul{
+        width: 100%;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+    .sidenav ul.down{
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width:950px){
+    .burger1,
+    .burger2,
+    .burger3 {
+        left: 20px;
+        top: 20px;
+        background: var(--blue);
+    }
+}

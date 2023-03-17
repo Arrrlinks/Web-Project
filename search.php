@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Search</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="search.css">
@@ -13,6 +14,10 @@
 <?php
 include 'element/burger/burger.php';
 include 'element/navbar/navbar.php';
+session_start();
+if(!isset($_SESSION['id'])) {
+    header('Location: login.php');
+}
 ?>
 <img src="svgs/br-tl 1.svg" alt="tl logo" id="tl1">
 <img src="svgs/br-tl 2.svg" alt="tl logo" id="tl2">
@@ -35,15 +40,14 @@ include 'element/navbar/navbar.php';
     <div>
         <button class="apply-button">Postuler</button>
       <div class="stars-icon">
-        <ion-icon name="star-outline"></ion-icon>
-        <ion-icon name="star-outline"></ion-icon>
-        <ion-icon name="star-outline"></ion-icon>
-        <ion-icon name="star-outline"></ion-icon>
-        <ion-icon name="star-outline"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star-half"></ion-icon>
       </div>
     </div>
   </div>
 </div>
-
 </body>
 </html>

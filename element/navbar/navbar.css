@@ -2,9 +2,31 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    color: #3963AD;
+    color: var(--blue);
     font-size: 50px;
-    margin: 30px 30px 0 0;
+    width: 100%;
+    position: fixed;
+    z-index: 997;
+    top: 0;
+    padding: 40px;
+    margin-left: auto;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar.navbar-scroll {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--clear-white);
+    background-color: var(--blue);
+    font-size: 50px;
+    width: 100%;
+    position: fixed;
+    z-index: 997;
+    top: 0;
+    padding: 40px;
+    margin-left: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .icon-group {
@@ -20,13 +42,24 @@
 .username {
     font-size: 1.5rem;
     user-select: none;
+    margin-right: 40px;
+}
+
+.navbar-scroll .username a {
+    color: var(--clear-white);
 }
 
 .username a{
-    color: #3963AD;
+    color: var(--blue);
     text-decoration: none;
 }
 
 .username a:hover{
     text-decoration: underline;
+}
+
+@media screen and (max-width: 520px) {
+    .navbar{
+        display: none;
+    }
 }

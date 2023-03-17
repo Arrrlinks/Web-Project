@@ -1,15 +1,38 @@
-
 <div class="burger-menu">
 <div id="sidenav" class="sidenav">
     <ul>
-        <li><a href="/Web-Project/index.php"><ion-icon name="home-outline"></ion-icon>Accueil</a></li>
-        <li><a href="#"><ion-icon name="briefcase-outline"></ion-icon>Navigation</a></li>
-        <li><a href="#"><ion-icon name="heart-outline"></ion-icon>Wishlist</a></li>
-        <li><a href="#"><ion-icon name="notifications-outline"></ion-icon>Notification</a></li>
+        <?php
+        error_reporting(0);
+        session_start();
+        echo '<li><a href="/Web-Project/index.php"><ion-icon name="home-outline"></ion-icon>Accueil</a></li>';
+        echo '<li><a href="/Web-Project/search.php"><ion-icon name="briefcase-outline"></ion-icon>Navigation</a></li>';
+        if(isset($_SESSION['id'])){
+            if(strtolower($_SESSION['role']) === 'user'){
+                echo '<li><a href="#"><ion-icon name="heart-outline"></ion-icon>Wishlist</a></li>';
+            }
+            else{
+                echo '<li><a href="/Web-Project/creation.php"><ion-icon name="add-circle-outline"></ion-icon>Creation</a></li>';
+            }
+            echo '<li><a href="#"><ion-icon name="notifications-outline"></ion-icon>Notification</a></li>';
+        }
+        ?>
     </ul>
+    <?php
+    ?>
     <ul class="down">
-        <li><a href="#"><ion-icon name="person-outline"></ion-icon>Mon compte</a></li>
-        <li><a href="/Web-Project/login.php"><ion-icon name="enter-outline"></ion-icon>Connexion</a></li>
+        <?php
+            echo '<li><a href="/Web-Project/account.php"><ion-icon name="person-outline"></ion-icon>Mon compte</a></li>';
+        ?>
+
+        <?php
+        if(isset($_SESSION['id'])){
+            echo '<li><a href="/Web-Project/logout.php"><ion-icon name="log-out-outline"></ion-icon>Déconnexion</a></li>';
+        }
+        else{
+            echo '<li><a href="/Web-Project/login.php"><ion-icon name="enter-outline"></ion-icon>Connexion</a></li>';
+        }
+        ?>
+
     </ul>
 </div>
 <div class="burger" id="openBtn">
