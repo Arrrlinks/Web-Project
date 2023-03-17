@@ -35,32 +35,32 @@
     transition: .3s ease
 }
 .input3::placeholder {
-    color: #3963AD;
+    color: var(--blue);
 }
 .input3:focus, input:hover {
     outline: none;
-    color: #007DAB;
-    background-color: #fff;
+    color: var(--dark-blue);
+    background-color: var(--white);
 }
 h1{
  padding-left: 10px;
- color: #146B8A;
+ color: var(--home-title);
 }
 .rectangle{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, 1fr);
     gap: 10px;
-    background-color: white;
+    background-color: var(--clear-white);
     padding: 10px;
-    width: 75%;
+    width: 60%;
     border-radius:20px ;
     position: relative;
     margin: 50px auto;
 }
 .Nom{
-    padding: 20px;
-    color: #007DAB;
+
+    color: var(--blue);
     flex-direction: column;
     border-radius: 10px;
     grid-column-start: 1;
@@ -68,32 +68,35 @@ h1{
     grid-row-start: 2;
     grid-row-end: 2;
     display: flex;
+    margin-top: -10px;
+    margin-left: 20px;
 }
 .nombre{
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    padding: 20px;
-    color: #007DAB;
+    margin-top:-10px;
+    color: var(--blue);
     grid-column-start: 2;
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 2;
 }
 .Secteur{
-    padding: 20px;
+    margin-top: -10px;
+    margin-left: 20px;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    color: #007DAB;
+    color: var(--blue);
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 3;
     grid-row-end: 3;
 }
 .Confidence{
-    padding: 20px;
-    color: #007DAB;
+    margin-top: -10px;
+    color: var(--blue);
     display: flex;
     border-radius: 10px;
     flex-direction: column;
@@ -106,30 +109,47 @@ h1{
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    padding: 20px;
-    color: #007DAB;
+    margin-top: -10px;
+    margin-left: 20px;
+    color: var(--blue);
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 4;
     grid-row-end: 4;
 }
 .buton{
-    padding: 20px;
-    color: #007DAB;
+    padding-left:20% ;
+    color: var(--blue);
     grid-column-start: 2;
     grid-column-end: 2;
     grid-row-start: 4;
     grid-row-end: 4;
 }
 .test1{
-    border-radius: 5px;
-
+    display:flex;
+    flex-direction: column;
+    width: 300px;
+    height: 35px;
+    line-height: 28px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    outline: none;
+    color: var(--text-color);
+    background-color: var(--white);
+    transition: .3s ease;
+    margin-top: 10px;
+    padding: 0 1rem 0 1rem;
+}
+#Adr2 , #Adr1{
+    margin-top: 10px;
 }
 .test{
-
-    background-color:#1e3d72 ;
-    color: white;
+    background-color:var(--blue) ;
+    color: var(--clear-white);
     border-radius: 10px;
-    width:30% ;
+    width:50% ;
+    height: 20px;
     align-items: center;
+    align-content: center;
+    margin-top: 50px;
 }

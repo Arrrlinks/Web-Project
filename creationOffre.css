@@ -1,0 +1,135 @@
+h1{
+    padding-left: 10px;
+    color: var(--home-title);
+}
+.Box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 2fr);
+    gap: 10px;
+    background-color: var(--clear-white);
+    padding: 10px;
+    width: 50%;
+    height:40% ;
+    border-radius:20px ;
+    position: relative;
+    margin: 50px auto;
+}
+.Nom{
+    color: var(--blue);
+    flex-direction: column;
+    border-radius: 10px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    display: flex;
+    margin-top: -30px;
+    margin-left: 20px;
+}
+.Nombre{
+    color: var(--blue);
+    flex-direction: column;
+    border-radius: 10px;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    display: flex;
+    margin-top: -30px;
+    margin-left: 20px;
+}
+.Competence {
+    color: var(--blue);
+    flex-direction: column;
+    border-radius: 10px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    display: flex;
+    margin-top: -60px;
+    margin-left: 20px;
+}
+.Duree {
+    color: var(--blue);
+    flex-direction: column;
+    border-radius: 10px;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    display: flex;
+    margin-top: -60px;
+    margin-left: 20px;
+}
+.Adr {
+    color: var(--blue);
+    flex-direction: column;
+    border-radius: 10px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    display: flex;
+    margin-top: -80px;
+    margin-left: 20px;
+}
+.Promotion {
+    color: var(--blue);
+    flex-direction: column;
+    border-radius: 10px;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    display: flex;
+    margin-top: -80px;
+    margin-left: 20px;
+}
+.remuneration {
+    color: var(--blue);
+    flex-direction: column;
+    border-radius: 10px;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.buton{
+    padding: initial;
+    color: var(--blue);
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 5;
+    grid-row-end: 5;
+}
+.test{
+    background-color:var(--blue) ;
+    color: var(--clear-white);
+    border-radius: 10px;
+    width:50% ;
+    height: 20px;
+    align-items: center;
+    align-content: center;
+    margin-top: 75px;
+    margin-left: 75px;
+}
+.test1{
+    display:flex;
+    flex-direction: column;
+    width: 300px;
+    height: 35px;
+    line-height: 28px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    outline: none;
+    color: var(--text-color);
+    background-color: var(--white);
+    transition: .3s ease;
+    margin-top: 5px;
+    padding: 0 1rem 0 1rem;
+}
