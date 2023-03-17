@@ -14,6 +14,10 @@
 <?php
 include 'element/burger/burger.php';
 include 'element/navbar/navbar.php';
+session_start();
+if(!isset($_SESSION['id'])) {
+    header('Location: login.php');
+}
 ?>
 <img src="svgs/br-tl 1.svg" alt="tl logo" id="tl1">
 <img src="svgs/br-tl 2.svg" alt="tl logo" id="tl2">
@@ -45,6 +49,5 @@ include 'element/navbar/navbar.php';
     </div>
   </div>
 </div>
-
 </body>
 </html>

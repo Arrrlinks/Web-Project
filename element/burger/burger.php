@@ -21,12 +21,7 @@
     ?>
     <ul class="down">
         <?php
-        if(isset($_SESSION['id'])){
             echo '<li><a href="/Web-Project/account.php"><ion-icon name="person-outline"></ion-icon>Mon compte</a></li>';
-        }
-        else{
-            echo '<li><a href="/Web-Project/login.php"><ion-icon name="person-outline"></ion-icon>Mon compte</a></li>';
-        }
         ?>
 
         <?php
