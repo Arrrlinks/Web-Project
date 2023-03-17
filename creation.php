@@ -48,7 +48,7 @@
     <label for="Adr2"></label><input type="text" id="Adr2" class="test1">
   </div>
   <div class="buton">
-  <button type="submit" class="test">Creer </button>
+  <button type="submit" class="test">Creer</button>
   </div>
 </form>
 
