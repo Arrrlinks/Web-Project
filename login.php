@@ -61,13 +61,12 @@
             $id = $_POST['id'];
             $password = $_POST['password'];
             $bdd = new PDO('mysql:host=localhost;dbname=users;charset=utf8', 'root', '123456789');
-            $req = $bdd->prepare('SELECT * FROM users WHERE username = :id AND password = :password');
+            $req = $bdd->prepare('SELECT * FROM users WHERE username = :id');
             $req->execute(array(
-                'id' => $id,
-                'password' => $password
+                'id' => $id
             ));
             $resultat = $req->fetch();
-            if (!$resultat) {
+            if (!$resultat || !(password_verify($password, $resultat['password']))) {
                 echo '<p class="error">Mauvais identifiant ou mot de passe !</p>';
             } else {
                 session_start();
