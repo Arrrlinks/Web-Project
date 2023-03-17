@@ -11,7 +11,7 @@
 
 #title span.title{
     color: var(--blue);
-    width: 500px;
+    width: 90vw;
     font-size: 50px;
     position: absolute;
     text-align: center;
@@ -32,8 +32,6 @@
 
 #title p{
     color: var(--blue);
-    height: 150px;
-    width: 500px;
     font-style: italic;
     position: absolute;
     top: 50px;

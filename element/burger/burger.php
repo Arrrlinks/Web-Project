@@ -11,7 +11,7 @@
                 echo '<li><a href="#"><ion-icon name="heart-outline"></ion-icon>Wishlist</a></li>';
             }
             else{
-                echo '<li><a href="/Web-Project/creation.html"><ion-icon name="add-circle-outline"></ion-icon>Creation</a></li>';
+                echo '<li><a href="/Web-Project/creation.php"><ion-icon name="add-circle-outline"></ion-icon>Creation</a></li>';
             }
             echo '<li><a href="#"><ion-icon name="notifications-outline"></ion-icon>Notification</a></li>';
         }
