@@ -61,7 +61,7 @@
         if (isset($_POST['id']) && isset($_POST['password'])) {
             $id = $_POST['id'];
             $password = $_POST['password'];
-            $bdd = new PDO('mysql:host=localhost;dbname=users;charset=utf8', 'root', '123456789');
+            $bdd = new PDO('mysql:host=92.222.10.61;dbname=web-project;charset=utf8', 'root', '123456789');
             $req = $bdd->prepare('SELECT * FROM users WHERE username = :id');
             $req->execute(array(
                 'id' => $id
