@@ -30,6 +30,7 @@ ion-icon{
     transform: rotate(180deg);
     top: 0;
     user-select: none;
+    z-index: 1;
 }
 
 #tl2{
@@ -44,6 +45,7 @@ ion-icon{
     bottom: 0;
     right: 0;
     user-select: none;
+    z-index: 1;
 }
 
 #br2{
@@ -59,6 +61,7 @@ ion-icon{
     top: 0;
     right: 0;
     user-select: none;
+    z-index: 1;
 }
 
 #tr2{
@@ -81,6 +84,7 @@ ion-icon{
     bottom: 0;
     left: 0;
     user-select: none;
+    z-index: 1;
 }
 
 #bl2{
