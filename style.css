@@ -19,6 +19,7 @@ body, html{
     padding: 0;
     background-color: var(--white);
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
 }
 
 ion-icon{

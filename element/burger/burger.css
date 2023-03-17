@@ -15,7 +15,7 @@
 .sidenav ul.down{
     width: 300px;
     position: fixed;
-    bottom: 0;
+    bottom: 1vh;
 }
 
 /* Sidenav menu links */
@@ -58,23 +58,6 @@
     top: 0;
     right: 25px;
     font-size: 36px;
-}
-
-@media screen and (max-width: 450px) {
-    .sidenav {
-        width: 100%;
-        left:-100%;
-    }
-    .sidenav ul{
-        width: 100%;
-    }
-    .sidenav a {
-        font-size: 18px;
-    }
-    .sidenav ul.down{
-        width: 100%;
-    }
-
 }
 
 .burger {
@@ -204,5 +187,31 @@
     }
     100% {
         transform: translateY(30px);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .sidenav {
+        width: 100vw;
+        left:-100vw;
+    }
+    .sidenav ul{
+        width: 100%;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+    .sidenav ul.down{
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width:950px){
+    .burger1,
+    .burger2,
+    .burger3 {
+        left: 20px;
+        top: 20px;
+        background: var(--blue);
     }
 }
