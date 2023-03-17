@@ -71,6 +71,10 @@
     .sidenav a {
         font-size: 18px;
     }
+    .sidenav ul.down{
+        width: 100%;
+    }
+
 }
 
 .burger {
