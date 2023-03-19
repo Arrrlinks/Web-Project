@@ -1,8 +1,8 @@
 .box-account{
     position: relative;
     width: 70%;
-    height: 375px;
-    margin: 100px auto;
+    height: 450px;
+    margin: 150px auto;
     background-color: var(--clear-white);
     border-radius: 20px;
     display: grid;
@@ -34,6 +34,22 @@
 .box-account #user_illustration{
     width: 319px;
     height: 219px;
+}
+
+.box-account button{
+    width: 75%;
+    grid-column: span 2;
+    font-weight: bold;
+    color: var(--clear-white);
+    background-color: var(--blue);
+    display: inline-block;
+    padding: 10px 24px;
+    border: 1.8px solid var(--blue);
+    border-radius: 25px;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.1s;
 }
 
 @media (max-width: 950px) {
