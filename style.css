@@ -4,7 +4,7 @@
 
 :root{
     --clear-white: #FFFFFF;
-    --white: #F7F8FD;
+    --white: #f2f3fd;
     --blue: #3963AD;
     --dark-blue: #1E3D72;
     --light-gray: #FBFBFB;
@@ -13,6 +13,7 @@
     --text-color: #0D0C22;
     --sidenav-bg: #041737;
     --input-bg: #eaeaea;
+    --orange: #ffa41c;
 }
 
 body, html{

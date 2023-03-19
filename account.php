@@ -64,7 +64,7 @@ if(!isset($_SESSION['id'])) {
             }
             ?>
       </div>
-      <button>Modifier le mot de passe</button>
+      <button><a href="pwdReset.php">Modifier le mot de passe</a></button>
   </div>
     <img src="svgs/user-illustration.svg" alt="user illustration" id="user_illustration">
   </div>

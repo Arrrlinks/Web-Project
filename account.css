@@ -52,6 +52,11 @@
     transition: 0.1s;
 }
 
+.box-account button a{
+    color: var(--clear-white);
+    text-decoration: none;
+}
+
 @media (max-width: 950px) {
     .box-account{
         width: 100%;
