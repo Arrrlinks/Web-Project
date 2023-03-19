@@ -62,7 +62,7 @@
             $id = $_POST['id'];
             $password = $_POST['password'];
             $bdd = new PDO('mysql:host=92.222.10.61;dbname=web-project;charset=utf8', 'root', '123456789');
-            $req = $bdd->prepare('SELECT * FROM users WHERE username = :id');
+            $req = $bdd->prepare('SELECT id,username,nom,prenom,role,promo,centre,password FROM users WHERE username = :id');
             $req->execute(array(
                 'id' => $id
             ));
