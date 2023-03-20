@@ -7,7 +7,7 @@
         echo '<li><a href="/Web-Project/index.php"><ion-icon name="home-outline"></ion-icon>Accueil</a></li>';
         echo '<li><a href="/Web-Project/search.php"><ion-icon name="briefcase-outline"></ion-icon>Navigation</a></li>';
         if(isset($_SESSION['id'])){
-            if(strtolower($_SESSION['role']) === 'user'){
+            if(strtolower($_SESSION['role']) === 'etudiant'){
                 echo '<li><a href="#"><ion-icon name="heart-outline"></ion-icon>Wishlist</a></li>';
             }
             else{
