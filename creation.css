@@ -68,7 +68,7 @@
     color: var(--clear-white);
     border-radius: 10px;
     margin-top: 50px;
-    padding: 10px 20px;
+    padding: 10px 50px;
     height: 50px;
 }
 
@@ -100,6 +100,18 @@
     font-size: 20px;
     color: var(--blue);
     cursor: pointer;
+}
+
+.addAdr{
+    background: none;
+    border: none;
+    color: var(--blue);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.error{
+    border: red 2px solid;
 }
 
 @media screen and (max-width: 768px){
