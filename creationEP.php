@@ -27,6 +27,11 @@ include 'element/navbar/navbar.php';
     <input type="radio" name="demo5" class="demo5" id="demo5-b" >
     <label for="demo5-b">Pilote</label>
     </div>
+    <div class="navbarc">
+        <a href="creation.php"><ion-icon name="home-sharp"></ion-icon></a>
+        <a href="creationEP.php"><ion-icon name="person-add"></ion-icon></a>
+        <a href="creationOffre.php"><ion-icon name="create"></ion-icon></a>
+    </div>
     <div class="NomU">
         <label for="nomU">Nom Utilisateur </label>
         <input type="text" id="nomU" class="test1">
@@ -45,6 +50,5 @@ include 'element/navbar/navbar.php';
     </div>
     <div class="buton">
         <button type="submit" class="test">Creer </button>
-    </div>
     </div>
 </form>

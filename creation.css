@@ -119,3 +119,21 @@
         font-size: 20px;
     }
 }
+.navbarc {
+    display:flex;
+    flex-direction: row;
+    align-items: end;
+    width: 80%;
+    height: 5px;
+    color: var(--blue);
+    font-size: 50px;
+    padding: 40px;
+    margin-left: 55%;
+    transition: background-color 0.3s ease-in-out;
+    grid-column: 2;
+    grid-row: 1;
+}
+.navbarc ion-icon {
+    margin-right: 10px; /* Espacement entre les icônes */
+    color: var(--blue);
+}

@@ -20,6 +20,11 @@ include 'element/navbar/navbar.php';
 <img src="svgs/br-tl 2.svg" alt="tl logo" id="tl2">
 <form method="post" class ="Box">
     <h1>Creation Offre</h1>
+    <div class="navbarc">
+        <a href="creation.php"><ion-icon name="home-sharp"></ion-icon></a>
+        <a href="creationEP.php"><ion-icon name="person-add"></ion-icon></a>
+        <a href="creationOffre.php"><ion-icon name="create"></ion-icon></a>
+    </div>
         <div class="Nom">
             <label for="nom">Intitulé du poste </label>
             <input type="text" id="nom" class="test1">

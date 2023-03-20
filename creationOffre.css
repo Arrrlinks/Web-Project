@@ -14,6 +14,7 @@ h1{
     border-radius:20px ;
     position: relative;
     margin: 50px auto;
+    top:50px;
 }
 .Nom{
     color: var(--blue);
@@ -132,4 +133,26 @@ h1{
     transition: .3s ease;
     margin-top: 5px;
     padding: 0 1rem 0 1rem;
+}
+.navbarc {
+    display:flex;
+    flex-direction: row;
+    align-items: end;
+    width: 80%;
+    height: 5px;
+    margin-left: 50%;
+    color: var(--blue);
+    font-size: 40px;
+    z-index: 997;
+    padding: 40px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease-in-out;
+    grid-column: 2;
+    grid-row: 1;
+
+}
+ion-icon {
+    margin-right: 10px; /* Espacement entre les icônes */
+    color: var(--blue);
+    align-items: end;
 }
