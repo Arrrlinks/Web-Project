@@ -3,7 +3,7 @@
 <head>
     <title>Creation Entreprise</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="creation.css">
+    <link rel="stylesheet" href="creationEntreprise.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
@@ -19,8 +19,8 @@ include 'element/burger/burger.php';
 <form method="post" class="rectangle">
     <h1>Creation d'une entreprise </h1>
     <div class="navbarc">
-        <a href="creation.php"><ion-icon name="home-sharp"></ion-icon></a>
-        <a href="creationEP.php"><ion-icon name="person-add"></ion-icon></a>
+        <a href="creationEntreprise.php"><ion-icon name="home-sharp"></ion-icon></a>
+        <a href="creationUser.php"><ion-icon name="person-add"></ion-icon></a>
         <a href="creationOffre.php"><ion-icon name="create"></ion-icon></a>
     </div>
     <div>
@@ -73,6 +73,6 @@ include 'element/burger/burger.php';
         <button type="submit" class="Cbutton">Creer</button>
     </div>
 </form>
-<script src="creation.js"></script>
+<script src="creationEntreprise.js"></script>
 </body>
 </html>

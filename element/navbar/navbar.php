@@ -8,7 +8,7 @@
                 echo '<a href="#"><ion-icon name="notifications"></ion-icon></a>';
             }
             else{
-                echo '<a href="/Web-Project/creation.php"><ion-icon name="add-circle-outline"></ion-icon></a>';
+                echo '<a href="/Web-Project/creationEntreprise.php"><ion-icon name="add-circle-outline"></ion-icon></a>';
                 echo '<a href="#"><ion-icon name="notifications"></ion-icon></a>';
             }
         }

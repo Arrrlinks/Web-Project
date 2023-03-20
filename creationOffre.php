@@ -21,42 +21,40 @@ include 'element/navbar/navbar.php';
 <form method="post" class ="Box">
     <h1>Creation Offre</h1>
     <div class="navbarc">
-        <a href="creation.php"><ion-icon name="home-sharp"></ion-icon></a>
-        <a href="creationEP.php"><ion-icon name="person-add"></ion-icon></a>
+        <a href="creationEntreprise.php"><ion-icon name="home-sharp"></ion-icon></a>
+        <a href="creationUser.php"><ion-icon name="person-add"></ion-icon></a>
         <a href="creationOffre.php"><ion-icon name="create"></ion-icon></a>
     </div>
         <div class="Nom">
-            <label for="nom">Intitulé du poste </label>
-            <input type="text" id="nom" class="test1">
+            <label for="nom">Intitulé du poste</label>
+            <input type="text" name="nom" id="nom" class="CreationOffreInput">
         </div>
         <div class="Nombre">
-            <label for="nombre">Nombre de place disponible </label>
-            <input type="number" id="nombre" class="test1">
+            <label for="nombre">Nombre de place disponible</label>
+            <input type="number" id="nombre" class="CreationOffreInput">
         </div>
         <div class="Competence">
-            <label for="competence">Conpétence  </label>
-            <input type="text" id="competence" class="test1">
+            <label for="competence">Conpétence</label>
+            <input type="text" id="competence" class="CreationOffreInput">
         </div>
         <div class="Duree">
-            <label for="duree">Durée du stage  </label>
-            <input type="date" id="duree" class="test1">
+            <label for="duree">Durée du stage</label>
+            <input type="date" id="duree" class="CreationOffreInput">
         </div>
         <div class="Adr">
-            <label for="Adr">Adresse  </label>
-            <input type="text" id="Adr" class="test1">
-            <input type="text" id="Adr" class="test1">
-            <input type="text" id="Adr" class="test1">
+            <label for="Adr">Adresse</label>
+            <input type="text" id="Adr" class="CreationOffreInput">
         </div>
         <div class="Promotion">
-            <label for="Pro">Promotion  </label>
-            <input type="text" id="Pro" class="test1">
+            <label for="Pro">Promotion</label>
+            <input type="text" id="Pro" class="CreationOffreInput">
         </div>
         <div class="remuneration">
-            <label for="Re">Rémunération </label>
-            <input type="text" id="Re" class="test1">
+            <label for="Re">Rémunération</label>
+            <input type="text" id="Re" class="CreationOffreInput">
         </div>
-    <div class="buton">
-        <button type="submit" class="test">Creer </button>
+    <div class="button">
+        <button type="submit" class="Cbutton">Creer</button>
     </div>
 </form>
 </body>

@@ -125,13 +125,16 @@
     align-items: end;
     width: 80%;
     height: 5px;
+    margin-left: 50%;
     color: var(--blue);
-    font-size: 50px;
+    font-size: 40px;
+    z-index: 997;
     padding: 40px;
-    margin-left: 55%;
+    margin-top: 10px;
     transition: background-color 0.3s ease-in-out;
     grid-column: 2;
     grid-row: 1;
+
 }
 .navbarc ion-icon {
     margin-right: 10px; /* Espacement entre les icônes */
