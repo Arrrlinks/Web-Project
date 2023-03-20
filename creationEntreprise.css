@@ -140,3 +140,16 @@
     margin-right: 10px; /* Espacement entre les icônes */
     color: var(--blue);
 }
+
+@media (max-width: 768px){
+    .rectangle{
+        width: 100%;
+        display: block;
+    }
+    .button{
+        margin-top: -40px;
+        display: block;
+        margin-left: 50%;
+        transform: translateX(-40%);
+    }
+}

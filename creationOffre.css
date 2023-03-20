@@ -73,3 +73,16 @@
     color: var(--blue);
     align-items: end;
 }
+
+@media (max-width: 768px){
+    .Box{
+        width: 100%;
+        display: block;
+    }
+    .button{
+        margin-top: 10px;
+        display: block;
+        margin-left: 50%;
+        transform: translateX(-40%);
+    }
+}

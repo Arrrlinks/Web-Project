@@ -1,6 +1,5 @@
 .Box input[type="radio"].demo5 {
     display: none;
-
 }
 .Box input[type="radio"].demo5 + label {
     position: relative;
@@ -66,7 +65,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200%;
+    width: 100%;
 }
 
 .CreationUserButton{
@@ -114,4 +113,20 @@
 .navbarc ion-icon {
     margin-right: 10px; /* Espacement entre les icônes */
     color: var(--blue);
+}
+
+@media (max-width: 768px){
+    .Box{
+        width: 100%;
+        display: block;
+    }
+    .button{
+        margin-top: 10px;
+        display: block;
+        margin-left: 50%;
+        transform: translateX(-20%);
+    }
+    .Box input[type="radio"].demo5 + label {
+        top: 80px;
+    }
 }
