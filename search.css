@@ -37,14 +37,23 @@
     color: var(--clear-white);
 }
 
+.result{
+    display: flex;
+    flex-direction: column;
+}
+
+.titlebox {
+    font-weight: bold;
+    margin: 40px 0 40px 40px;
+}
+
 .box-stage{
     position: relative;
     width: 70%;
-    height: 2200px;
-    margin: 50px auto;
+    height: 400px;
+    margin: auto 15% auto;
     background-color: var(--clear-white);
     border-radius: 20px;
-    align-items: center;
 }
 
 .stage {
@@ -99,4 +108,40 @@
 .stage .stars-icon {
     font-size: 16px;
     color: #F88459;
+}
+
+.box-personne{
+    position: relative;
+    width: 70%;
+    height: 400px;
+    margin: 50px 15% auto;
+    background-color: var(--clear-white);
+    border-radius: 20px;
+}
+
+.personne {
+    position: absolute;
+    width: 85%;
+    margin: 25px auto;
+    background-color: var(--light-gray);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.personne .icon{
+    font-size:20px;
+}
+
+.personne .delete-icon{
+    color:darkred;
+}
+
+.personne .edit-icon{
+    color:var(--blue);
 }

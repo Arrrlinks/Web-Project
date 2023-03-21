@@ -32,7 +32,9 @@ if(!isset($_SESSION['id'])) {
       <button class="categorie7">Catégorie 7</button>
     </div>
 </div>
+<div class="result">
 <div class=box-stage>
+    <h1 class="titlebox">Stages</h1>
   <div class="stage">
     <div class="title">Intitulé de stage</div>
     <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et nibh nec risus scelerisque ornare. Vivamus egestas, justo vitae placerat vestibulum, tortor lacus accumsan orci, ac eleifend lacus libero a erat.</div>
@@ -49,5 +51,31 @@ if(!isset($_SESSION['id'])) {
     </div>
   </div>
 </div>
+<div class=box-personne>
+    <h1 class="titlebox">Personnes</h1>
+    <div class="personne">
+        <div class="Name">MOREL Romain</div>
+        <div class="test">CPIA2 Nancy</div>
+        <div class="test">Etudiant</div>
+        <div class="icon">
+            <ion-icon class="edit-icon" name="create-outline"></ion-icon>
+            <ion-icon class="delete-icon" name="trash-outline"></ion-icon>
+        </div>
+    </div>
+</div>
+
+<div class=box-personne>
+    <h1 class="titlebox">Entreprises</h1>
+    <div class="personne">
+        <div class="Name">CESI</div>
+        <div class="test">CPIA2 Nancy</div>
+        <div class="test">Etudiant</div>
+        <div class="icon">
+            <ion-icon class="edit-icon" name="create-outline"></ion-icon>
+            <ion-icon class="eye-icon" name="eye-outline"></ion-icon>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
