@@ -2,8 +2,8 @@
 const cacheName = 'CesiEnFait';
 const staticAssets = [
     '/',
-    '/index.php',
-    '/style.css',
+    '/accueil.php',
+    '/styles.css',
     '/imgs/logo.png',
     '/site.webmanifest'
 ];

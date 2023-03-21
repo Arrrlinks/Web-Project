@@ -1,27 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Creation Entreprise</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="creationEntreprise.css">
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
-            integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-</head>
-<body>
+<?php $title = "Création"; ?>
+<?php $css = "creationEntreprise.css"; ?>
+<?php $navbar = 1; ?>
+<?php $sidenav = 1; ?>
+<?php ob_start(); ?>
+
 <?php
 include 'element/navbar/navbar.php';
-include 'element/burger/burger.php';
+include 'element/sidenav/sidenav.php';
 ?>
-<img src="svgs/br-tl 1.svg" alt="tl logo" id="tl1">
-<img src="svgs/br-tl 2.svg" alt="tl logo" id="tl2">
+<img src="../svgs/br-tl%201.svg" alt="tl logo" id="tl1">
+<img src="../svgs/br-tl%202.svg" alt="tl logo" id="tl2">
 <form method="post" class="rectangle">
     <h1>Créer une entreprise </h1>
     <div class="navbarc">
-        <a href="creationEntreprise.php"><ion-icon name="home-sharp"></ion-icon></a>
-        <a href="creationUser.php"><ion-icon name="person-add"></ion-icon></a>
-        <a href="creationOffre.php"><ion-icon name="create"></ion-icon></a>
+        <a href="?creationEntreprise"><ion-icon name="home-sharp"></ion-icon></a>
+        <a href="?creationUser"><ion-icon name="person-add"></ion-icon></a>
+        <a href="?creationOffre"><ion-icon name="create"></ion-icon></a>
     </div>
     <div>
         <label for="nameEntr">Nom de l'entreprise</label>
@@ -73,6 +67,7 @@ include 'element/burger/burger.php';
         <button type="submit" class="Cbutton">Creer</button>
     </div>
 </form>
-<script src="creationEntreprise.js"></script>
-</body>
-</html>
+<script src="../creationEntreprise.js"></script>
+
+<?php $content=ob_get_clean(); ?>
+<?php require('view/template.php');?>

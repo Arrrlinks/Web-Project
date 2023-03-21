@@ -1,37 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="pwdReset.css">
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</head>
-<body>
-<?php
-session_start();
-if (!isset($_SESSION['id'])) {
-    header("Location: index.php");
-}
-?>
-<img src="svgs/br-tl 1.svg" alt="tl logo" id="tl1">
-<img src="svgs/br-tl 2.svg" alt="tl logo" id="tl2">
-<img src="svgs/br-tl 1.svg" alt="br logo" id="br1">
-<img src="svgs/br-tl 2.svg" alt="br logo" id="br2">
+<?php $title = "Changer votre Mot de Passe"; ?>
+<?php $css = "pwdReset.css"; ?>
+<?php $navbar = 0; ?>
+<?php $sidenav = 1; ?>
+<?php ob_start(); ?>
 
-<img src="svgs/tr-bl 1.svg" alt="tr logo" id="tr1">
-<img src="svgs/tr-bl 2.svg" alt="tr logo" id="tr2">
-<img src="svgs/tr-bl 3.svg" alt="tr logo" id="tr3">
+<img src="../svgs/br-tl%201.svg" alt="tl logo" id="tl1">
+<img src="../svgs/br-tl%202.svg" alt="tl logo" id="tl2">
+<img src="../svgs/br-tl%201.svg" alt="br logo" id="br1">
+<img src="../svgs/br-tl%202.svg" alt="br logo" id="br2">
 
-<img src="svgs/tr-bl 1.svg" alt="tr logo" id="bl1">
-<img src="svgs/tr-bl 2.svg" alt="tr logo" id="bl2">
-<img src="svgs/tr-bl 3.svg" alt="tr logo" id="bl3">
+<img src="../svgs/tr-bl%201.svg" alt="tr logo" id="tr1">
+<img src="../svgs/tr-bl%202.svg" alt="tr logo" id="tr2">
+<img src="../svgs/tr-bl%203.svg" alt="tr logo" id="tr3">
+
+<img src="../svgs/tr-bl%201.svg" alt="tr logo" id="bl1">
+<img src="../svgs/tr-bl%202.svg" alt="tr logo" id="bl2">
+<img src="../svgs/tr-bl%203.svg" alt="tr logo" id="bl3">
 <div id="la"></div>
 <div id="login">
     <h1>Change Password</h1>
-    <form action="pwdReset.php" method="post">
+    <form action="?pwdReset" method="post">
         <div class="wave-group">
             <input name="current" type="password" class="input" required>
             <span class="bar"></span>
@@ -71,26 +59,7 @@ if (!isset($_SESSION['id'])) {
                 <span class="label-char" style="--index: 11">d</span>
             </label>
         </div>
-        <?php
-        if (isset($_POST['current']) && isset($_POST['new'])) {
-            $current = $_POST['current'];
-            $new = $_POST['new'];
-            $bdd = new PDO('mysql:host=92.222.10.61;dbname=web-project;charset=utf8', 'root', '123456789');
-            $req = $bdd->prepare('SELECT password FROM users WHERE id = :id');
-            $req->execute(array('id' => $_SESSION["id"]));
-            $result = $req->fetch();
-            if (password_verify($current, $result['password'])) {
-                $req2 = $bdd->prepare('UPDATE users SET password = :password WHERE id = :id');
-                $req2->execute(array(
-                    'password' => password_hash($new, PASSWORD_DEFAULT),
-                    'id' => $_SESSION["id"]
-                ));
-                header("Location: index.php");
-            } else {
-               echo '<p class="error">Wrong password</p>';
-            }
-        }
-        ?>
+        <?= $pwdReset ?>
         <button class="login" type="submit">
             <p>Change</p>
             <svg stroke-width="4" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6"
@@ -101,8 +70,6 @@ if (!isset($_SESSION['id'])) {
     </form>
 
 </div>
-<?php
-include 'element/burger/burger.php';
-?>
-</body>
-</html>
+
+<?php $content=ob_get_clean(); ?>
+<?php require('view/template.php');?>
