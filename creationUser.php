@@ -21,13 +21,19 @@ include 'element/navbar/navbar.php';
 <img src="svgs/br-tl 1.svg" alt="tl logo" id="tl1">
 <img src="svgs/br-tl 2.svg" alt="tl logo" id="tl2">
 <form method="post" action="creationUser.php" class="Box">
-    <h1>Creation d'utilisateur</h1>
+    <h1>Créer un utilisateur</h1>
     <div class="Ensemble"></div>
     <div class="ButtonR">
         <input type="radio" name="role" class="demo5" id="demo5-a" value="etudiant" checked required>
         <label for="demo5-a">Etudiant</label>
-        <input type="radio" name="role" class="demo5" id="demo5-b" value="pilote" required>
-        <label for="demo5-b">Pilote</label>
+        <?php
+        if ($_SESSION['role'] == 'admin') {
+            echo '<input type="radio" name="role" class="demo5" id="demo5-b" value="pilote" required> <label for="demo5-b">Pilote</label>';
+        }
+        else {
+            echo '<input type="radio" name="role" class="disabled" id="demo5-b" value="pilote" required disabled> <label for="demo5-b">Pilote</label>';
+        }
+        ?>
     </div>
     <div class="navbarc">
         <a href="creationEntreprise.php">

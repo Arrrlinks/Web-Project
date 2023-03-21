@@ -45,6 +45,11 @@
     padding: 0 1rem 0 1rem;
 }
 
+select.CreationOffreInput{
+    height: 40px;
+    width: calc(80% + 2rem);
+}
+
 .CreationOffreInput:focus{
     transition: .3s;
     border: 2px solid var(--blue);

@@ -10,6 +10,12 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
+<?php
+session_start();
+if (isset($_SESSION['id'])) {
+    header("Location: index.php");
+}
+?>
 <img src="svgs/br-tl 1.svg" alt="tl logo" id="tl1">
 <img src="svgs/br-tl 2.svg" alt="tl logo" id="tl2">
 <img src="svgs/br-tl 1.svg" alt="br logo" id="br1">

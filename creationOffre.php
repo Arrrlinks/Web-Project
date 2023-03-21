@@ -19,39 +19,50 @@ include 'element/navbar/navbar.php';
 <img src="svgs/br-tl 1.svg" alt="tl logo" id="tl1">
 <img src="svgs/br-tl 2.svg" alt="tl logo" id="tl2">
 <form method="post" class ="Box">
-    <h1>Creation Offre</h1>
+    <h1>Créer une offre</h1>
     <div class="navbarc">
         <a href="creationEntreprise.php"><ion-icon name="home-sharp"></ion-icon></a>
         <a href="creationUser.php"><ion-icon name="person-add"></ion-icon></a>
         <a href="creationOffre.php"><ion-icon name="create"></ion-icon></a>
     </div>
-        <div class="Nom">
+        <div>
             <label for="nom">Intitulé du poste</label>
             <input type="text" name="nom" id="nom" class="CreationOffreInput">
         </div>
-        <div class="Nombre">
+        <div>
             <label for="nombre">Nombre de place disponible</label>
             <input type="number" id="nombre" class="CreationOffreInput">
         </div>
-        <div class="Competence">
-            <label for="competence">Conpétence</label>
-            <input type="text" id="competence" class="CreationOffreInput">
-        </div>
-        <div class="Duree">
-            <label for="duree">Durée du stage</label>
-            <input type="date" id="duree" class="CreationOffreInput">
-        </div>
-        <div class="Adr">
+    <div>
+        <label for="Pro">Entreprise</label>
+        <select id="Pro" class="CreationOffreInput">
+            <option value="1">Entreprise 1</option>
+            <option value="2">Entreprise 2</option>
+            <option value="3">Entreprise 3</option>
+        </select>
+    </div>
+    <div>
+        <label for="competence">Compétences</label>
+        <input type="text" id="competence" class="CreationOffreInput">
+        <br>
+    </div>
+        <div>
             <label for="Adr">Adresse</label>
-            <input type="text" id="Adr" class="CreationOffreInput">
-        </div>
-        <div class="Promotion">
-            <label for="Pro">Promotion</label>
-            <input type="text" id="Pro" class="CreationOffreInput">
-        </div>
-        <div class="remuneration">
+            <select id="Adr" class="CreationOffreInput">
+                <option value="1">Adresse 1</option>
+                <option value="2">Adresse 2</option>
+                <option value="3">Adresse 3</option>
+            </select>
+            <br>
             <label for="Re">Rémunération</label>
             <input type="text" id="Re" class="CreationOffreInput">
+        </div>
+        <div>
+            <label for="du">Du</label>
+            <input type="date" id="du" name="du" class="CreationOffreInput">
+            <br>
+            <label for="au">Au</label>
+            <input type="date" id="au" name="du" class="CreationOffreInput">
         </div>
     <div class="button">
         <button type="submit" class="Cbutton">Creer</button>

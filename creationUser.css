@@ -115,6 +115,34 @@
     color: var(--blue);
 }
 
+
+.Box input[type="radio"].disabled {
+    display: none;
+}
+.Box input[type="radio"].disabled + label {
+    position: relative;
+    padding-left: 1rem;
+    cursor: not-allowed;
+    margin-left: 1rem;
+}
+.Box input[type="radio"].disabled + label::before,
+.Box input[type="radio"].disabled + label::after {
+    display: flex;
+    position: absolute;
+    box-sizing: border-box;
+    bottom: 0;
+    left: 0;
+    content:'';
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+    margin-left: -5px;
+}
+.Box input[type="radio"].disabled + label::before {
+    background-color: var(--gray);
+}
+
+
 @media (max-width: 768px){
     .Box{
         width: 100%;

@@ -17,7 +17,7 @@ include 'element/burger/burger.php';
 <img src="svgs/br-tl 1.svg" alt="tl logo" id="tl1">
 <img src="svgs/br-tl 2.svg" alt="tl logo" id="tl2">
 <form method="post" class="rectangle">
-    <h1>Creation d'une entreprise </h1>
+    <h1>Créer une entreprise </h1>
     <div class="navbarc">
         <a href="creationEntreprise.php"><ion-icon name="home-sharp"></ion-icon></a>
         <a href="creationUser.php"><ion-icon name="person-add"></ion-icon></a>
@@ -28,7 +28,7 @@ include 'element/burger/burger.php';
         <input type="text" name="nameEntr" id="nameEntr" class="Cform" required>
     </div>
     <div>
-        <label for="numberOfEmployee">Nombre de personne </label>
+        <label for="numberOfEmployee">Nombre de personne</label>
         <input type="number" name="numberOfEmployee" id="numberOfEmployee" class="Cform" required>
     </div>
     <div>
