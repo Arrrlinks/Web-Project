@@ -5,7 +5,7 @@ const staticAssets = [
     '/index.php',
     '/style.css',
     '/imgs/logo.png',
-    '/manifest.json'
+    '/site.webmanifest'
 ];
 
 self.addEventListener('install', async function () {
