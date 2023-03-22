@@ -36,6 +36,7 @@
 }
 
 .icon-group ion-icon {
+    color: var(--blue);
     margin-right: 10px; /* Espacement entre les icônes */
 }
 
