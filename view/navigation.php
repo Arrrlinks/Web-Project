@@ -42,45 +42,44 @@
 
     <div class=box-personne>
     <h1 class="titlebox">Personnes</h1>
-    <?php if ($usersResult == null) {
-        echo'<div class="personne">';
-        echo '<div class="name">Aucun résultat pour votre recherche.</div>';
-        echo'</div>';
-        echo'<div class="pagination">';
-        echo'<a href="?navigation&q='.$_GET['q'].'&page='.($page-1).'">';
-        echo'<ion-icon class=pagination-icon name="arrow-back-outline"></ion-icon>';
-        echo'</a>';
-        echo'</div>';
-    } else {
-    foreach ($usersResult as $row) {
-echo'<div class="personne">';
-echo'<div class="name">' . strtoupper($row['nom']).' '.ucfirst(strtolower($row['prenom'])) . '</div>';
-echo'<div class="promotion">' .$row['promo']. '</div>';
-echo'<div class="role">' .$row['role']. '</div>';
-echo'<div class="icon">';
-echo'<ion-icon class="edit-icon" name="create-outline"></ion-icon>';
-echo'<ion-icon class="delete-icon" name="trash-outline"></ion-icon>';
-echo'<button class="stats-button">Statistiques</button>';
-echo'</div>';
-echo'</div>';
-} if ($page == 1) {
-            echo '<div class="pagination">';
-            echo '<a href="?navigation&q=' . $_GET['q'] . '&page=' . ($page + 1) . '">';
-            echo '<ion-icon class=pagination-icon name="arrow-forward-outline"></ion-icon>';
-            echo '</a>';
+        <?php
+        if ($usersResult === null || empty($usersResult)) {
+            // If there are no results, output a message
+            echo '<div class="personne">';
+            echo '<div class="name">Aucun résultat pour votre recherche.</div>';
             echo '</div>';
+        } else {
+            // If there are results, loop through them and output each one
+            foreach ($usersResult as $row) {
+                echo '<div class="personne">';
+                echo '<div class="name">' . strtoupper($row['nom']) . ' ' . ucfirst(strtolower($row['prenom'])) . '</div>';
+                echo '<div class="promotion">' . $row['promo'] . '</div>';
+                echo '<div class="role">' . $row['role'] . '</div>';
+                echo '<div class="icon">';
+                echo '<ion-icon class="edit-icon" name="create-outline"></ion-icon>';
+                echo '<ion-icon class="delete-icon" name="trash-outline"></ion-icon>';
+                echo '<button class="stats-button">Statistiques</button>';
+                echo '</div>';
+                echo '</div>';
+            }
+
+            // Output pagination links if there are multiple pages
+            if ($totalPages > 1) {
+                echo '<div class="pagination">';
+                if ($page > 1) {
+                    echo '<a href="?navigation&q=' . $_GET['q'] . '&page=' . ($page - 1) . '">';
+                    echo '<ion-icon class=pagination-icon name="arrow-back-outline"></ion-icon>';
+                    echo '</a>';
+                }
+                if ($page < $totalPages) {
+                    echo '<a href="?navigation&q=' . $_GET['q'] . '&page=' . ($page + 1) . '">';
+                    echo '<ion-icon class=pagination-icon name="arrow-forward-outline"></ion-icon>';
+                    echo '</a>';
+                }
+                echo '</div>';
+            }
         }
-    if ($page > 1) {
-        echo '<div class="pagination">';
-        echo '<a href="?navigation&q=' . $_GET['q'] . '&page=' . ($page - 1) . '">';
-        echo '<ion-icon class=pagination-icon name="arrow-back-outline"></ion-icon>';
-        echo '</a>';
-        echo '<a href="?navigation&q=' . $_GET['q'] . '&page=' . ($page + 1) . '">';
-        echo '<ion-icon class=pagination-icon name="arrow-forward-outline"></ion-icon>';
-        echo '</a>';
-        echo '</div>';}
-    }
-    ?>
+        ?>
     </div>
 
 <div class=box-entreprise>
