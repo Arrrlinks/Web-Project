@@ -39,19 +39,27 @@
     </div>
   </div>
 </div>
-<div class=box-personne>
+
+    <div class=box-personne>
     <h1 class="titlebox">Personnes</h1>
-    <div class="personne">
-        <div class="name">MOREL Romain</div>
-        <div class="promotion">CPIA2 Nancy</div>
-        <div class="role">Etudiant</div>
-        <div class="icon">
-            <ion-icon class="edit-icon" name="create-outline"></ion-icon>
-            <ion-icon class="delete-icon" name="trash-outline"></ion-icon>
-            <button class="stats-button">Statistiques</button>
-        </div>
-    </div>
-</div>
+    <?php if ($usersResult == null) {
+        echo'<div class="personne">';
+        echo '<div class="name">Aucun résultat pour votre recherche.</div>';
+        echo'</div>';
+    } else {
+    foreach ($usersResult as $row) {;
+echo'<div class="personne">';
+echo'<div class="name">' . strtoupper($row['nom']).' '.ucfirst(strtolower($row['prenom'])) . '</div>';
+echo'<div class="promotion">' .$row['promo']. '</div>';
+echo'<div class="role">' .$row['role']. '</div>';
+echo'<div class="icon">';
+echo'<ion-icon class="edit-icon" name="create-outline"></ion-icon>';
+echo'<ion-icon class="delete-icon" name="trash-outline"></ion-icon>';
+echo'<button class="stats-button">Statistiques</button>';
+echo'</div>';
+echo'</div>';
+}} ?>
+    </div>';
 
 <div class=box-entreprise>
     <h1 class="titlebox">Entreprises</h1>
