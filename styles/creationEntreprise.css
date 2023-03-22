@@ -53,6 +53,7 @@
     background-color: var(--input-bg);
     transition: .3s ease;
     padding: 0 1rem 0 1rem;
+    margin-top: 2px;
 }
 
 .adresse:focus{
@@ -113,6 +114,8 @@
     font-size: 20px;
     cursor: pointer;
 }
+
+
 
 .error{
     border: red 2px solid;

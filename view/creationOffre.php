@@ -24,9 +24,6 @@
     <div>
         <label for="Pro">Entreprise</label>
         <select id="Pro" class="CreationOffreInput">
-            <option value="1">Entreprise 1</option>
-            <option value="2">Entreprise 2</option>
-            <option value="3">Entreprise 3</option>
         </select>
     </div>
     <div>
@@ -37,9 +34,6 @@
         <div>
             <label for="Adr">Adresse</label>
             <select id="Adr" class="CreationOffreInput">
-                <option value="1">Adresse 1</option>
-                <option value="2">Adresse 2</option>
-                <option value="3">Adresse 3</option>
             </select>
             <br>
             <label for="Re">Rémunération</label>

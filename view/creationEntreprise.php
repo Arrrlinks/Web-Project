@@ -61,11 +61,12 @@ include 'element/sidenav/sidenav.php';
             <button type="button" class="addAdr" onclick="removeAdr()"><ion-icon name="remove-outline"></ion-icon></button>
             <button type="button" class="addAdr" onclick="addAdr()"><ion-icon name="add-outline"></ion-icon></button>
       </span>
-        <label for="Adr"></label><input type="text" name="Adr" id="Adr" class="adresse">
+        <label for="Adr"></label><input type="text" name="Adr[]" id="Adr" class="adresse">
     </div>
     <div class="button">
         <button type="submit" class="Cbutton">Creer</button>
     </div>
+    <?= $isEntrepriseCreated ?>
 </form>
 <script src="../creationEntreprise.js"></script>
 

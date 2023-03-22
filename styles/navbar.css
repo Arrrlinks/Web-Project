@@ -67,6 +67,48 @@
     color: var(--clear-white);
 }
 
+.nav-searchbar {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    max-width: 190px;
+    margin-top: -15px;
+    margin-right: 75px;
+}
+
+.nav-searchbar svg {
+    position: absolute;
+    fill: var(--blue);
+    width: 1rem;
+    height: 1rem;
+    left: -20%;
+    margin-top: 5px;
+}
+
+.nav-searchbar input {
+    width: 300px;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem 0 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    outline: none;
+    color: var(--text-color);
+    transition: .3s ease
+}
+
+.nav-searchbar input::placeholder {
+    color: var(--blue);
+}
+
+.nav-searchbar input:focus, input:hover {
+    outline: none;
+    color: var(--blue);
+    background-color: var(--clear-white);
+}
+
 @media screen and (max-width: 520px) {
     .navbar{
         display: none;
