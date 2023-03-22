@@ -56,16 +56,17 @@
 
 .titlebox {
     font-weight: bold;
-    margin: 40px 0 40px 40px;
+    margin: 40px 0 0 40px;
 }
 
 .box-stage{
     position: relative;
     width: 70%;
-    height: 400px;
-    margin: auto 15% auto;
+    margin: auto 15% 50px auto;
     background-color: var(--clear-white);
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .bas-boxstage{
@@ -77,18 +78,13 @@
 }
 
 .stage {
-    position: absolute;
+    position: relative;
     width: 85%;
+    height: 160px;
     margin: 25px auto;
     background-color: var(--light-gray);
     padding: 20px;
     border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .stage .title {
@@ -135,14 +131,15 @@
 .box-personne{
     position: relative;
     width: 70%;
-    height: 400px;
-    margin: 50px 15% auto;
+    margin: auto 15% 50px auto;
     background-color: var(--clear-white);
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .personne {
-    position: absolute;
+    position: relative;
     width: 85%;
     margin: 25px auto;
     background-color: var(--light-gray);
@@ -152,8 +149,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .personne .icon{
@@ -183,15 +178,17 @@
 .box-entreprise{
     position: relative;
     width: 70%;
-    height: 400px;
-    margin: 50px 15% auto;
+    margin: auto 15% 50px auto;
     background-color: var(--clear-white);
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .entreprise {
-    position: absolute;
+    position: relative;
     width: 85%;
+    /* height: 160px; */
     margin: 25px auto;
     background-color: var(--light-gray);
     padding: 20px;
@@ -200,8 +197,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .entreprise .icon{
