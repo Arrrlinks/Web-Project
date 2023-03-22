@@ -42,25 +42,27 @@
 <div class=box-personne>
     <h1 class="titlebox">Personnes</h1>
     <div class="personne">
-        <div class="Name">MOREL Romain</div>
-        <div class="test">CPIA2 Nancy</div>
-        <div class="test">Etudiant</div>
+        <div class="name">MOREL Romain</div>
+        <div class="promotion">CPIA2 Nancy</div>
+        <div class="role">Etudiant</div>
         <div class="icon">
             <ion-icon class="edit-icon" name="create-outline"></ion-icon>
             <ion-icon class="delete-icon" name="trash-outline"></ion-icon>
+            <button class="stats-button">Statistiques</button>
         </div>
     </div>
 </div>
 
-<div class=box-personne>
+<div class=box-entreprise>
     <h1 class="titlebox">Entreprises</h1>
-    <div class="personne">
-        <div class="Name">CESI</div>
-        <div class="test">CPIA2 Nancy</div>
+    <div class="entreprise">
+        <div class="name">CESI</div>
+        <div class="localisation">Nancy</div>
         <div class="test">Etudiant</div>
         <div class="icon">
             <ion-icon class="edit-icon" name="create-outline"></ion-icon>
             <ion-icon class="eye-icon" name="eye-outline"></ion-icon>
+            <button class="stats-button">Statistiques</button>
         </div>
     </div>
 </div>

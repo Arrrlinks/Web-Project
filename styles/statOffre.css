@@ -1,0 +1,42 @@
+.Rectangle {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 30px;
+    padding: 40px;
+    width: 60%;
+    border-radius:20px ;
+    position: relative;
+    margin: 135px auto;
+    background-color: var(--white);
+}
+.Rectangle h1 {
+    color: var(--home-title);
+    margin-left: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.Box {
+    display: flex;
+    flex-direction: column;
+}
+.Box .contentContainer{
+    display: flex;
+    flex-direction: row;
+}
+.Box span {
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+button{
+    background-color: var(--blue);
+    color: var(--clear-white);
+    border: none;
+    border-radius: 5px;
+    margin-left: 40%;
+    margin-top:20px;
+    width: 20%;
+}
