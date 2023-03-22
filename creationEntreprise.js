@@ -1,19 +1,19 @@
-let i = 0;
 const adrBox = document.getElementById('adresseBox');
+
 function addAdr() {
-    i++;
-    adrBox.innerHTML += `<label for="Adr"></label><input type="text" name="Adr[]" id="Adr" class="adresse">`;
+    adrBox.insertAdjacentHTML('beforeend', `<label for="Adr"></label><input type="text" name="Adr[]" id="Adr" class="adresse">`);
 }
 
 function removeAdr() {
-    if(adrBox.childElementCount > 4) {
-        adrBox.removeChild(adrBox.lastChild);
+    const inputs = adrBox.querySelectorAll('input[type="text"]');
+    if(inputs.length > 1) {
+        inputs[inputs.length - 1].remove();
     }
 }
 
 const nameEntreprise = document.getElementById("nameEntr");
 
-nameEntreprise.addEventListener("input", function(event) {
+nameEntreprise.addEventListener("input", function (event) {
     let value = event.target.value;
     if (value.length === 0) {
         nameEntreprise.classList.add("error");
@@ -26,7 +26,7 @@ nameEntreprise.addEventListener("input", function(event) {
 
 const numberOfEmployee = document.getElementById("numberOfEmployee");
 
-numberOfEmployee.addEventListener("input", function(event) {
+numberOfEmployee.addEventListener("input", function (event) {
     let value = event.target.value;
     value = value.replace(/[^0-9]/g, "");
     event.target.value = value;
@@ -41,7 +41,7 @@ numberOfEmployee.addEventListener("input", function(event) {
 
 const secteurEntreprise = document.getElementById("secteurEntr");
 
-secteurEntreprise.addEventListener("input", function(event) {
+secteurEntreprise.addEventListener("input", function (event) {
     let value = event.target.value;
     value = value.replace(/[^a-zA-Z\- ]/g, '');
     event.target.value = value;
@@ -54,5 +54,4 @@ secteurEntreprise.addEventListener("input", function(event) {
     }
 });
 
-const input = document.getElementById("Adr"); // récupérer l'élément input
-const apiKey = "YOUR_API_KEY"; // remplacez YOUR_API_KEY par votre clé d'API SmartyStreets
+const input = document.getElementById("Adr");
