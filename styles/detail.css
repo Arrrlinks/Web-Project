@@ -1,0 +1,52 @@
+.Rectangle {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 30px;
+    padding: 40px;
+    width: 60%;
+    border-radius:20px ;
+    position: relative;
+    margin: 135px auto;
+    background-color: var(--clear-white);
+}
+.Rectangle h1 {
+    color: var(--home-title);
+    padding-left: 50%;
+    margin-top: 10px;
+}
+
+.Box {
+    display: flex;
+    flex-direction: column;
+}
+.Box span {
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    color: var(--text-color);
+}
+.Box .Button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.Postuler{
+    background-color:var(--blue) ;
+    color: var(--clear-white);
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.Postuler:last-child{
+    background-color:var(--clear-white) ;
+    color: var(--blue);
+    border: var(--blue) 2px solid;
+}

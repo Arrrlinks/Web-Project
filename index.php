@@ -23,6 +23,9 @@ elseif (isset($_GET['creationOffre'])) {
 elseif (isset($_GET['creationUser'])) {
     require_once('src/controllers/creationUser_c.php');
 }
+elseif (isset($_GET['detail'])) {
+    require_once('src/controllers/detail_c.php');
+}
 else {
     require_once('src/controllers/accueil_c.php');
 }
