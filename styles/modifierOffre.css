@@ -1,0 +1,88 @@
+.Box h1{
+    padding-left: 10px;
+    color: var(--home-title);
+}
+
+.Box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--clear-white);
+    grid-gap: 30px;
+    padding: 40px;
+    width: 60%;
+    border-radius:20px ;
+    position: relative;
+    margin: 135px auto;
+}
+
+.Box label{
+    color: var(--blue);
+}
+.Mbutton{
+    background-color:var(--blue) ;
+    color: var(--clear-white);
+    border-radius: 10px;
+    padding: 10px 50px;
+    height: 50px;
+}
+.button{
+    color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ModifierOffreInput{
+    display:flex;
+    flex-direction: column;
+    width: 80%;
+    height: 35px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    color: var(--text-color);
+    background-color: var(--input-bg);
+    transition: .3s ease;
+    padding: 0 1rem 0 1rem;
+}
+
+.ModifierOffreInput:focus{
+    transition: .3s;
+    border: 2px solid var(--blue);
+    outline: none;
+}
+
+.navbarc {
+    display:flex;
+    flex-direction: row;
+    align-items: end;
+    width: 80%;
+    height: 5px;
+    margin-left: 50%;
+    color: var(--blue);
+    font-size: 40px;
+    z-index: 997;
+    padding: 40px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease-in-out;
+    grid-column: 2;
+    grid-row: 1;
+
+}
+.Box ion-icon {
+    margin-right: 10px; /* Espacement entre les icônes */
+    color: var(--blue);
+    align-items: end;
+}
+
+@media (max-width: 768px){
+    .Box{
+        width: 100%;
+        display: block;
+    }
+    .button{
+        margin-top: 10px;
+        display: block;
+        margin-left: 50%;
+        transform: translateX(-40%);
+    }
+}

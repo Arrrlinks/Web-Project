@@ -1,34 +1,28 @@
-<?php $title = "Création"; ?>
-<?php $css = "creationUser.css"; ?>
+<?php $title = "Modifier un utilisateur"; ?>
+<?php $css = "modifierUtilisateur.css"; ?>
 <?php $navbar = 1; ?>
 <?php $sidenav = 1; ?>
 <?php ob_start(); ?>
 
 <img src="../svg/br-tl%201.svg" alt="tl logo" id="tl1">
 <img src="../svg/br-tl%202.svg" alt="tl logo" id="tl2">
-<form method="post" action="creationUser.php" class="Box">
-    <h1>Créer un utilisateur</h1>
+<form method="post" class="Box">
+    <h1>Modifier d'utilisateur</h1>
     <div class="Ensemble"></div>
     <div class="ButtonR">
         <input type="radio" name="role" class="demo5" id="demo5-a" value="etudiant" checked required>
         <label for="demo5-a">Etudiant</label>
-        <?php
-        if (isAdminSession()) {
-            echo '<input type="radio" name="role" class="demo5" id="demo5-b" value="pilote" required> <label for="demo5-b">Pilote</label>';
-        }
-        else {
-            echo '<input type="radio" name="role" class="disabled" id="demo5-b" value="pilote" required disabled> <label for="demo5-b">Pilote</label>';
-        }
-        ?>
+        <input type="radio" name="role" class="demo5" id="demo5-b" value="pilote" required>
+        <label for="demo5-b">Pilote</label>
     </div>
     <div class="navbarc">
-        <a href="creationEntreprise.php">
+        <a href="modifierEntreprise.php">
             <ion-icon name="home-sharp"></ion-icon>
         </a>
-        <a href="creationUser.php">
+        <a href="modifierUtilisateur.php">
             <ion-icon name="person-add"></ion-icon>
         </a>
-        <a href="creationOffre.php">
+        <a href="modifierOffre.php">
             <ion-icon name="create"></ion-icon>
         </a>
     </div>
@@ -53,10 +47,10 @@
         <input type="text" id="password" name="password" class="UserCreationInput" required>
     </div>
     <div class="button">
-        <button type="submit" class="CreationUserButton">Creer</button>
+        <button type="submit" class="CreationUserButton">Modifier</button>
     </div>
-    <?= $user ?>
 </form>
+
 
 <?php $content=ob_get_clean(); ?>
 <?php require('view/template.php');?>

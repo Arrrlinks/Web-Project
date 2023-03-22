@@ -4,8 +4,8 @@
 <?php $sidenav = 1; ?>
 <?php ob_start(); ?>
 
-<img src="../svgs/br-tl%201.svg" alt="tl logo" id="tl1">
-<img src="../svgs/br-tl%202.svg" alt="tl logo" id="tl2">
+<img src="../svg/br-tl%201.svg" alt="tl logo" id="tl1">
+<img src="../svg/br-tl%202.svg" alt="tl logo" id="tl2">
 <div class=box-categorie>
     <div class="categorie">
       <button class="categorie1">Catégorie 1</button>

@@ -1,28 +1,25 @@
-<?php $title = "Création"; ?>
-<?php $css = "creationEntreprise.css"; ?>
+<?php $title = "Modifier une entreprise"; ?>
+<?php $css = "modifierEntreprise.css"; ?>
 <?php $navbar = 1; ?>
 <?php $sidenav = 1; ?>
 <?php ob_start(); ?>
 
-<?php
-include 'element/navbar/navbar.php';
-include 'element/sidenav/sidenav.php';
-?>
+
 <img src="../svg/br-tl%201.svg" alt="tl logo" id="tl1">
 <img src="../svg/br-tl%202.svg" alt="tl logo" id="tl2">
 <form method="post" class="rectangle">
-    <h1>Créer une entreprise </h1>
+    <h1>Modifier une entreprise </h1>
     <div class="navbarc">
-        <a href="?creationEntreprise"><ion-icon name="home-sharp"></ion-icon></a>
-        <a href="?creationUser"><ion-icon name="person-add"></ion-icon></a>
-        <a href="?creationOffre"><ion-icon name="create"></ion-icon></a>
+        <a href="modifierEntreprise.php"><ion-icon name="home-sharp"></ion-icon></a>
+        <a href="modifierUtilisateur.php"><ion-icon name="person-add"></ion-icon></a>
+        <a href="modifierOffre.php"><ion-icon name="create"></ion-icon></a>
     </div>
     <div>
         <label for="nameEntr">Nom de l'entreprise</label>
         <input type="text" name="nameEntr" id="nameEntr" class="Cform" required>
     </div>
     <div>
-        <label for="numberOfEmployee">Nombre de personne</label>
+        <label for="numberOfEmployee">Nombre de personne </label>
         <input type="number" name="numberOfEmployee" id="numberOfEmployee" class="Cform" required>
     </div>
     <div>
@@ -64,7 +61,7 @@ include 'element/sidenav/sidenav.php';
         <label for="Adr"></label><input type="text" name="Adr" id="Adr" class="adresse">
     </div>
     <div class="button">
-        <button type="submit" class="Cbutton">Creer</button>
+        <button type="submit" class="Mbutton">Modifier</button>
     </div>
 </form>
 <script src="../creationEntreprise.js"></script>

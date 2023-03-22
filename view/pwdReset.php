@@ -4,18 +4,18 @@
 <?php $sidenav = 1; ?>
 <?php ob_start(); ?>
 
-<img src="../svgs/br-tl%201.svg" alt="tl logo" id="tl1">
-<img src="../svgs/br-tl%202.svg" alt="tl logo" id="tl2">
-<img src="../svgs/br-tl%201.svg" alt="br logo" id="br1">
-<img src="../svgs/br-tl%202.svg" alt="br logo" id="br2">
+<img src="../svg/br-tl%201.svg" alt="tl logo" id="tl1">
+<img src="../svg/br-tl%202.svg" alt="tl logo" id="tl2">
+<img src="../svg/br-tl%201.svg" alt="br logo" id="br1">
+<img src="../svg/br-tl%202.svg" alt="br logo" id="br2">
 
-<img src="../svgs/tr-bl%201.svg" alt="tr logo" id="tr1">
-<img src="../svgs/tr-bl%202.svg" alt="tr logo" id="tr2">
-<img src="../svgs/tr-bl%203.svg" alt="tr logo" id="tr3">
+<img src="../svg/tr-bl%201.svg" alt="tr logo" id="tr1">
+<img src="../svg/tr-bl%202.svg" alt="tr logo" id="tr2">
+<img src="../svg/tr-bl%203.svg" alt="tr logo" id="tr3">
 
-<img src="../svgs/tr-bl%201.svg" alt="tr logo" id="bl1">
-<img src="../svgs/tr-bl%202.svg" alt="tr logo" id="bl2">
-<img src="../svgs/tr-bl%203.svg" alt="tr logo" id="bl3">
+<img src="../svg/tr-bl%201.svg" alt="tr logo" id="bl1">
+<img src="../svg/tr-bl%202.svg" alt="tr logo" id="bl2">
+<img src="../svg/tr-bl%203.svg" alt="tr logo" id="bl3">
 <div id="la"></div>
 <div id="login">
     <h1>Change Password</h1>
