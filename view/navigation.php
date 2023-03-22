@@ -23,16 +23,19 @@
   <div class="stage">
     <div class="title">Intitulé de stage</div>
     <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et nibh nec risus scelerisque ornare. Vivamus egestas, justo vitae placerat vestibulum, tortor lacus accumsan orci, ac eleifend lacus libero a erat.</div>
-    <ion-icon class="like-icon" name="heart-outline"></ion-icon>
-    <div>
+    <div class="bas-boxstage">
+          <div class="stars-icon">
+            <div class="confiance">Confiance du pilote :</div>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star-half"></ion-icon>
+          </div>
+          <div class="group-likeapply">
+        <ion-icon class="like-icon" name="heart-outline"></ion-icon>
         <button class="apply-button">Postuler</button>
-      <div class="stars-icon">
-        <ion-icon name="star"></ion-icon>
-        <ion-icon name="star"></ion-icon>
-        <ion-icon name="star"></ion-icon>
-        <ion-icon name="star"></ion-icon>
-        <ion-icon name="star-half"></ion-icon>
-      </div>
+        </div>
     </div>
   </div>
 </div>
@@ -61,6 +64,9 @@
         </div>
     </div>
 </div>
+<script src="../navigation.js"></script>
+
+
 
 <?php $content=ob_get_clean(); ?>
 <?php require('view/template.php');?>
