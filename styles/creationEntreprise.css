@@ -63,9 +63,12 @@
 }
 
 .button{
+    width: 200%;
     display: flex;
+    align-items: center;
     justify-content: center;
     color: var(--blue);
+    margin-top: -20px;
 }
 
 .Cbutton{
@@ -159,6 +162,7 @@
         display: block;
         margin-left: 50%;
         transform: translate(-40%,-40px);
+        width: 40%;
     }
     .rectangle div:not(.rating){
         margin-top: 20px;

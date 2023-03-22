@@ -65,7 +65,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 200%;
 }
 
 .CreationUserButton{
@@ -152,7 +152,8 @@
         margin-top: 10px;
         display: block;
         margin-left: 50%;
-        transform: translateX(-20%);
+        transform: translateX(-17%);
+        width: 100%;
     }
     .Box input[type="radio"].demo5 + label {
         top: 80px;
