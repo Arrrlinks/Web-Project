@@ -1,0 +1,136 @@
+.rectangle h1{
+    padding-left: 10px;
+    color: var(--home-title);
+}
+.rectangle{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color:  var(--white);
+    grid-gap: 30px;
+    padding: 40px;
+    width: 60%;
+    border-radius:20px ;
+    position: relative;
+    margin: 135px auto;
+}
+
+.rectangle label{
+    color: var(--text-color);
+}
+
+.Cform{
+    display:flex;
+    flex-direction: column;
+    width: 80%;
+    height: 35px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    color: var(--text-color);
+    background-color: var(--input-bg);
+    transition: .3s ease;
+    padding: 0 1rem 0 1rem;
+}
+
+.Cform:focus{
+    transition: .3s;
+    border: 2px solid var(--blue);
+    outline: none;
+}
+
+#adresseBox{
+    margin-top: -20px;
+}
+
+.adresse{
+    display:flex;
+    flex-direction: column;
+    width: 80%;
+    height: 35px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    color: var(--text-color);
+    background-color: var(--input-bg);
+    transition: .3s ease;
+    padding: 0 1rem 0 1rem;
+}
+
+.adresse:focus{
+    transition: .3s;
+    border: 2px solid var(--blue);
+    outline: none;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    color: var(--blue);
+}
+
+.Cbutton{
+    background-color:var(--blue) ;
+    color: var(--clear-white);
+    border-radius: 10px;
+    margin-top: 50px;
+    padding: 10px 50px;
+    height: 50px;
+}
+
+.rating {
+    transform: rotateY(180deg);
+    display: inline-block;
+}
+
+.rating input[type="radio"] {
+    display: none;
+}
+
+.rating label {
+    display: inline-block;
+    font-size: 40px;
+    color: var(--input-bg);
+    cursor: pointer;
+    transform: scaleX(-1);
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input[type="radio"]:checked ~ label {
+    color: var(--orange);
+}
+
+.iconAdr{
+    padding-left: 20px;
+    font-size: 20px;
+    color: var(--blue);
+    cursor: pointer;
+}
+
+.addAdr{
+    background: none;
+    border: none;
+    color: var(--blue);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.error{
+    border: red 2px solid;
+}
+
+@media screen and (max-width: 768px){
+    .rating label {
+        font-size: 20px;
+    }
+}
+@media (max-width: 768px){
+    .rectangle{
+        width: 100%;
+        display: block;
+    }
+    .button{
+        margin-top: -40px;
+        display: block;
+        margin-left: 50%;
+        transform: translateX(-40%);
+    }
+}

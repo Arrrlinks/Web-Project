@@ -35,6 +35,12 @@ elseif (isset($_GET['modifierOffre'])){
 elseif (isset($_GET['modifierUtilisateur'])){
     require_once('src/controllers/modifierUtilisateur_c.php');
 }
+elseif (isset($_GET['statoffre'])){
+    require_once('src/controllers/statOffre_c.php');
+}
+elseif (isset($_GET['statentreprise'])){
+    require_once('src/controllers/statEntreprise_c.php');
+}
 else {
     require_once('src/controllers/accueil_c.php');
 }
