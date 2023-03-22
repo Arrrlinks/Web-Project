@@ -157,7 +157,9 @@
 }
 
 .personne .icon{
-    font-size:20px;
+    font-size: 20px;
+    align-items: center;
+    display: flex;
 }
 
 .personne .delete-icon{
@@ -176,4 +178,50 @@
 .confiance{
     color: black;
     margin-bottom: 10px;
+}
+
+.box-entreprise{
+    position: relative;
+    width: 70%;
+    height: 400px;
+    margin: 50px 15% auto;
+    background-color: var(--clear-white);
+    border-radius: 20px;
+}
+
+.entreprise {
+    position: absolute;
+    width: 85%;
+    margin: 25px auto;
+    background-color: var(--light-gray);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.entreprise .icon{
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+}
+
+.entreprise .edit-icon{
+    color:var(--blue);
+}
+
+.stats-button{
+    padding: 10px 20px;
+    background-color: var(--blue);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 15px;
 }
