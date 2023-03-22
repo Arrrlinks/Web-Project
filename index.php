@@ -26,6 +26,15 @@ elseif (isset($_GET['creationUser'])) {
 elseif (isset($_GET['detail'])) {
     require_once('src/controllers/detail_c.php');
 }
+elseif (isset($_GET['modifierEntreprise'])){
+    require_once('src/controllers/modifierEntreprise_C.php');
+}
+elseif (isset($_GET['modifierOffre'])){
+    require_once('src/controllers/modifierOffre_C.php');
+}
+elseif (isset($_GET['modifierUtilisateur'])){
+    require_once('src/controllers/modifierUtilisateur_c.php');
+}
 else {
     require_once('src/controllers/accueil_c.php');
 }

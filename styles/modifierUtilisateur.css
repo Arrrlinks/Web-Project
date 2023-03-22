@@ -1,0 +1,132 @@
+.Box input[type="radio"].demo5 {
+    display: none;
+}
+.Box input[type="radio"].demo5 + label {
+    position: relative;
+    padding-left: 1rem;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+.Box input[type="radio"].demo5 + label::before,
+.Box input[type="radio"].demo5 + label::after {
+    display: flex;
+    position: absolute;
+    box-sizing: border-box;
+    bottom: 0;
+    left: 0;
+    content:'';
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+    margin-left: -5px;
+}
+.Box input[type="radio"].demo5 + label::before {
+    border: 1px solid var(--text-color);
+    background-color: var(--white);
+}
+.Box input[type="radio"].demo5:checked + label::after {
+    background-color: var(--blue);
+}
+
+.Box label{
+    color: var(--blue);
+}
+.Box h1{
+    padding-left: 10px;
+    color: var(--home-title);
+}
+
+.Box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--clear-white);
+    grid-gap: 30px;
+    padding: 40px;
+    width: 60%;
+    border-radius:20px ;
+    position: relative;
+    margin: 135px auto;
+}
+.ButtonR{
+    border-radius: 10px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    display: flex;
+    margin-top: -75px;
+    margin-left: 40px;
+    align-items: center;
+    width: 20%;
+}
+
+.button{
+    color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.CreationUserButton{
+    background-color:var(--blue) ;
+    color: var(--clear-white);
+    border-radius: 10px;
+    padding: 10px 50px;
+    height: 50px;
+}
+.UserCreationInput{
+    display:flex;
+    flex-direction: column;
+    width: 80%;
+    height: 35px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    color: var(--text-color);
+    background-color: var(--input-bg);
+    transition: .3s ease;
+    padding: 0 1rem 0 1rem;
+}
+
+.UserCreationInput:focus{
+    transition: .3s;
+    border: 2px solid var(--blue);
+    outline: none;
+}
+
+.navbarc {
+    display:flex;
+    flex-direction: row;
+    align-items: end;
+    width: 80%;
+    height: 5px;
+    margin-left: 50%;
+    color: var(--blue);
+    font-size: 40px;
+    z-index: 997;
+    padding: 40px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease-in-out;
+    grid-column: 2;
+    grid-row: 1;
+}
+.navbarc ion-icon {
+    margin-right: 10px; /* Espacement entre les icônes */
+    color: var(--blue);
+}
+
+@media (max-width: 768px){
+    .Box{
+        width: 100%;
+        display: block;
+    }
+    .button{
+        margin-top: 10px;
+        display: block;
+        margin-left: 50%;
+        transform: translateX(-20%);
+    }
+    .Box input[type="radio"].demo5 + label {
+        top: 80px;
+    }
+}
