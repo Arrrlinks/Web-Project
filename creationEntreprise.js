@@ -2,7 +2,7 @@ let i = 0;
 const adrBox = document.getElementById('adresseBox');
 function addAdr() {
     i++;
-    adrBox.innerHTML += `<label for="Adr"></label><input type="text" name="Adr" id="Adr" class="adresse">`;
+    adrBox.innerHTML += `<label for="Adr"></label><input type="text" name="Adr[]" id="Adr" class="adresse">`;
 }
 
 function removeAdr() {

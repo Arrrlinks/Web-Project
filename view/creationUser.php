@@ -6,7 +6,7 @@
 
 <img src="../svg/br-tl%201.svg" alt="tl logo" id="tl1">
 <img src="../svg/br-tl%202.svg" alt="tl logo" id="tl2">
-<form method="post" action="creationUser.php" class="Box">
+<form method="post" class="Box">
     <h1>Créer un utilisateur</h1>
     <div class="Ensemble"></div>
     <div class="ButtonR">
@@ -22,13 +22,13 @@
         ?>
     </div>
     <div class="navbarc">
-        <a href="creationEntreprise.php">
+        <a href="?creationEntreprise">
             <ion-icon name="home-sharp"></ion-icon>
         </a>
-        <a href="creationUser.php">
+        <a href="?creationUser.php">
             <ion-icon name="person-add"></ion-icon>
         </a>
-        <a href="creationOffre.php">
+        <a href="?creationOffre.php">
             <ion-icon name="create"></ion-icon>
         </a>
     </div>
