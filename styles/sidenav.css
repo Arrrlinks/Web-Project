@@ -206,12 +206,10 @@
     }
 }
 
-@media screen and (max-width:950px){
+@media screen and (max-width:768px){
     .burger1,
     .burger2,
     .burger3 {
-        left: 20px;
-        top: 20px;
         background: var(--blue);
     }
 }

@@ -30,7 +30,7 @@ include 'element/sidenav/sidenav.php';
         <input type="text" name="secteurEntr" id="secteurEntr" class="Cform" required>
     </div>
     <div>
-        <label for="conf">Confiance de l'Entreprise</label><br>
+        <label for="conf">Confiance attribuée</label><br>
         <div class="rating">
             <input type="radio" id="star1" name="rating" value="5" required>
             <label for="star1" title="1 étoile">

@@ -157,6 +157,9 @@
     .Box input[type="radio"].demo5 + label {
         top: 80px;
     }
+    .Box div{
+        margin-top: 20px;
+    }
 }
 
 .selected ion-icon{
