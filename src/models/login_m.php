@@ -2,6 +2,7 @@
 require_once('src/models/init.php');
 function isLogin()
 {
+    ifSessionExit();
     if (isset($_POST['id']) && isset($_POST['password'])) {
         $id = $_POST['id'];
         $password = $_POST['password'];

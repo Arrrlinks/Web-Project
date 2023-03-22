@@ -4,8 +4,8 @@
 <?php $sidenav = 1; ?>
 <?php ob_start(); ?>
 
-<img src="../svgs/br-tl%201.svg" alt="tl logo" id="tl1">
-<img src="../svgs/br-tl%202.svg" alt="tl logo" id="tl2">
+<img src="../svg/br-tl%201.svg" alt="tl logo" id="tl1">
+<img src="../svg/br-tl%202.svg" alt="tl logo" id="tl2">
 <form method="post" class ="Box">
     <h1>Modifier Offre</h1>
     <div class="navbarc">

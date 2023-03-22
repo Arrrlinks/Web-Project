@@ -4,7 +4,7 @@ const staticAssets = [
     '/',
     '/accueil.php',
     '/styles.css',
-    '/imgs/logo.png',
+    '/img/logo.png',
     '/site.webmanifest'
 ];
 
