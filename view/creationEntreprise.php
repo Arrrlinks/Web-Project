@@ -13,7 +13,7 @@ include 'element/sidenav/sidenav.php';
 <form method="post" class="rectangle">
     <h1>Créer une entreprise </h1>
     <div class="navbarc">
-        <a href="?creationEntreprise"><ion-icon name="home-sharp"></ion-icon></a>
+        <a href="?creationEntreprise" class="selected"><ion-icon name="home-sharp"></ion-icon></a>
         <a href="?creationUser"><ion-icon name="person-add"></ion-icon></a>
         <a href="?creationOffre"><ion-icon name="create"></ion-icon></a>
     </div>
@@ -30,7 +30,7 @@ include 'element/sidenav/sidenav.php';
         <input type="text" name="secteurEntr" id="secteurEntr" class="Cform" required>
     </div>
     <div>
-        <label for="conf">Confiance de l'Entreprise</label><br>
+        <label for="conf">Confiance attribuée</label><br>
         <div class="rating">
             <input type="radio" id="star1" name="rating" value="5" required>
             <label for="star1" title="1 étoile">
@@ -63,6 +63,7 @@ include 'element/sidenav/sidenav.php';
       </span>
         <label for="Adr"></label><input type="text" name="Adr[]" id="Adr" class="adresse">
     </div>
+    <br>
     <div class="button">
         <button type="submit" class="Cbutton">Creer</button>
     </div>

@@ -26,6 +26,7 @@
     height: 50px;
 }
 .button{
+    width: 200%;
     color: var(--blue);
     display: flex;
     justify-content: center;
@@ -85,9 +86,17 @@ select.CreationOffreInput{
         display: block;
     }
     .button{
+        width: 50%;
         margin-top: 10px;
         display: block;
         margin-left: 50%;
         transform: translateX(-40%);
     }
+    .Box div{
+        margin-top: 20px;
+    }
+}
+
+.selected ion-icon{
+    color: var(--dark-blue);
 }

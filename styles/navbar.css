@@ -36,6 +36,7 @@
 }
 
 .icon-group ion-icon {
+    color: var(--blue);
     margin-right: 10px; /* Espacement entre les icônes */
 }
 
@@ -111,6 +112,12 @@
 
 @media screen and (max-width: 520px) {
     .navbar{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 815px) {
+    .nav-searchbar {
         display: none;
     }
 }

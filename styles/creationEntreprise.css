@@ -63,9 +63,12 @@
 }
 
 .button{
+    width: 200%;
     display: flex;
+    align-items: center;
     justify-content: center;
     color: var(--blue);
+    margin-top: -20px;
 }
 
 .Cbutton{
@@ -154,9 +157,24 @@
         display: block;
     }
     .button{
-        margin-top: -40px;
+        margin-top: -60px;
+        margin-bottom: -40px;
         display: block;
         margin-left: 50%;
-        transform: translateX(-40%);
+        transform: translate(-40%,-40px);
+        width: 40%;
     }
+    .rectangle div:not(.rating){
+        margin-top: 20px;
+    }
+    .rating {
+        margin-bottom: 20px;
+    }
+    .rating ion-icon{
+        font-size: 50px;
+    }
+}
+
+.selected ion-icon{
+    color: var(--dark-blue);
 }

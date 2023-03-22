@@ -224,6 +224,7 @@
 .pagination-icon{
     font-size: 20px;
     margin: 10px;
+    color: var(--blue);
 }
 
 .pagination{
