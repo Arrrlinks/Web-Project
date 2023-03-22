@@ -11,7 +11,7 @@
     <div class="navbarc">
         <a href="?creationEntreprise"><ion-icon name="home-sharp"></ion-icon></a>
         <a href="?creationUser"><ion-icon name="person-add"></ion-icon></a>
-        <a href="?creationOffre"><ion-icon name="create"></ion-icon></a>
+        <a href="?creationOffre" class="selected"><ion-icon name="create"></ion-icon></a>
     </div>
         <div>
             <label for="nom">Intitulé du poste</label>

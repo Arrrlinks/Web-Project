@@ -25,10 +25,10 @@
         <a href="?creationEntreprise">
             <ion-icon name="home-sharp"></ion-icon>
         </a>
-        <a href="?creationUser.php">
+        <a href="?creationUser" class="selected">
             <ion-icon name="person-add"></ion-icon>
         </a>
-        <a href="?creationOffre.php">
+        <a href="?creationOffre">
             <ion-icon name="create"></ion-icon>
         </a>
     </div>

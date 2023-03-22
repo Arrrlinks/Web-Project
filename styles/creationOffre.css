@@ -91,3 +91,7 @@ select.CreationOffreInput{
         transform: translateX(-40%);
     }
 }
+
+.selected ion-icon{
+    color: var(--dark-blue);
+}

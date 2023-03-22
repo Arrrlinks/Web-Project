@@ -13,7 +13,7 @@ include 'element/sidenav/sidenav.php';
 <form method="post" class="rectangle">
     <h1>Créer une entreprise </h1>
     <div class="navbarc">
-        <a href="?creationEntreprise"><ion-icon name="home-sharp"></ion-icon></a>
+        <a href="?creationEntreprise" class="selected"><ion-icon name="home-sharp"></ion-icon></a>
         <a href="?creationUser"><ion-icon name="person-add"></ion-icon></a>
         <a href="?creationOffre"><ion-icon name="create"></ion-icon></a>
     </div>
