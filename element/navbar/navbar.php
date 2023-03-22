@@ -4,6 +4,7 @@
         <label>
             <input type="hidden" name="navigation">
             <input name="q" placeholder="Rechercher un stage" type="search">
+            <input type="hidden" name="page" value="1">
         </label>
     </form>
     <div class="icon-group">

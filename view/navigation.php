@@ -46,8 +46,13 @@
         echo'<div class="personne">';
         echo '<div class="name">Aucun résultat pour votre recherche.</div>';
         echo'</div>';
+        echo'<div class="pagination">';
+        echo'<a href="?navigation&q='.$_GET['q'].'&page='.($page-1).'">';
+        echo'<ion-icon class=pagination-icon name="arrow-back-outline"></ion-icon>';
+        echo'</a>';
+        echo'</div>';
     } else {
-    foreach ($usersResult as $row) {;
+    foreach ($usersResult as $row) {
 echo'<div class="personne">';
 echo'<div class="name">' . strtoupper($row['nom']).' '.ucfirst(strtolower($row['prenom'])) . '</div>';
 echo'<div class="promotion">' .$row['promo']. '</div>';
@@ -58,8 +63,25 @@ echo'<ion-icon class="delete-icon" name="trash-outline"></ion-icon>';
 echo'<button class="stats-button">Statistiques</button>';
 echo'</div>';
 echo'</div>';
-}} ?>
-    </div>';
+} if ($page == 1) {
+            echo '<div class="pagination">';
+            echo '<a href="?navigation&q=' . $_GET['q'] . '&page=' . ($page + 1) . '">';
+            echo '<ion-icon class=pagination-icon name="arrow-forward-outline"></ion-icon>';
+            echo '</a>';
+            echo '</div>';
+        }
+    if ($page > 1) {
+        echo '<div class="pagination">';
+        echo '<a href="?navigation&q=' . $_GET['q'] . '&page=' . ($page - 1) . '">';
+        echo '<ion-icon class=pagination-icon name="arrow-back-outline"></ion-icon>';
+        echo '</a>';
+        echo '<a href="?navigation&q=' . $_GET['q'] . '&page=' . ($page + 1) . '">';
+        echo '<ion-icon class=pagination-icon name="arrow-forward-outline"></ion-icon>';
+        echo '</a>';
+        echo '</div>';}
+    }
+    ?>
+    </div>
 
 <div class=box-entreprise>
     <h1 class="titlebox">Entreprises</h1>
