@@ -63,6 +63,7 @@
     position: relative;
     width: 70%;
     margin: auto 15% 50px auto;
+    padding-bottom: 20px;
     background-color: var(--clear-white);
     border-radius: 20px;
     display: flex;
@@ -81,7 +82,7 @@
     position: relative;
     width: 85%;
     height: 160px;
-    margin: 25px auto;
+    margin: 12.5px auto 12.5px auto;
     background-color: var(--light-gray);
     padding: 20px;
     border-radius: 20px;
@@ -123,7 +124,7 @@
     margin: 20px;
 }
 
-.stage .stars-icon {
+.stars-icon {
     font-size: 16px;
     color: #F88459;
 }
@@ -136,25 +137,29 @@
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    padding-bottom: 20px;
 }
 
 .personne {
     position: relative;
     width: 85%;
-    margin: 25px auto;
+    margin: 12.5px auto 12.5px auto;
     background-color: var(--light-gray);
     padding: 20px;
     border-radius: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    place-items: start;
     align-items: center;
 }
 
 .personne .icon{
     font-size: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: end;
     align-items: center;
-    display: flex;
 }
 
 .personne .delete-icon{
@@ -183,26 +188,29 @@
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    padding-bottom: 20px;
 }
 
 .entreprise {
     position: relative;
     width: 85%;
-    /* height: 160px; */
-    margin: 25px auto;
+    margin: 12.5px auto 12.5px auto;
     background-color: var(--light-gray);
     padding: 20px;
     border-radius: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    place-items: start;
     align-items: center;
 }
 
 .entreprise .icon{
     font-size: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: end;
     align-items: center;
-    display: flex;
 }
 
 .entreprise .edit-icon{

@@ -40,7 +40,7 @@
   </div>
 </div>
 
-    <div class=box-personne>
+    <div class=box-personne id="box-personne">
     <h1 class="titlebox">Personnes</h1>
         <?php
         if ($usersResult === null || empty($usersResult)) {
@@ -54,22 +54,24 @@
                 echo '<div class="promotion">' . $row['promo'] . '</div>';
                 echo '<div class="role">' . $row['role'] . '</div>';
                 echo '<div class="icon">';
+                echo'<div>';
                 echo '<ion-icon class="edit-icon" name="create-outline"></ion-icon>';
                 echo '<ion-icon class="delete-icon" name="trash-outline"></ion-icon>';
+                echo'</div>';
                 echo '<button class="stats-button">Statistiques</button>';
                 echo '</div>';
                 echo '</div>';
             }
 
-            if ($totalPages > 1) {
+            if ($totalPagesUser > 1) {
                 echo '<div class="pagination">';
-                if ($page > 1) {
-                    echo '<a href="?navigation&q=' . $_GET['q'] . '&page=' . ($page - 1) . '">';
+                if ($pageUser > 1) {
+                    echo '<a href="?navigation&q=' . $_GET['q'] . '&userpage=' . ($pageUser - 1) . '&entreprisepage=' . ($pageEntreprise) . '&offrepage=' . ($pageOffre) . '#box-personne">';
                     echo '<ion-icon class=pagination-icon name="arrow-back-outline"></ion-icon>';
                     echo '</a>';
                 }
-                if ($page < $totalPages) {
-                    echo '<a href="?navigation&q=' . $_GET['q'] . '&page=' . ($page + 1) . '">';
+                if ($pageUser < $totalPagesUser) {
+                    echo '<a href="?navigation&q=' . $_GET['q'] . '&userpage=' . ($pageUser + 1) . '&entreprisepage=' . ($pageEntreprise) . '&offrepage=' . ($pageOffre) . '#box-personne">';
                     echo '<ion-icon class=pagination-icon name="arrow-forward-outline"></ion-icon>';
                     echo '</a>';
                 }
@@ -79,18 +81,52 @@
         ?>
     </div>
 
-<div class=box-entreprise>
+<div class="box-entreprise" id="box-entreprise">
     <h1 class="titlebox">Entreprises</h1>
-    <div class="entreprise">
-        <div class="name">CESI</div>
-        <div class="localisation">Nancy</div>
-        <div class="test">Etudiant</div>
-        <div class="icon">
-            <ion-icon class="edit-icon" name="create-outline"></ion-icon>
-            <ion-icon class="eye-icon" name="eye-outline"></ion-icon>
-            <button class="stats-button">Statistiques</button>
-        </div>
-    </div>
+    <?php
+    if ($entreprisesResult === null || empty($entreprisesResult)) {
+        echo '<div class="entreprise">';
+        echo '<div class="name">Aucun résultat pour votre recherche.</div>';
+        echo '</div>';
+    }else{
+        foreach ($entreprisesResult as $row){
+            echo '<div class="entreprise">';
+            echo '<div class="name">' . $row['name'] . '</div>';
+            echo '<div class="localisation">' . $row['activity'] . '</div>';
+            echo '<div class="stars-icon">';
+            for ($i = 1; $i <= 5; $i++) {
+                if ($i <= floor($row['scorePilot'])) {
+                    echo '<ion-icon name="star"></ion-icon>';
+                } else {
+                    echo '<ion-icon name="star-outline"></ion-icon>';
+                }
+            }
+            echo'</div>';
+            echo '<div class="icon">';
+            echo'<div>';
+            echo '<ion-icon class="edit-icon" name="create-outline"></ion-icon>';
+            echo '<ion-icon class="eye-icon" name="eye-outline"></ion-icon>';
+            echo'</div>';
+            echo '<button class="stats-button">Statistiques</button>';
+            echo '</div>';
+            echo '</div>';
+        }
+        if ($totalPagesEntreprise > 1) {
+            echo '<div class="pagination">';
+            if ($pageEntreprise > 1) {
+                echo '<a href="?navigation&q=' . $_GET['q'] . '&userpage=' . ($pageUser) . '&entreprisepage=' . ($pageEntreprise  - 1) . '&offrepage=' . ($pageOffre) . '#box-entreprise">';
+                echo '<ion-icon class=pagination-icon name="arrow-back-outline"></ion-icon>';
+                echo '</a>';
+            }
+            if ($pageEntreprise < $totalPagesEntreprise) {
+                echo '<a href="?navigation&q=' . $_GET['q'] . '&userpage=' . ($pageUser) . '&entreprisepage=' . ($pageEntreprise  + 1) . '&offrepage=' . ($pageOffre) . '#box-entreprise">';
+                echo '<ion-icon class=pagination-icon name="arrow-forward-outline"></ion-icon>';
+                echo '</a>';
+            }
+            echo '</div>';
+        }
+    }
+    ?>
 </div>
 <script src="../navigation.js"></script>
 

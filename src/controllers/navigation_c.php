@@ -2,10 +2,17 @@
 
 
 require_once('src/models/navigation_m.php');
-$page = $_GET['page'];
+$pageUser = $_GET['userpage'];
+$pageOffre = $_GET['offrepage'];
+$pageEntreprise = $_GET['entreprisepage'];
+
 $usersResult = getUsersResult();
 $offresResult = getOffresResult();
 $entreprisesResult = getEntreprisesResult();
 
-$totalPages = totalPages();
+$totalPagesUser = totalPagesUser();
+$totalPagesOffre = totalPagesOffre();
+$totalPagesEntreprise = totalPagesEntreprise();
+
+
 require_once('view/navigation.php');
