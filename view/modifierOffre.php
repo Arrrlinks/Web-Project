@@ -41,6 +41,7 @@
         <label for="Re">Rémunération</label>
         <input type="text" id="Re" class="ModifierOffreInput">
     </div>
+    <?= $isOffreCreated ?>
     <div class="button">
         <button type="submit" class="Mbutton">Modifier</button>
     </div>
