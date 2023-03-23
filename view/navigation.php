@@ -12,8 +12,8 @@
     <h1 class="titlebox">Stages</h1>
     <?php
     if ($offresResult === null || empty($offresResult)) {
-        echo '<div class="stage">';
-        echo '<div class="description">Aucun résultat pour votre recherche.</div>';
+        echo '<div class="aucunresultat">';
+        echo '<div>Aucun résultat pour votre recherche.</div>';
         echo '</div>';
     } else {
         foreach ($offresResult as $row) {
@@ -61,8 +61,8 @@
     <h1 class="titlebox">Personnes</h1>
         <?php
         if ($usersResult === null || empty($usersResult)) {
-            echo '<div class="personne">';
-            echo '<div class="name">Aucun résultat pour votre recherche.</div>';
+            echo '<div class="aucunresultat">';
+            echo '<div>Aucun résultat pour votre recherche.</div>';
             echo '</div>';
         } else {
             foreach ($usersResult as $row) {
@@ -102,8 +102,8 @@
     <h1 class="titlebox">Entreprises</h1>
     <?php
     if ($entreprisesResult === null || empty($entreprisesResult)) {
-        echo '<div class="entreprise">';
-        echo '<div class="name">Aucun résultat pour votre recherche.</div>';
+        echo '<div class="aucunresultat">';
+        echo '<div>Aucun résultat pour votre recherche.</div>';
         echo '</div>';
     }else{
         foreach ($entreprisesResult as $row){
