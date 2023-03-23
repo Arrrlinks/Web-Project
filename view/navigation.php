@@ -44,12 +44,10 @@
     <h1 class="titlebox">Personnes</h1>
         <?php
         if ($usersResult === null || empty($usersResult)) {
-            // If there are no results, output a message
             echo '<div class="personne">';
             echo '<div class="name">Aucun résultat pour votre recherche.</div>';
             echo '</div>';
         } else {
-            // If there are results, loop through them and output each one
             foreach ($usersResult as $row) {
                 echo '<div class="personne">';
                 echo '<div class="name">' . strtoupper($row['nom']) . ' ' . ucfirst(strtolower($row['prenom'])) . '</div>';
@@ -63,7 +61,6 @@
                 echo '</div>';
             }
 
-            // Output pagination links if there are multiple pages
             if ($totalPages > 1) {
                 echo '<div class="pagination">';
                 if ($page > 1) {
