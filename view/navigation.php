@@ -20,24 +20,51 @@
 <div class="result">
 <div class=box-stage>
     <h1 class="titlebox">Stages</h1>
-  <div class="stage">
-    <div class="title">Intitulé de stage</div>
-    <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et nibh nec risus scelerisque ornare. Vivamus egestas, justo vitae placerat vestibulum, tortor lacus accumsan orci, ac eleifend lacus libero a erat.</div>
-    <div class="bas-boxstage">
-          <div class="stars-icon">
-            <div class="confiance">Confiance du pilote :</div>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star-half"></ion-icon>
-          </div>
-          <div class="group-likeapply">
-        <ion-icon class="like-icon" name="heart-outline"></ion-icon>
-        <button class="apply-button">Postuler</button>
-        </div>
-    </div>
-  </div>
+    <?php
+    if ($offresResult === null || empty($offresResult)) {
+        echo '<div class="stage">';
+        echo '<div class="description">Aucun résultat pour votre recherche.</div>';
+        echo '</div>';
+    } else {
+        foreach ($offresResult as $row) {
+            echo '<div class="stage">';
+            echo '<div class="title">' . $row['nomOffre'] .'</div>';
+            echo '<div class="description">Compétences requises : '. $row['skills'] .'</div>';
+            echo '<div class="bas-boxstage">';
+            echo '<div class="stars-icon">';
+            echo '<div class="confiance">Confiance du pilote :</div>';
+            for ($i = 1; $i <= 5; $i++) {
+                if ($i <= floor($row['scorePilot'])) {
+                    echo '<ion-icon name="star"></ion-icon>';
+                } else {
+                    echo '<ion-icon name="star-outline"></ion-icon>';
+                }
+            }
+            echo '</div>';
+            echo '<div class="group-likeapply">';
+            echo '<ion-icon class="like-icon" name="heart-outline"></ion-icon>';
+            echo '<button class="apply-button">Postuler</button>';
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
+        }
+
+        if ($totalPagesOffre > 1) {
+            echo '<div class="pagination">';
+            if ($pageOffre > 1) {
+                echo '<a href="?navigation&q=' . $_GET['q'] . '&userpage=' . ($pageUser) . '&entreprisepage=' . ($pageEntreprise) . '&offrepage=' . ($pageOffre - 1) . '#box-personne">';
+                echo '<ion-icon class=pagination-icon name="arrow-back-outline"></ion-icon>';
+                echo '</a>';
+            }
+            if ($pageOffre < $totalPagesOffre) {
+                echo '<a href="?navigation&q=' . $_GET['q'] . '&userpage=' . ($pageUser) . '&entreprisepage=' . ($pageEntreprise) . '&offrepage=' . ($pageOffre  + 1) . '#box-personne">';
+                echo '<ion-icon class=pagination-icon name="arrow-forward-outline"></ion-icon>';
+                echo '</a>';
+            }
+            echo '</div>';
+        }
+    }
+    ?>
 </div>
 
     <div class=box-personne id="box-personne">

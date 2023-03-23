@@ -19,6 +19,15 @@ function getUsersResult()
 
 function getOffresResult()
 {
+    $recherche = $_GET['q'];
+    $offrepage = $_GET['offrepage'];
+    $bdd=dbConnect();
+    $req = $bdd->prepare('SELECT offre.nomOffre, offre.entreprise, offre.skills, offre.address, entreprise.scorePilot 
+    FROM offre INNER JOIN entreprise ON entreprise.name = offre.entreprise 
+    WHERE offre.nomOffre LIKE "%'.$recherche.'%" OR offre.entreprise LIKE "%'.$recherche.'%" OR offre.skills LIKE "%'.$recherche.'%" OR offre.address LIKE "%'.$recherche.'%" 
+    LIMIT 5 OFFSET '.($offrepage-1)*5);
+    $req->execute();
+    return $req->fetchAll();
 }
 
 function getEntreprisesResult()
@@ -52,5 +61,11 @@ function totalPagesEntreprise()
 
 function totalPagesOffre()
 {
+    $recherche = $_GET['q'];
+    $bdd=dbConnect();
+    $req = $bdd->prepare('SELECT count(*) as total FROM offre where nomOffre like "%'.$recherche.'%" or entreprise like "%'.$recherche.'%" or skills like "%'.$recherche.'%" or address like "%'.$recherche.'%"');
+    $req->execute();
+    $resultat = $req->fetch();
+    return ceil($resultat['total']/5);
 }
 
