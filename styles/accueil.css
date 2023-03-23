@@ -77,5 +77,4 @@
 .searchbar input:focus, input:hover {
     outline: none;
     color: var(--blue);
-    background-color: var(--clear-white);
 }
