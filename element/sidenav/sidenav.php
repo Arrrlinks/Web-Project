@@ -5,7 +5,7 @@
             error_reporting(0);
             session_start();
             echo '<li><a href="?"><ion-icon name="home-outline"></ion-icon>Accueil</a></li>';
-            echo '<li><a href="?navigation=&page=1"><ion-icon name="briefcase-outline"></ion-icon>Navigation</a></li>';
+            echo '<li><a href="?navigation=&q=&userpage=1&entreprisepage=1&offrepage=1"><ion-icon name="briefcase-outline"></ion-icon>Navigation</a></li>';
             if (isset($_SESSION['id'])) {
                 if (strtolower($_SESSION['role']) === 'etudiant') {
                     echo '<li><a href="#"><ion-icon name="heart-outline"></ion-icon>Wishlist</a></li>';
