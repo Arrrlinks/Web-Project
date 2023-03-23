@@ -6,19 +6,9 @@
 
 <img src="../svg/br-tl%201.svg" alt="tl logo" id="tl1">
 <img src="../svg/br-tl%202.svg" alt="tl logo" id="tl2">
-<div class=box-categorie>
-    <div class="categorie">
-      <button class="categorie1">Catégorie 1</button>
-      <button class="categorie2">Catégorie 2</button>
-      <button class="categorie3">Catégorie 3</button>
-      <button class="categorie4">Catégorie 4</button>
-      <button class="categorie5">Catégorie 5</button>
-      <button class="categorie6">Catégorie 6</button>
-      <button class="categorie7">Catégorie 7</button>
-    </div>
-</div>
+
 <div class="result">
-<div class=box-stage>
+<div class="box-stage" id="box-stage">
     <h1 class="titlebox">Stages</h1>
     <?php
     if ($offresResult === null || empty($offresResult)) {
@@ -52,12 +42,12 @@
         if ($totalPagesOffre > 1) {
             echo '<div class="pagination">';
             if ($pageOffre > 1) {
-                echo '<a href="?navigation&q=' . $_GET['q'] . '&userpage=' . ($pageUser) . '&entreprisepage=' . ($pageEntreprise) . '&offrepage=' . ($pageOffre - 1) . '#box-personne">';
+                echo '<a href="?navigation&q=' . $_GET['q'] . '&userpage=' . ($pageUser) . '&entreprisepage=' . ($pageEntreprise) . '&offrepage=' . ($pageOffre - 1) . '#box-stage">';
                 echo '<ion-icon class=pagination-icon name="arrow-back-outline"></ion-icon>';
                 echo '</a>';
             }
             if ($pageOffre < $totalPagesOffre) {
-                echo '<a href="?navigation&q=' . $_GET['q'] . '&userpage=' . ($pageUser) . '&entreprisepage=' . ($pageEntreprise) . '&offrepage=' . ($pageOffre  + 1) . '#box-personne">';
+                echo '<a href="?navigation&q=' . $_GET['q'] . '&userpage=' . ($pageUser) . '&entreprisepage=' . ($pageEntreprise) . '&offrepage=' . ($pageOffre  + 1) . '#box-stage">';
                 echo '<ion-icon class=pagination-icon name="arrow-forward-outline"></ion-icon>';
                 echo '</a>';
             }
@@ -155,7 +145,6 @@
     }
     ?>
 </div>
-<script src="../navigation.js"></script>
 
 
 
