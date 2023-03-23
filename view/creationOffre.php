@@ -20,43 +20,61 @@
             </a>
         </div>
         <div>
-            <label for="nom">Intitulé du poste</label>
-            <input type="text" name="nom" id="nom" class="CreationOffreInput">
+            <label for="nomPoste">Intitulé du poste</label>
+            <input type="text" name="nomPoste" id="nomPoste" class="CreationOffreInput" required>
         </div>
         <div>
             <label for="nombre">Nombre de place disponible</label>
-            <input type="number" id="nombre" class="CreationOffreInput">
+            <input type="number" id="nombre" name="nombre" class="CreationOffreInput" required>
         </div>
         <div>
-            <label for="Pro">Entreprise</label>
-            <select id="Pro" class="CreationOffreInput">
+            <label for="entreprise">Entreprise</label>
+            <select id="entreprise" name="entreprise" class="CreationOffreInput" required>
+                <option value="" disabled selected></option>
+                <?php
+                foreach ($entreprise as $value) {
+                    echo '<option value="' . $value['name'] . '">' . $value['name'] . '</option>';
+                }
+                ?>
             </select>
         </div>
         <div>
-            <label for="competence">Compétences</label>
-            <input type="text" id="competence" class="CreationOffreInput">
+            <label for="skills">Compétences</label>
+            <input type="text" id="skills" name="skills" class="CreationOffreInput" required>
             <br>
         </div>
         <div>
             <label for="Adr">Adresse</label>
-            <select id="Adr" class="CreationOffreInput">
+            <select id="Adr" name="Adr" class="CreationOffreInput" required>
             </select>
             <br>
-            <label for="Re">Rémunération</label>
-            <input type="text" id="Re" class="CreationOffreInput">
+            <label for="salary">Rémunération</label>
+            <input type="text" id="salary" name="salary" class="CreationOffreInput" required>
         </div>
         <div>
-            <label for="du">Du</label>
-            <input type="date" id="du" name="du" class="CreationOffreInput">
+            <label for="fromDate">Du</label>
+            <input type="date" id="fromDate" name="fromDate" class="CreationOffreInput" required>
             <br>
-            <label for="au">Au</label>
-            <input type="date" id="au" name="du" class="CreationOffreInput">
+            <label for="toDate">Au</label>
+            <input type="date" id="toDate" name="toDate" class="CreationOffreInput" required>
         </div>
         <div class="button">
             <button type="submit" class="Cbutton">Creer</button>
         </div>
 
     </form>
+    <script>
+        const entrepriseSelect = document.getElementById('entreprise');
+        const adrSelect = document.getElementById('Adr');
+        const entrepriseOptions = <?php echo json_encode($entreprise); ?>;
+    </script>
+    <script type="text/javascript" src="creationOffre.js"></script>
+
+
+
+
+
+
 
 <?php $content = ob_get_clean(); ?>
 <?php require('view/template.php'); ?>

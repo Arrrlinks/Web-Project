@@ -44,7 +44,7 @@ function createEntreprise(){
                 'idAdr' => $adr['idAdr']
             ));
         }
-        $req = $bdd->prepare('select address, name, activity, numberOfEmployees, score, scorePilot from isLocated inner join localisation l on isLocated.idAdr = l.idAdr inner join entreprise e on isLocated.idEntreprise = e.idEnt');
+        $req = $bdd->prepare('select * from isLocated inner join localisation l on isLocated.idAdr = l.idAdr inner join entreprise e on isLocated.idEntreprise = e.idEnt');
         $resultat = $req->execute();
         if($resultat){
             return "L'entreprise a bien été créée";
