@@ -156,7 +156,7 @@
     ?>
 </div>
 
-<script type="text/javascript" src="wishlist.js">
+    <script type="text/javascript" src="wishlist.js"></script>
 
 <?php $content=ob_get_clean(); ?>
 <?php require('view/template.php');?>

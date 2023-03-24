@@ -14,7 +14,7 @@
         session_start();
         if(isset($_SESSION['id'])) {
             if($_SESSION['role']=='etudiant'){
-                echo '<a href="?wishlist"><ion-icon name="heart-outline"></ion-icon></a>';
+                echo '<a href="?wishlist&userpage=1"><ion-icon name="heart-outline"></ion-icon></a>';
                 echo '<a href="#"><ion-icon name="notifications"></ion-icon></a>';
             }
             else{

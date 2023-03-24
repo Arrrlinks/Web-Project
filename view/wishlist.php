@@ -32,7 +32,7 @@
                 }
                 echo '</div>';
                 echo '<div class="group-likeapply">';
-                echo '<button><ion-icon class="like-icon" name="heart-outline" style="--id:'. $row['idOffre'] .'" ></ion-icon></button>';
+                echo '<button style="--id:'. $row['idOffre'] .'"><ion-icon class="like-icon" name="heart-outline"></ion-icon></button>';
                 echo '<button class="apply-button" style="--id:'. $row['idOffre'] .'">Postuler</button>';
                 echo '</div>';
                 echo '</div>';
@@ -42,12 +42,12 @@
             if ($totalPagesOffre > 1) {
                 echo '<div class="pagination">';
                 if ($pageOffre > 1) {
-                    echo '<a href="?navigation&q=' . $_GET['q'] . '&userpage=' . ($pageUser) . '&entreprisepage=' . ($pageEntreprise) . '&offrepage=' . ($pageOffre - 1) . '#box-stage">';
+                    echo '<a href="?wishlist' . $_GET['q'] . '&userpage=' . ($pageUser) . '#box-stage">';
                     echo '<ion-icon class=pagination-icon name="arrow-back-outline"></ion-icon>';
                     echo '</a>';
                 }
                 if ($pageOffre < $totalPagesOffre) {
-                    echo '<a href="?navigation&q=' . $_GET['q'] . '&userpage=' . ($pageUser) . '&entreprisepage=' . ($pageEntreprise) . '&offrepage=' . ($pageOffre  + 1) . '#box-stage">';
+                    echo '<a href="?wishlist' . $_GET['q'] . '&userpage=' . ($pageUser) . '#box-stage">';
                     echo '<ion-icon class=pagination-icon name="arrow-forward-outline"></ion-icon>';
                     echo '</a>';
                 }
