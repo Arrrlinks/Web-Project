@@ -32,7 +32,9 @@
             }
             echo '</div>';
             echo '<div class="group-likeapply">';
-            echo '<button class="wishlistButton" style="--id:'. $row['idOffre'] .'"><ion-icon class="like-icon" name="heart-outline"></ion-icon></button>';
+            if (isStudentSession() or isAdminSession()) {
+                echo '<button class="wishlistButton" style="--id:' . $row['idOffre'] . '"><ion-icon class="like-icon" name="heart-outline"></ion-icon></button>';
+            }
             echo '<button class="apply-button" style="--id:'. $row['idOffre'] .'">Postuler</button>';
             echo '</div>';
             echo '</div>';
@@ -72,10 +74,17 @@
                 echo '<div class="promotion">' . $row['promo'] . '</div>';
                 echo '<div class="role">' . $row['role'] . '</div>';
                 echo '<div class="icon">';
-                echo'<div>';
-                echo '<ion-icon class="edit-icon" name="create-outline"></ion-icon>';
-                echo '<ion-icon class="delete-icon" name="trash-outline"></ion-icon>';
-                echo'</div>';
+                if($row['role'] == 'pilote' and isPilotSession()) {
+                    echo '<div>';
+                    echo '<ion-icon class="edit-icon" name="create-outline" style="display:none"></ion-icon>';
+                    echo '<ion-icon class="delete-icon" name="trash-outline" style="display:none"></ion-icon>';
+                    echo '</div>';
+                } else{
+                    echo '<div>';
+                    echo '<ion-icon class="edit-icon" name="create-outline"></ion-icon>';
+                    echo '<ion-icon class="delete-icon" name="trash-outline"></ion-icon>';
+                    echo '</div>';
+                }
                 echo '<button class="stats-button">Statistiques</button>';
                 echo '</div>';
                 echo '</div>';

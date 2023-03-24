@@ -78,3 +78,7 @@
     outline: none;
     color: var(--blue);
 }
+
+.nav-searchbar{
+    display :none;
+}
