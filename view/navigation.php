@@ -72,10 +72,17 @@
                 echo '<div class="promotion">' . $row['promo'] . '</div>';
                 echo '<div class="role">' . $row['role'] . '</div>';
                 echo '<div class="icon">';
-                echo'<div>';
-                echo '<ion-icon class="edit-icon" name="create-outline"></ion-icon>';
-                echo '<ion-icon class="delete-icon" name="trash-outline"></ion-icon>';
-                echo'</div>';
+                if($row['role'] == 'pilote' and isPilotSession()) {
+                    echo '<div>';
+                    echo '<ion-icon class="edit-icon" name="create-outline" style="display:none"></ion-icon>';
+                    echo '<ion-icon class="delete-icon" name="trash-outline" style="display:none"></ion-icon>';
+                    echo '</div>';
+                } else{
+                    echo '<div>';
+                    echo '<ion-icon class="edit-icon" name="create-outline"></ion-icon>';
+                    echo '<ion-icon class="delete-icon" name="trash-outline"></ion-icon>';
+                    echo '</div>';
+                }
                 echo '<button class="stats-button">Statistiques</button>';
                 echo '</div>';
                 echo '</div>';
