@@ -6,7 +6,7 @@
 
     <img src="../svg/br-tl%201.svg" alt="tl logo" id="tl1">
     <img src="../svg/br-tl%202.svg" alt="tl logo" id="tl2">
-    <form method="post" class="Box">
+    <form method="post" class="Box" onsubmit="return submitForm(this);">
         <h1>Créer une offre</h1>
         <div class="navbarc">
             <a href="?creationEntreprise">
