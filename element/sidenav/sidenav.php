@@ -9,8 +9,13 @@
             if (isset($_SESSION['id'])) {
                 if (strtolower($_SESSION['role']) === 'etudiant') {
                     echo '<li><a href="?wishlist&userpage=1"><ion-icon name="heart-outline"></ion-icon>Wishlist</a></li>';
-                } else {
+                } if(strtolower($_SESSION['role']) === 'pilote') {
                     echo '<li><a href="?creationEntreprise"><ion-icon name="add-circle-outline"></ion-icon>Creation</a></li>';
+                }
+                if (strtolower($_SESSION['role']) === 'admin') {
+                    echo '<li><a href="?wishlist&userpage=1"><ion-icon name="heart-outline"></ion-icon>Wishlist</a></li>';
+                    echo '<li><a href="?creationEntreprise"><ion-icon name="add-circle-outline"></ion-icon>Creation</a></li>';
+
                 }
                 echo '<li><a href="#"><ion-icon name="notifications-outline"></ion-icon>Notification</a></li>';
             }
