@@ -57,9 +57,10 @@
     ?>
 </div>
 
-    <div class=box-personne id="box-personne">
-    <h1 class="titlebox">Personnes</h1>
-        <?php
+<?php
+        if(isPilotSession() or isAdminSession()){
+        echo'<div class=box-personne id="box-personne">';
+        echo'<h1 class="titlebox">Personnes</h1>';
         if ($usersResult === null || empty($usersResult)) {
             echo '<div class="aucunresultat">';
             echo '<div>Aucun résultat pour votre recherche.</div>';
@@ -95,8 +96,9 @@
                 echo '</div>';
             }
         }
-        ?>
-    </div>
+    echo'</div>';
+        }
+?>
 
 <div class="box-entreprise" id="box-entreprise">
     <h1 class="titlebox">Entreprises</h1>
@@ -120,10 +122,18 @@
             }
             echo'</div>';
             echo '<div class="icon">';
-            echo'<div>';
-            echo '<ion-icon class="edit-icon" name="create-outline"></ion-icon>';
-            echo '<ion-icon class="eye-icon" name="eye-outline"></ion-icon>';
-            echo'</div>';
+            if(isPilotSession() or isAdminSession()) {
+                echo '<div>';
+                echo '<ion-icon class="edit-icon" name="create-outline"></ion-icon>';
+                echo '<ion-icon class="eye-icon" name="eye-outline"></ion-icon>';
+                echo '</div>';
+            }
+            if(isStudentSession()) {
+                echo '<div>';
+                echo '<ion-icon class="edit-icon" name="create-outline" style="display: none"></ion-icon>';
+                echo '<ion-icon class="eye-icon" name="eye-outline" style="display: none"></ion-icon>';
+                echo '</div>';
+            }
             echo '<button class="stats-button">Statistiques</button>';
             echo '</div>';
             echo '</div>';
