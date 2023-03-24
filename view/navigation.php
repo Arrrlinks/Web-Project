@@ -32,7 +32,9 @@
             }
             echo '</div>';
             echo '<div class="group-likeapply">';
-            echo '<button class="wishlistButton" style="--id:'. $row['idOffre'] .'"><ion-icon class="like-icon" name="heart-outline"></ion-icon></button>';
+            if (isStudentSession() or isAdminSession()) {
+                echo '<button class="wishlistButton" style="--id:' . $row['idOffre'] . '"><ion-icon class="like-icon" name="heart-outline"></ion-icon></button>';
+            }
             echo '<button class="apply-button" style="--id:'. $row['idOffre'] .'">Postuler</button>';
             echo '</div>';
             echo '</div>';
