@@ -103,7 +103,6 @@
 }
 
 .personne .icon{
-    font-size: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: end;
@@ -112,10 +111,12 @@
 
 .personne .delete-icon{
     color:darkred;
+    font-size: 20px;
 }
 
 .personne .edit-icon{
     color:var(--blue);
+    font-size: 20px;
 }
 
 .group-likeapply{
@@ -154,11 +155,11 @@
 }
 
 .entreprise .icon{
-    font-size: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: end;
     align-items: center;
+    font-size: 20px;
 }
 
 .entreprise .edit-icon{
@@ -224,7 +225,7 @@
     border-radius: 20px;
 }
 
-.group-likeapply button{
+#nodisplay-button{
     background: none;
     border: none;
     cursor: pointer;

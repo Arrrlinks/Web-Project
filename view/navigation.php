@@ -33,7 +33,7 @@
             echo '</div>';
             echo '<div class="group-likeapply">';
             if (isStudentSession() or isAdminSession()) {
-                echo '<button class="wishlistButton" style="--id:' . $row['idOffre'] . '"><ion-icon class="like-icon" name="heart-outline"></ion-icon></button>';
+                echo '<button class="wishlistButton" id="nodisplay-button" style="--id:' . $row['idOffre'] . '"><ion-icon class="like-icon" name="heart-outline"></ion-icon></button>';
             }
             echo '<button class="apply-button" style="--id:'. $row['idOffre'] .'">Postuler</button>';
             echo '</div>';
@@ -81,8 +81,8 @@
                     echo '</div>';
                 } else{
                     echo '<div>';
-                    echo '<ion-icon class="edit-icon" name="create-outline"></ion-icon>';
-                    echo '<ion-icon class="delete-icon" name="trash-outline"></ion-icon>';
+                    echo '<a class="editButton" id="nodisplay-button" href="index.php?modifierUtilisateur&user=' . $row['id'] . '"><ion-icon class="edit-icon" name="create-outline"></ion-icon></a>';
+                    echo '<a class="deleteButton" id="nodisplay-button" style="--id:' . $row['id'] . '"><ion-icon class="delete-icon" name="trash-outline"></ion-icon></a>';
                     echo '</div>';
                 }
                 if($row['role'] == 'etudiant') {
