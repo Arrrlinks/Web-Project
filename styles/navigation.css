@@ -177,6 +177,25 @@
     margin-left: 15px;
 }
 
+.stats-button-off{
+    padding: 10px 20px;
+    background-color: #616161;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 15px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: not-allowed;
+    transition: all 0.3s ease;
+    margin-left: 15px;
+}
+
 .pagination-icon{
     font-size: 20px;
     margin: 10px;
