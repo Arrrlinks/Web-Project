@@ -2,10 +2,11 @@
     padding-left: 10px;
     color: var(--home-title);
 }
+
 .rectangle{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color:  var(--white);
+    background-color: var(--clear-white);
     grid-gap: 30px;
     padding: 40px;
     width: 60%;
@@ -15,7 +16,7 @@
 }
 
 .rectangle label{
-    color: var(--text-color);
+    color: var(--blue);
 }
 
 .Cform{
@@ -35,10 +36,6 @@
     transition: .3s;
     border: 2px solid var(--blue);
     outline: none;
-}
-
-#adresseBox{
-    margin-top: -20px;
 }
 
 .adresse{
@@ -66,7 +63,7 @@
     color: var(--blue);
 }
 
-.Cbutton{
+.Mbutton{
     background-color:var(--blue) ;
     color: var(--clear-white);
     border-radius: 10px;
@@ -122,6 +119,28 @@
         font-size: 20px;
     }
 }
+.navbarc {
+    display:flex;
+    flex-direction: row;
+    align-items: end;
+    width: 80%;
+    height: 5px;
+    margin-left: 50%;
+    color: var(--blue);
+    font-size: 40px;
+    z-index: 997;
+    padding: 40px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease-in-out;
+    grid-column: 2;
+    grid-row: 1;
+
+}
+.navbarc ion-icon {
+    margin-right: 10px; /* Espacement entre les icônes */
+    color: var(--blue);
+}
+
 @media (max-width: 768px){
     .rectangle{
         width: 100%;

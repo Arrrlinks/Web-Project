@@ -1,17 +1,13 @@
-<?php $title = "StatOffre"; ?>
-<?php $css = "statOffre.css"; ?>
+<?php $title = "stat Etudiant"; ?>
+<?php $css = "statEntreprise.css"; ?>
 <?php $navbar = 1; ?>
 <?php $sidenav = 1; ?>
 <?php ob_start(); ?>
-<img src="svgs/br-tl 1.svg" alt="tl logo" id="tl1">
-<img src="svgs/br-tl 2.svg" alt="tl logo" id="tl2">
-
+<img src="../svg/br-tl%201.svg" alt="tl logo" id="tl1">
+<img src="../svg/br-tl%202.svg" alt="tl logo" id="tl2">
 <form method="post" class="rectangle">
-    <h1>Créer une entreprise </h1>
-    <div class="navbarc">
-        <a href="?creationEntreprise"><ion-icon name="home-sharp"></ion-icon></a>
-        <a href="?creationUser"><ion-icon name="person-add"></ion-icon></a>
-        <a href="?creationOffre"><ion-icon name="create"></ion-icon></a>
+    <h1>Stat Entreprise </h1>
+    <div>
     </div>
     <div>
         <label for="nameEntr">Nom de l'entreprise</label>
@@ -49,7 +45,6 @@
                 <ion-icon name="star"></ion-icon>
             </label>
         </div>
-
     </div>
     <div id="adresseBox">
         <label>Adresse</label>
@@ -58,9 +53,6 @@
             <button type="button" class="addAdr" onclick="addAdr()"><ion-icon name="add-outline"></ion-icon></button>
       </span>
         <label for="Adr"></label><input type="text" name="Adr" id="Adr" class="adresse">
-    </div>
-    <div class="button">
-        <button type="submit" class="Cbutton">Creer</button>
     </div>
 </form>
 <script src="../creationEntreprise.js"></script>
