@@ -85,7 +85,12 @@
                     echo '<ion-icon class="delete-icon" name="trash-outline"></ion-icon>';
                     echo '</div>';
                 }
-                echo '<button class="stats-button">Statistiques</button>';
+                if($row['role'] == 'etudiant') {
+                    echo '<button class="stats-button">Statistiques</button>';
+                }
+                if($row['role'] == 'pilote') {
+                    echo '<button class="stats-button-off">Statistiques</button>';
+                }
                 echo '</div>';
                 echo '</div>';
             }

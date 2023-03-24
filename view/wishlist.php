@@ -32,7 +32,7 @@
                 }
                 echo '</div>';
                 echo '<div class="group-likeapply">';
-                echo '<button style="--id:'. $row['idOffre'] .'"><ion-icon class="like-icon" name="heart-outline"></ion-icon></button>';
+                echo '<button class="wishlistButton" style="--id:'. $row['idOffre'] .'"><ion-icon class="like-icon" name="heart-outline"></ion-icon></button>';
                 echo '<button class="apply-button" style="--id:'. $row['idOffre'] .'">Postuler</button>';
                 echo '</div>';
                 echo '</div>';
@@ -58,6 +58,7 @@
     </div>
     </div>
 
+<script src="wishlist.js"></script>
 
 <?php $content=ob_get_clean(); ?>
 <?php require('view/template.php');?>

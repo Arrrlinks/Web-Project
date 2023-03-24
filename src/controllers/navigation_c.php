@@ -12,5 +12,6 @@ $totalPagesUser = totalPagesUser();
 $totalPagesOffre = totalPagesOffre();
 $totalPagesEntreprise = totalPagesEntreprise();
 
+;
 
 require_once('view/navigation.php');

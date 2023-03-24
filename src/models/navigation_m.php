@@ -71,4 +71,3 @@ function totalPagesOffre()
     $resultat = $req->fetch();
     return ceil($resultat['total']/5);
 }
-

@@ -5,7 +5,6 @@ function getAccount()
     ifNoSessionExit();
     if(isset($_SESSION['id']))
     {
-        session_start();
         $username = $_SESSION['username'];
         $nom = $_SESSION['nom'];
         $prenom = $_SESSION['prenom'];

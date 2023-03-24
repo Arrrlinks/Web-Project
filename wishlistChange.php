@@ -2,7 +2,6 @@
 
 require_once('src/models/init.php');
 
-
 if (isset($_POST['id']) && isset($_SESSION['id'])) {
     $id = $_POST['id'];
     $user_id = $_SESSION['id'];
