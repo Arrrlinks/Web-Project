@@ -11,12 +11,12 @@
     <div class="box-stage" id="box-stage">
         <h1 class="titlebox">Wishlist</h1>
         <?php
-        if ($offresResult === null || empty($offresResult)) {
+        if ($wishlistResult === null || empty($wishlistResult)) {
             echo '<div class="aucunresultat">';
             echo '<div>Aucune offre enregistrée.</div>';
             echo '</div>';
         } else {
-            foreach ($offresResult as $row) {
+            foreach ($wishlistResult as $row) {
                 echo '<div class="stage">';
                 echo '<div class="title">' . $row['nomOffre'] .'</div>';
                 echo '<div class="description">Compétences requises : '. $row['skills'] .'</div>';
@@ -39,15 +39,15 @@
                 echo '</div>';
             }
 
-            if ($totalPagesOffre > 1) {
+            if ($totalPagesWishlist > 1) {
                 echo '<div class="pagination">';
-                if ($pageOffre > 1) {
-                    echo '<a href="?wishlist' . $_GET['q'] . '&userpage=' . ($pageUser) . '#box-stage">';
+                if ($pageWishlist > 1) {
+                    echo '<a href="?wishlist&wishlistpage=' . ($pageWishlist-1) . '">';
                     echo '<ion-icon class=pagination-icon name="arrow-back-outline"></ion-icon>';
                     echo '</a>';
                 }
-                if ($pageOffre < $totalPagesOffre) {
-                    echo '<a href="?wishlist' . $_GET['q'] . '&userpage=' . ($pageUser) . '#box-stage">';
+                if ($pageWishlist < $totalPagesWishlist) {
+                    echo '<a href="?wishlist&wishlistpage=' . ($pageWishlist+1) .'">';
                     echo '<ion-icon class=pagination-icon name="arrow-forward-outline"></ion-icon>';
                     echo '</a>';
                 }
