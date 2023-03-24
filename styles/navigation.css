@@ -199,3 +199,9 @@
     padding: 20px;
     border-radius: 20px;
 }
+
+.group-likeapply button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}

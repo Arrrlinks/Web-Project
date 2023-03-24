@@ -7,7 +7,7 @@ function getUsersResult()
     $recherche = $_GET['q'];
     $userpage = $_GET['userpage'];
     $bdd=dbConnect();
-    $req = $bdd->prepare('SELECT nom,prenom,role,promo,centre FROM users WHERE (username LIKE "%'.$recherche.'%" 
+    $req = $bdd->prepare('SELECT id,nom,prenom,role,promo,centre FROM users WHERE (username LIKE "%'.$recherche.'%" 
         OR nom LIKE "%'.$recherche.'%" 
         OR prenom LIKE "%'.$recherche.'%" 
         OR promo LIKE "%'.$recherche.'%" 
@@ -22,9 +22,12 @@ function getOffresResult()
     $recherche = $_GET['q'];
     $offrepage = $_GET['offrepage'];
     $bdd=dbConnect();
-    $req = $bdd->prepare('SELECT offre.nomOffre, offre.entreprise, offre.skills, offre.address, entreprise.scorePilot 
+    $req = $bdd->prepare('SELECT offre.idOffre, offre.nomOffre, offre.entreprise, offre.skills, offre.address, entreprise.scorePilot 
     FROM offre INNER JOIN entreprise ON entreprise.name = offre.entreprise 
-    WHERE offre.nomOffre LIKE "%'.$recherche.'%" OR offre.entreprise LIKE "%'.$recherche.'%" OR offre.skills LIKE "%'.$recherche.'%" OR offre.address LIKE "%'.$recherche.'%" 
+    WHERE offre.nomOffre LIKE "%'.$recherche.'%" 
+    OR offre.entreprise LIKE "%'.$recherche.'%" 
+    OR offre.skills LIKE "%'.$recherche.'%" 
+    OR offre.address LIKE "%'.$recherche.'%" 
     LIMIT 5 OFFSET '.($offrepage-1)*5);
     $req->execute();
     return $req->fetchAll();

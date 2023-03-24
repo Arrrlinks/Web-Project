@@ -32,8 +32,8 @@
             }
             echo '</div>';
             echo '<div class="group-likeapply">';
-            echo '<ion-icon class="like-icon" name="heart-outline"></ion-icon>';
-            echo '<button class="apply-button">Postuler</button>';
+            echo '<button><ion-icon class="like-icon" name="heart-outline" style="--id:'. $row['idOffre'] .'" ></ion-icon></button>';
+            echo '<button class="apply-button" style="--id:'. $row['idOffre'] .'">Postuler</button>';
             echo '</div>';
             echo '</div>';
             echo '</div>';
