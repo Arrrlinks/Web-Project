@@ -9,12 +9,10 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
 }
-
 .box-account .title {
     font-weight: bold;
     margin: 40px 0 40px 40px;
 }
-
 .box-account .info {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -22,20 +20,16 @@
     grid-gap: 20px;
     margin: 0 0 40px 40px;
 }
-
 .box-account .label {
     font-weight: bold;
 }
-
 .box-account .value {
     margin-top: 5px;
 }
-
 .box-account #user_illustration{
     width: 319px;
     height: 219px;
 }
-
 .box-account button{
     width: 75%;
     grid-column: span 2;
@@ -51,12 +45,10 @@
     cursor: pointer;
     transition: 0.1s;
 }
-
 .box-account button a{
     color: var(--clear-white);
     text-decoration: none;
 }
-
 @media (max-width: 950px) {
     .box-account{
         width: 100%;
