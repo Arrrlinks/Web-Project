@@ -196,6 +196,11 @@
     margin-left: 15px;
 }
 
+.stats-button:hover {
+    background-color: var(--dark-blue);
+}
+
+
 .pagination-icon{
     font-size: 20px;
     margin: 10px;
