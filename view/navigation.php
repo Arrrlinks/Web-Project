@@ -86,7 +86,7 @@
                     echo '</div>';
                 }
                 if($row['role'] == 'etudiant') {
-                    echo '<button class="stats-button">Statistiques</button>';
+                    echo '<a href="?statEtudiant&id='.$row['id'].'"><button class="stats-button" >Statistiques</button></a>';
                 }
                 if($row['role'] == 'pilote') {
                     echo '<button class="stats-button-off">Statistiques</button>';
