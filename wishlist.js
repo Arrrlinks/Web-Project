@@ -11,9 +11,28 @@ for (let i = 0; i < wishlistBtn.length; i++) {
             if (xhr.status === 200) {
                 if (xhr.responseText === 'added') {
                     wishlistBtn[i].innerHTML = '<ion-icon name="heart" class="like-icon"></ion-icon>';
+                    Swal.fire({
+                        position: 'bottom-end',
+                        width: '300px',
+                        icon: 'success',
+                        title: "L'offre a été ajoutée à la wishlist",
+                        showConfirmButton: false,
+                        timer: 2000,
+                        backdrop: false,
+                    });
                 }
                 else if (xhr.responseText === 'deleted') {
                     wishlistBtn[i].innerHTML = '<ion-icon name="heart-outline" class="like-icon"></ion-icon>';
+                    Swal.fire({
+                        position: 'bottom-end',
+                        width: '300px',
+                        icon: 'error',
+                        title: "L'offre a été supprimée à la wishlist",
+                        showConfirmButton: false,
+                        timer: 2000,
+                        backdrop: false,
+                    });
+
                 }
                 else {
                     console.log('Erreur lors de la requête.');
