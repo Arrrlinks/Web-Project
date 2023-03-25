@@ -27,7 +27,7 @@ for (let i = 0; i < wishlistBtn.length; i++) {
                         position: 'bottom-end',
                         width: '300px',
                         icon: 'error',
-                        title: "L'offre a été supprimée à la wishlist",
+                        title: "L'offre a été supprimée de la wishlist",
                         showConfirmButton: false,
                         timer: 1000,
                         backdrop: false,
@@ -35,11 +35,27 @@ for (let i = 0; i < wishlistBtn.length; i++) {
 
                 }
                 else {
-                    console.log('Erreur lors de la requête.');
+                    Swal.fire({
+                        position: 'bottom-end',
+                        width: '300px',
+                        icon: 'error',
+                        title: "Une erreur est survenue",
+                        showConfirmButton: false,
+                        timer: 1000,
+                        backdrop: false,
+                    });
                 }
             }
             else {
-                console.log('Erreur lors de la requête.');
+                Swal.fire({
+                    position: 'bottom-end',
+                    width: '300px',
+                    icon: 'warning',
+                    title: "Une erreur est survenue",
+                    showConfirmButton: false,
+                    timer: 1000,
+                    backdrop: false,
+                });
             }
         };
         xhr.send('id=' + id);
