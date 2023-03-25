@@ -17,7 +17,7 @@ for (let i = 0; i < wishlistBtn.length; i++) {
                         icon: 'success',
                         title: "L'offre a été ajoutée à la wishlist",
                         showConfirmButton: false,
-                        timer: 2000,
+                        timer: 1000,
                         backdrop: false,
                     });
                 }
@@ -29,7 +29,7 @@ for (let i = 0; i < wishlistBtn.length; i++) {
                         icon: 'error',
                         title: "L'offre a été supprimée à la wishlist",
                         showConfirmButton: false,
-                        timer: 2000,
+                        timer: 1000,
                         backdrop: false,
                     });
 
