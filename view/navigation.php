@@ -33,7 +33,12 @@
             echo '</div>';
             echo '<div class="group-likeapply">';
             if (isStudentSession() or isAdminSession()) {
-                echo '<button class="wishlistButton" id="nodisplay-button" style="--id:' . $row['idOffre'] . '"><ion-icon class="like-icon" name="heart-outline"></ion-icon></button>';
+                echo '<button class="wishlistButton" id="nodisplay-button" style="--id:' . $row['idOffre'] . '">';
+                if (isWishlisted($row['idOffre']))
+                    echo '<ion-icon class="like-icon" name="heart"></ion-icon>';
+                else
+                    echo '<ion-icon class="like-icon" name="heart-outline"></ion-icon>';
+                echo '</button>';
             }
             echo '<button class="apply-button" style="--id:'. $row['idOffre'] .'">Postuler</button>';
             echo '</div>';

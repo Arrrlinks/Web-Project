@@ -19,3 +19,23 @@ function totalPagesWishlist()
     $resultat = $req->fetch();
     return ceil($resultat['total']/5);
 }
+
+function isWishlisted($offre){
+    if (isset($_SESSION['id'])) {
+        $offreid = $offre;
+        $user_id = $_SESSION['id'];
+        $db = dbConnect();
+        $req = $db->prepare('SELECT * FROM isWishlisted WHERE userId = :userId AND offreId = :offreId');
+        $req->execute(array(
+            'userId' => $user_id,
+            'offreId' => $offreid
+        ));
+        $result = $req->fetch();
+        if($result){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+}
