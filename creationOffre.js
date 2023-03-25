@@ -27,9 +27,9 @@ function submitForm(form) {
         icon: 'success',
         title: 'L\'offre a bien été créée !',
         showConfirmButton: false,
-        timer: 2000 // affiche l'alerte pendant 10 secondes
+        timer: 2000
     }).then(() => {
-        form.submit(); // soumet le formulaire une fois l'alerte fermée
+        form.submit();
     });
-    return false; // empêche le formulaire d'être soumis automatiquement
+    return false;
 }

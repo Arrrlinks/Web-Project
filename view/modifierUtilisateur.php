@@ -7,7 +7,7 @@
 <img src="../svg/br-tl%201.svg" alt="tl logo" id="tl1">
 <img src="../svg/br-tl%202.svg" alt="tl logo" id="tl2">
 
-<form method="post" class="Box">
+<form method="post" class="Box" onsubmit="return submitForm(event, this);">
     <h1>Modifier d'utilisateur</h1>
     <div class="Ensemble"></div>
     <!-- <div class="ButtonR">
@@ -49,6 +49,7 @@
     <?php $updateUser ?>
 </form>
 
+<script type="text/javascript" src="script/modifierUtilisateur.js"></script>
 
 <?php $content=ob_get_clean(); ?>
 <?php require('view/template.php');?>
