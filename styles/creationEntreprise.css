@@ -155,6 +155,7 @@
     .rectangle{
         width: 100%;
         display: block;
+        padding: 5%;
     }
     .button{
         margin-top: -60px;
@@ -173,8 +174,15 @@
     .rating ion-icon{
         font-size: 50px;
     }
+    .navbarc{
+        margin-left: 0;
+    }
+    #adresseBox{
+        margin-top: 10px;
+    }
 }
 
 .selected ion-icon{
     color: var(--dark-blue);
 }
+

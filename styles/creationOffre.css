@@ -84,6 +84,7 @@ select.CreationOffreInput{
     .Box{
         width: 100%;
         display: block;
+        padding: 5%;
     }
     .button{
         width: 50%;
@@ -94,6 +95,9 @@ select.CreationOffreInput{
     }
     .Box div{
         margin-top: 20px;
+    }
+    .navbarc{
+        margin-left: 0;
     }
 }
 

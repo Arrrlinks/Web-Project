@@ -147,6 +147,7 @@
     .Box{
         width: 100%;
         display: block;
+        padding: 5%;
     }
     .button{
         margin-top: 10px;
@@ -160,6 +161,9 @@
     }
     .Box div{
         margin-top: 20px;
+    }
+    .navbarc{
+        margin-left: 0;
     }
 }
 

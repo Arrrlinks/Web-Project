@@ -82,7 +82,7 @@
                 echo '<div class="personne">';
                 echo '<div class="name">' . strtoupper($row['nom']) . ' ' . ucfirst(strtolower($row['prenom'])) . '</div>';
                 echo '<div class="promotion">' . $row['promo'] . '</div>';
-                echo '<div class="role">' . $row['role'] . '</div>';
+                echo '<div class="role">' . ucfirst(strtolower($row['role'])) . '</div>';
                 echo '<div class="icon">';
                 if($row['role'] == 'pilote' and isPilotSession()) {
                     echo '<div>';

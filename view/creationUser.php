@@ -63,7 +63,7 @@ if($isUserCreated){ ?>
     <script>
         const username=<?php echo json_encode($isUserCreated); ?>;
         showSuccessAlert(username);</script>
-<?php }elseif (!$isUserCreated && $isuserCreated != null){ ?>
+<?php }elseif (!$isUserCreated && $isUserCreated != null){ ?>
     <script>showErrorAlert();</script>
 <?php } ?>
 <?php $content=ob_get_clean(); ?>
