@@ -230,3 +230,8 @@
     border: none;
     cursor: pointer;
 }
+
+.offre{
+    color: var(--clear-white);
+    text-decoration: none;
+}

@@ -11,8 +11,9 @@
 }
 .Rectangle h1 {
     color: var(--home-title);
-    padding-left: 50%;
     margin-top: 10px;
+    text-align: center;
+    margin-bottom: -10px;
 }
 
 .Box {
@@ -45,8 +46,6 @@
     margin-right: 20px;
 }
 
-.Postuler:last-child{
-    background-color:var(--clear-white) ;
+.Box a{
     color: var(--blue);
-    border: var(--blue) 2px solid;
 }

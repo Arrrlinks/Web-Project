@@ -24,10 +24,10 @@ elseif (isset($_GET['creationUser'])) {
     require_once('src/controllers/creationUser_c.php');
 }
 elseif (isset($_GET['detail'])) {
-    require_once('src/controllers/detail_c.php');
+    require_once('src/controllers/postuler_c.php');
 }
 elseif (isset($_GET['modifierEntreprise'])){
-    require_once('src/controllers/modifierEntreprise_C.php');
+    require_once('src/controllers/modifierEntreprise_c.php');
 }
 elseif (isset($_GET['modifierOffre'])){
     require_once('src/controllers/modifierOffre_C.php');
@@ -46,6 +46,9 @@ elseif (isset($_GET['statEtudiant'])){
 }
 elseif (isset($_GET['wishlist'])){
     require_once('src/controllers/wishlist_c.php');
+}
+elseif (isset($_GET['postuler'])){
+    require_once('src/controllers/postuler_c.php');
 }
 else {
     require_once('src/controllers/accueil_c.php');
