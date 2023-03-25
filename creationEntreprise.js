@@ -55,3 +55,21 @@ secteurEntreprise.addEventListener("input", function (event) {
 });
 
 const input = document.getElementById("Adr");
+
+function showSuccessAlert() {
+    Swal.fire({
+        icon: 'success',
+        title: 'L\'entreprise a bien été créée !',
+        showConfirmButton: false,
+        timer: 4000
+    });
+}
+
+function showErrorAlert() {
+    Swal.fire({
+        icon: 'error',
+        title: 'Une erreur est survenue',
+        showConfirmButton: false,
+        timer: 2000
+    });
+}

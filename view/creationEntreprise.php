@@ -30,6 +30,19 @@ include 'element/sidenav/sidenav.php';
         <input type="text" name="secteurEntr" id="secteurEntr" class="Cform" required>
     </div>
     <div>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" class="Cform" required>
+    </div>
+
+    <div id="adresseBox">
+        <label>Adresse</label>
+        <span class="iconAdr">
+            <button type="button" class="addAdr" onclick="removeAdr()"><ion-icon name="remove-outline"></ion-icon></button>
+            <button type="button" class="addAdr" onclick="addAdr()"><ion-icon name="add-outline"></ion-icon></button>
+      </span>
+        <label for="Adr"></label><input type="text" name="Adr[]" id="Adr" class="adresse">
+    </div>
+    <div>
         <label for="conf">Confiance attribuée</label><br>
         <div class="rating">
             <input type="radio" id="star1" name="rating" value="5" required>
@@ -55,21 +68,17 @@ include 'element/sidenav/sidenav.php';
         </div>
 
     </div>
-    <div id="adresseBox">
-        <label>Adresse</label>
-        <span class="iconAdr">
-            <button type="button" class="addAdr" onclick="removeAdr()"><ion-icon name="remove-outline"></ion-icon></button>
-            <button type="button" class="addAdr" onclick="addAdr()"><ion-icon name="add-outline"></ion-icon></button>
-      </span>
-        <label for="Adr"></label><input type="text" name="Adr[]" id="Adr" class="adresse">
-    </div>
-    <br>
     <div class="button">
         <button type="submit" class="Cbutton">Creer</button>
     </div>
-    <?= $isEntrepriseCreated ?>
 </form>
 <script src="../creationEntreprise.js"></script>
+<?php
+if($isEntrepriseCreated){ ?>
+    <script>showSuccessAlert();</script>
+<?php }elseif (!$isEntrepriseCreated && $isEntrepriseCreated!= null){ ?>
+    <script>showErrorAlert();</script>
+<?php } ?>
 
 <?php $content=ob_get_clean(); ?>
 <?php require('view/template.php');?>

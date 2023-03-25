@@ -16,6 +16,12 @@ function createUser(){
         $password = $_POST['password'];
 
         $username = "cesi." . strtolower($prenom[0]) . strtolower($nom);
+        for($i = 0; $i < strlen($username); $i++){
+            if($username[$i] == " "){
+                $username[$i] = ".";
+            }
+        }
+
         $number = 0;
         $bdd = new PDO('mysql:host=92.222.10.61;dbname=web-project;charset=utf8', 'root', '123456789');
 
@@ -49,10 +55,10 @@ function createUser(){
         ));
         $resultat = $req->fetch();
         if ($resultat) {
-            return "L'utilisateur a bien été créé sous le nom de " . $username;
+            return $username;
         }
         else{
-            return "Une erreur est survenue lors de la création de l'utilisateur";
+            return false;
         }
     }
 

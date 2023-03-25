@@ -6,7 +6,7 @@
 
     <img src="../svg/br-tl%201.svg" alt="tl logo" id="tl1">
     <img src="../svg/br-tl%202.svg" alt="tl logo" id="tl2">
-    <form method="post" class="Box" onsubmit="return submitForm(this);">
+    <form method="post" class="Box">
         <h1>Créer une offre</h1>
         <div class="navbarc">
             <a href="?creationEntreprise">
@@ -69,12 +69,11 @@
         const entrepriseOptions = <?php echo json_encode($entreprise); ?>;
     </script>
     <script type="text/javascript" src="creationOffre.js"></script>
-
-
-
-
-
-
-
+    <?php
+    if($isOffreCreated){ ?>
+        <script>showSuccessAlert();</script>
+    <?php }elseif (!$isOffreCreated && $isOffreCreated != null){ ?>
+        <script>showErrorAlert();</script>
+    <?php } ?>
 <?php $content = ob_get_clean(); ?>
 <?php require('view/template.php'); ?>

@@ -22,14 +22,20 @@ entrepriseSelect.addEventListener('change', () => {
     xhr.send('Entr=' + entreprise);
 });
 
-function submitForm(form) {
+function showSuccessAlert() {
     Swal.fire({
         icon: 'success',
         title: 'L\'offre a bien été créée !',
         showConfirmButton: false,
         timer: 2000
-    }).then(() => {
-        form.submit();
     });
-    return false;
+}
+
+function showErrorAlert() {
+    Swal.fire({
+        icon: 'error',
+        title: 'Une erreur est survenue',
+        showConfirmButton: false,
+        timer: 2000
+    });
 }

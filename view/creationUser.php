@@ -56,8 +56,15 @@
     <div class="button">
         <button type="submit" class="CreationUserButton">Creer</button>
     </div>
-    <?= $user ?>
 </form>
-
+<script type="text/javascript" src="creationUser.js"></script>
+<?php
+if($isUserCreated){ ?>
+    <script>
+        const username=<?php echo json_encode($isUserCreated); ?>;
+        showSuccessAlert(username);</script>
+<?php }elseif (!$isUserCreated && $isuserCreated != null){ ?>
+    <script>showErrorAlert();</script>
+<?php } ?>
 <?php $content=ob_get_clean(); ?>
 <?php require('view/template.php');?>

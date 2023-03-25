@@ -33,10 +33,10 @@ function createOffre(){
         $req = $db->prepare('select * from offre');
         $resultat = $req->execute();
         if($resultat){
-            return "L'offre a bien été créée";
+            return true;
         }
         else{
-            return "Une erreur est survenue lors de la création de l'offre";
+            return false;
         }
     }
 }
