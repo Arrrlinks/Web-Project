@@ -49,3 +49,9 @@
 .Box a{
     color: var(--blue);
 }
+
+.Button a{
+    text-decoration: none;
+    color: var(--clear-white);
+    font-size: 15px;
+}

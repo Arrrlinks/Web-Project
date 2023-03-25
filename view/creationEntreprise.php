@@ -22,7 +22,7 @@ include 'element/sidenav/sidenav.php';
         <input type="text" name="nameEntr" id="nameEntr" class="Cform" required>
     </div>
     <div>
-        <label for="numberOfEmployee">Nombre de personne</label>
+        <label for="numberOfEmployee">Nombre d'employés</label>
         <input type="number" name="numberOfEmployee" id="numberOfEmployee" class="Cform" required>
     </div>
     <div>
