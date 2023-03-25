@@ -115,3 +115,7 @@ select.CreationOffreInput{
     background-color: #fff;
     border: 1px solid #ccc;
 }
+
+.error{
+    border: red 2px solid;
+}

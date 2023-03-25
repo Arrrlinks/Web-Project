@@ -32,7 +32,7 @@ numberOfEmployee.addEventListener("input", function (event) {
     event.target.value = value;
     if (value.length === 0) {
         numberOfEmployee.classList.add("error");
-        event.target.setCustomValidity("Veuillez entrer un nombre");
+        event.target.setCustomValidity("Veuillez entrer un nombre d'employés");
     } else {
         numberOfEmployee.classList.remove("error");
         event.target.setCustomValidity("");
@@ -43,7 +43,7 @@ const secteurEntreprise = document.getElementById("secteurEntr");
 
 secteurEntreprise.addEventListener("input", function (event) {
     let value = event.target.value;
-    value = value.replace(/[^a-zA-Z\- ]/g, '');
+    value = value.replace(/[^a-zA-Z\-,/ ]/g, '');
     event.target.value = value;
     if (value.length === 0) {
         secteurEntreprise.classList.add("error");
@@ -54,7 +54,33 @@ secteurEntreprise.addEventListener("input", function (event) {
     }
 });
 
-const input = document.getElementById("Adr");
+const email = document.getElementById("email");
+
+email.addEventListener("input", function (event) {
+    let value = event.target.value;
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+        email.classList.add("error");
+        event.target.setCustomValidity("Veuillez entrer une adresse email valide.");
+    } else {
+        email.classList.remove("error");
+        event.target.setCustomValidity("");
+    }
+});
+
+const adresse = document.getElementById("Adr");
+
+adresse.addEventListener("input", function (event) {
+    let value = event.target.value;
+    if (value.length === 0) {
+        adresse.classList.add("error");
+        event.target.setCustomValidity("Veuillez entrer une adresse");
+    } else {
+        adresse.classList.remove("error");
+        event.target.setCustomValidity("");
+    }
+});
+
 
 function showSuccessAlert() {
     Swal.fire({

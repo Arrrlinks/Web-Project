@@ -170,3 +170,7 @@
 .selected ion-icon{
     color: var(--dark-blue);
 }
+
+.error{
+    border: red 2px solid;
+}
