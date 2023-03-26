@@ -15,16 +15,16 @@
         if(isset($_SESSION['id'])) {
             if($_SESSION['role']=='etudiant'){
                 echo '<a href="?wishlist&wishlistpage=1"><ion-icon name="heart-outline"></ion-icon></a>';
-                echo '<a href="#"><ion-icon name="notifications"></ion-icon></a>';
+                echo '<a href="?notifications"><ion-icon name="notifications"></ion-icon></a>';
             }
             if($_SESSION['role']=='pilote'){
                 echo '<a href="?creationOffre"><ion-icon name="add-circle-outline"></ion-icon></a>';
-                echo '<a href="#"><ion-icon name="notifications"></ion-icon></a>';
+                echo '<a href="?notifications"><ion-icon name="notifications"></ion-icon></a>';
             }
             if ($_SESSION['role']=='admin'){
                 echo '<a href="?wishlist&wishlistpage=1"><ion-icon name="heart-outline"></ion-icon></a>';
                 echo '<a href="?creationEntreprise"><ion-icon name="add-circle-outline"></ion-icon></a>';
-                echo '<a href="#"><ion-icon name="notifications"></ion-icon></a>';
+                echo '<a href="?notifications"><ion-icon name="notifications"></ion-icon></a>';
             }
         }
         ?>

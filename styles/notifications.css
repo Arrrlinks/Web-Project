@@ -1,0 +1,183 @@
+.result{
+    display: flex;
+    flex-direction: column;
+}
+
+.titlebox {
+    font-weight: bold;
+    margin: 40px 0 0 40px;
+}
+
+.box-stage{
+    position: relative;
+    width: 70%;
+    margin: 150px auto 50px auto;
+    padding-bottom: 20px;
+    background-color: var(--clear-white);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bas-boxstage{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+}
+
+.stage {
+    position: relative;
+    width: 85%;
+    margin: 12.5px auto 12.5px auto;
+    background-color: var(--light-gray);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.stage .title {
+    width: 450px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.stage .description {
+    font-size: 16px;
+    text-align : justify;
+    margin-bottom: 20px;
+}
+
+.stage .apply-button {
+    padding: 10px 20px;
+    background-color: var(--blue);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: fit-content;
+}
+
+.stage .apply-button:hover {
+    background-color: var(--dark-blue);
+}
+
+.stage .like-icon {
+    font-size: 20px;
+    color: var(--blue);
+    margin: 20px;
+}
+
+.stars-icon {
+    font-size: 16px;
+    color: #F88459;
+}
+
+.box-personne{
+    position: relative;
+    width: 70%;
+    margin: auto 15% 50px auto;
+    background-color: var(--clear-white);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.personne {
+    position: relative;
+    width: 85%;
+    margin: 12.5px auto 12.5px auto;
+    background-color: var(--light-gray);
+    padding: 20px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    place-items: start;
+    align-items: center;
+}
+
+.personne .icon{
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: end;
+    align-items: center;
+}
+
+.personne .delete-icon{
+    color:darkred;
+}
+
+.personne .edit-icon{
+    color:var(--blue);
+}
+
+.group-likeapply{
+    display: flex;
+    align-items: center;
+}
+
+.confiance{
+    color: black;
+    margin-bottom: 10px;
+}
+
+.stats-button{
+    padding: 10px 20px;
+    background-color: var(--blue);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 15px;
+}
+
+.pagination-icon{
+    font-size: 20px;
+    margin: 10px;
+    color: var(--blue);
+}
+
+.pagination{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    margin-right: 20px;
+    color: var(--blue);
+}
+
+.aucunresultat{
+    position: relative;
+    width: 85%;
+    margin: 12.5px auto 12.5px auto;
+    background-color: var(--light-gray);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.group-likeapply button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.notification {
+    position: relative;
+    width: 85%;
+    margin: 12.5px auto 12.5px auto;
+    background-color: var(--light-gray);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.offre{
+    color: var(--blue);
+}

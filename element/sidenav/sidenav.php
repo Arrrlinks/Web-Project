@@ -17,7 +17,7 @@
                     echo '<li><a href="?creationEntreprise"><ion-icon name="add-circle-outline"></ion-icon>Creation</a></li>';
 
                 }
-                echo '<li><a href="#"><ion-icon name="notifications-outline"></ion-icon>Notification</a></li>';
+                echo '<li><a href="?notifications"><ion-icon name="notifications-outline"></ion-icon>Notification</a></li>';
             }
             ?>
         </ul>

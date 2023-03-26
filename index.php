@@ -50,6 +50,9 @@ elseif (isset($_GET['wishlist'])){
 elseif (isset($_GET['postuler'])){
     require_once('src/controllers/postuler_c.php');
 }
+elseif (isset($_GET['notifications'])){
+    require_once('src/controllers/notifications_c.php');
+}
 else {
     require_once('src/controllers/accueil_c.php');
 }

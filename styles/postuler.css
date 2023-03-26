@@ -54,4 +54,6 @@
     text-decoration: none;
     color: var(--clear-white);
     font-size: 15px;
+    width: 200px;
+    padding: 20px 0;
 }

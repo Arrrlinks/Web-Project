@@ -28,14 +28,15 @@
             <?php if(isset($_SESSION['id'])){
                 if(isPilotSession()){?>
                     <button type="submit" class="Postuler"><a href=<?= 'mailto:'.$offre['email'][0] ?>>Contacter</a></button>
-                <?php }else{ ?>
-                    <button type="submit" class="Postuler"><a href=<?= 'mailto:'.$offre['email'][0] ?>>Postuler</a></button>
-                    <?php }} ?>
+                <?php }else{
+                    echo "<button type='submit' id='postuler' style='--id:". $_GET['id'] ."' class='Postuler'><a href='mailto:".$offre['email'][0]."'>Postuler</a></button>";
+                    }} ?>
 
         </div>
     </div>
 </form>
 
+<script src="script/postuler.js"></script>
 
 <?php $content=ob_get_clean(); ?>
 <?php require('view/template.php');?>
