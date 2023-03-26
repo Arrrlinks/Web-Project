@@ -92,7 +92,7 @@ function validateDates() {
 
     if (!isValidDate(fromDate)) {
         fromDateInput.classList.add("error");
-        fromDateInput.setCustomValidity('Veuillez entrer une date de début valide.');
+        fromDateInput.setCustomValidity('Veuillez entrer une date de début valide');
     } else {
         fromDateInput.classList.remove("error");
         fromDateInput.setCustomValidity('');
@@ -100,7 +100,7 @@ function validateDates() {
 
     if (!isValidDate(toDate)) {
         toDateInput.classList.add("error");
-        toDateInput.setCustomValidity('Veuillez entrer une date de fin valide.');
+        toDateInput.setCustomValidity('Veuillez entrer une date de fin valide');
     } else {
         toDateInput.classList.remove("error");
         toDateInput.setCustomValidity('');
@@ -109,7 +109,7 @@ function validateDates() {
     if (fromDate >= toDate) {
         fromDateInput.classList.add("error");
         toDateInput.classList.add("error");
-        toDateInput.setCustomValidity('La date de fin doit être supérieure à la date de début.');
+        toDateInput.setCustomValidity('La date de fin doit être supérieure à la date de début');
     } else {
         fromDateInput.classList.remove("error");
         toDateInput.classList.remove("error");

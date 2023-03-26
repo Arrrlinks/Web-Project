@@ -41,8 +41,8 @@ elseif (isset($_GET['statoffre'])){
 elseif (isset($_GET['statentreprise'])){
     require_once('src/controllers/statEntreprise_c.php');
 }
-elseif (isset($_GET['statEtudiant'])){
-    require_once('src/controllers/statEtudiant_c.php');
+elseif (isset($_GET['statUser'])){
+    require_once('src/controllers/statUser_c.php');
 }
 elseif (isset($_GET['wishlist'])){
     require_once('src/controllers/wishlist_c.php');
