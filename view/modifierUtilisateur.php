@@ -10,12 +10,6 @@
 <form method="post" class="Box" onsubmit="return submitForm(event, this);">
     <h1>Modifier d'utilisateur</h1>
     <div class="Ensemble"></div>
-    <!-- <div class="ButtonR">
-        <input type="radio" name="role" class="demo5" id="demo5-a" value="etudiant" checked required>
-        <label for="demo5-a">Etudiant</label>
-        <input type="radio" name="role" class="demo5" id="demo5-b" value="pilote" required>
-        <label for="demo5-b">Pilote</label>
-    </div>-->
     <div class="navbarc">
         <a href="modifierEntreprise.php">
             <ion-icon name="home-sharp"></ion-icon>
@@ -27,19 +21,19 @@
             <ion-icon name="create"></ion-icon>
         </a>
     </div>
-    <div>
+    <div style="grid-column:1; grid-row:2">
         <label for="prenomU">Prénom</label>
         <input type="text" id="prenomU" name="prenomU" value ="<?php echo $getUser['prenom'] ?>" class="UserCreationInput" required>
     </div>
-    <div>
+    <div style="grid-column:2; grid-row:2">
         <label for="nomU">Nom</label>
         <input type="text" id="nomU" name="nomU" value="<?php echo $getUser['nom'] ?>" class="UserCreationInput" required>
     </div>
-    <div>
+    <div style="grid-column:1; grid-row:3">
         <label for="Centre">Centre CESI</label>
         <input type="text" id="Centre" name="Centre" value ="<?php echo $getUser['centre'] ?>" class="UserCreationInput" required>
     </div>
-    <div>
+    <div style="grid-column:2; grid-row:3">
         <label for="Promo">Promotion</label>
         <input type="text" id="Promo" name="Promo" value="<?php echo $getUser['promo'] ?>" class="UserCreationInput" required>
     </div>
