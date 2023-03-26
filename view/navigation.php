@@ -92,7 +92,7 @@
                 } else{
                     echo '<div>';
                     echo '<a class="editButton" href="index.php?modifierUtilisateur&user=' . $row['id'] . '"><ion-icon class="edit-icon" name="create-outline"></ion-icon></a>';
-                    echo '<button class="deleteButton" id="supprimerUser-' . $row['id'] . '"><ion-icon class="delete-icon" name="trash-outline"></ion-icon></button>';
+                    echo '<button class="deleteButtonuser" id="supprimerUser-' . $row['id'] . '"><ion-icon class="delete-icon" name="trash-outline"></ion-icon></button>';
                     echo '</div>';
                 }
                 if($row['role'] == 'etudiant') {

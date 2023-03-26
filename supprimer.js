@@ -1,9 +1,7 @@
 // Sélectionner tous les boutons de suppression d'utilisateurs
-var boutons_supprimer = document.querySelectorAll('.deleteButton');
-
-// Boucle pour ajouter un événement "click" à chaque bouton de suppression
-    for(var i = 0; i < boutons_supprimer.length; i++){
-        boutons_supprimer[i].addEventListener('click', function(){
+var boutons_supprimer_USER = document.querySelectorAll('.deleteButtonuser');
+for(var i = 0; i < boutons_supprimer_USER.length; i++){
+        boutons_supprimer_USER[i].addEventListener('click', function(){
             var id_utilisateur = this.id.split('-')[1];
 
             // Afficher une alerte de confirmation avec SweetAlert2
