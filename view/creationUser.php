@@ -42,7 +42,12 @@
     </div>
     <div>
         <label for="Centre">Centre CESI</label>
-        <input type="text" id="Centre" name="Centre" class="UserCreationInput" required>
+        <select type="text" id="Centre" name="Centre" class="UserCreationInput" required>
+            <?php
+            foreach ($centres as $centre)
+                echo "<option value='$centre[0]'>$centre[0]</option>";
+            ?>
+        </select>
     </div>
     <div>
         <label for="Promo">Promotion</label>

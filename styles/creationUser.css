@@ -174,3 +174,11 @@
 .error{
     border: red 2px solid;
 }
+
+select.UserCreationInput{
+    height: 40px;
+    width: calc(80% + 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

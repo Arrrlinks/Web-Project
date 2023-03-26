@@ -49,6 +49,9 @@
 select.CreationOffreInput{
     height: 40px;
     width: calc(80% + 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .CreationOffreInput:focus{

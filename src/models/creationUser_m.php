@@ -61,5 +61,11 @@ function createUser(){
             return false;
         }
     }
+}
 
+function getCentres(){
+    $bdd = dbConnect();
+    $req = $bdd->prepare('SELECT centre_name FROM centres ORDER BY centre_name');
+    $req->execute();
+    return $req->fetchAll();
 }
