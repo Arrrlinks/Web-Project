@@ -28,5 +28,6 @@ function updateUser() {
             'centre' => ucfirst(strtolower($centre)),
             'id' => $_GET['user']
         ));
+        header("Location: index.php?navigation=&q=&userpage=1&entreprisepage=1&offrepage=1");
     }
 }
