@@ -162,7 +162,7 @@
                 echo '<ion-icon class="eye-icon" name="eye-outline" style="display: none"></ion-icon>';
                 echo '</div>';
             }
-            echo '<button class="stats-button">Statistiques</button>';
+            echo '<a href="?statentreprise&idEnt='.$row['idEnt'].'"><button class="stats-button" >Statistiques</button></a>';
             echo '</div>';
             echo '</div>';
         }
