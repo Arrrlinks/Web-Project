@@ -3,14 +3,14 @@
 <?php $navbar = 1; ?>
 <?php $sidenav = 1; ?>
 <?php ob_start(); ?>
+<img src="../svg/br-tl%201.svg" alt="tl logo" id="tl1" class="cloud-image">
+<img src="../svg/br-tl%202.svg" alt="tl logo" id="tl2" class="cloud-image">
+<img src="../svg/br-tl%201.svg" alt="br logo" id="br1" class="cloud-image">
+<img src="../svg/br-tl%202.svg" alt="br logo" id="br2" class="cloud-image">
+<img src="../svg/tr-bl%201.svg" alt="tr logo" id="bl1" class="cloud-image">
+<img src="../svg/tr-bl%202.svg" alt="tr logo" id="bl2" class="cloud-image">
+<img src="../svg/tr-bl%203.svg" alt="tr logo" id="bl3" class="cloud-image">
 
-<img src="../svg/br-tl%201.svg" alt="tl logo" id="tl1">
-<img src="../svg/br-tl%202.svg" alt="tl logo" id="tl2">
-<img src="../svg/br-tl%201.svg" alt="br logo" id="br1">
-<img src="../svg/br-tl%202.svg" alt="br logo" id="br2">
-<img src="../svg/tr-bl%201.svg" alt="tr logo" id="bl1">
-<img src="../svg/tr-bl%202.svg" alt="tr logo" id="bl2">
-<img src="../svg/tr-bl%203.svg" alt="tr logo" id="bl3">
 <div id="container-title">
 <div id="title">
 <span class="title">
@@ -30,6 +30,8 @@
     </form>
 </div>
 </div>
+
+<script src="accueil.js"></script>
 
 <?php $content=ob_get_clean(); ?>
 <?php require('view/template.php');?>

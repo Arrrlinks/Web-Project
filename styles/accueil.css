@@ -82,3 +82,16 @@
 .nav-searchbar{
     display :none;
 }
+
+.cloud-image {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.cloud-image.show {
+    opacity: 1;
+}
+
+.cloud-image.item {
+    opacity: 1;
+}
