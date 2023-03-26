@@ -31,3 +31,32 @@ function updateUser() {
         header("Location: index.php?navigation=&q=&userpage=1&entreprisepage=1&offrepage=1");
     }
 }
+
+function getCentres() {
+    $db = dbConnect();
+    $query = $db->prepare("SELECT centre FROM users where id = :id");
+    $query->execute(array(
+        'id' => $_GET['user']));
+    $centre = $query->fetchAll();
+    $query = $db->prepare("SELECT centre_name FROM centres where centres.centre_name != :centre ORDER BY centre_name");
+    $query->execute(array(
+        'centre' => $centre[0]['centre']
+    ));
+    $centres = $query->fetchAll();
+    return $centre+$centres;
+}
+
+function getPromos() {
+    $db = dbConnect();
+    $query = $db->prepare("SELECT  promo FROM users where id = :id");
+    $query->execute(array(
+        'id' => $_GET['user']
+    ));
+    $promo = $query->fetchAll();
+    $query = $db->prepare("SELECT promo_name FROM promo where promo.promo_name != :promo ORDER BY promo_name");
+    $query->execute(array(
+        'promo' => $promo[0]['promo']
+    ));
+    $promos = $query->fetchAll();
+    return $promo+$promos;
+}

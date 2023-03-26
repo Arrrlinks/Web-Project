@@ -69,3 +69,10 @@ function getCentres(){
     $req->execute();
     return $req->fetchAll();
 }
+
+function getPromos(){
+    $bdd = dbConnect();
+    $req = $bdd->prepare('SELECT promo_name FROM promo');
+    $req->execute();
+    return $req->fetchAll();
+}

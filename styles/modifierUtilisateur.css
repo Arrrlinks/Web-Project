@@ -115,6 +115,14 @@
     color: var(--blue);
 }
 
+select.UserCreationInput{
+    height: 40px;
+    width: calc(80% + 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media (max-width: 768px){
     .Box{
         width: 100%;

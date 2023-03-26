@@ -31,11 +31,21 @@
     </div>
     <div style="grid-column:1; grid-row:3">
         <label for="Centre">Centre CESI</label>
-        <input type="text" id="Centre" name="Centre" value ="<?php echo $getUser['centre'] ?>" class="UserCreationInput" required>
+        <select type="text" id="Centre" name="Centre" class="UserCreationInput" required>
+            <?php
+            foreach ($centres as $centre)
+                echo "<option value='$centre[0]'>$centre[0]</option>";
+            ?>
+        </select>
     </div>
     <div style="grid-column:2; grid-row:3">
         <label for="Promo">Promotion</label>
-        <input type="text" id="Promo" name="Promo" value="<?php echo $getUser['promo'] ?>" class="UserCreationInput" required>
+        <select type="text" id="Promo" name="Promo" class="UserCreationInput" required>
+            <?php
+            foreach ($promos as $promo)
+                echo "<option value='$promo[0]'>$promo[0]</option>";
+            ?>
+        </select>
     </div>
     <div class="button">
         <button type="submit" class="CreationUserButton">Modifier</button>

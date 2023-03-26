@@ -51,7 +51,12 @@
     </div>
     <div>
         <label for="Promo">Promotion</label>
-        <input type="text" id="Promo" name="Promo" class="UserCreationInput" required>
+        <select type="text" id="Promo" name="Promo" class="UserCreationInput" required>
+            <?php
+            foreach ($promos as $promo)
+                echo "<option value='$promo[0]'>$promo[0]</option>";
+            ?>
+        </select>
     </div>
     <div>
         <label for="password">Mot de passe</label>
