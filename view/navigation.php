@@ -148,7 +148,7 @@
             echo '<div class="icon">';
             if(isPilotSession() or isAdminSession()) {
                 echo '<div>';
-                echo '<ion-icon class="edit-icon" name="create-outline"></ion-icon>';
+                echo '<a class="editButton" href="index.php?modifierEntreprise&entreprise=' . $row['idEnt'] . '"><ion-icon class="edit-icon" name="create-outline"></ion-icon></a>';
                 if(isMasked($row['idEnt'])) {
                     echo '<button class="setDisplayButton" style="--id:' . $row['idEnt'] . '"><ion-icon class="eye-icon" name="eye-off-outline"></ion-icon></button>';
                 } else {
