@@ -91,8 +91,8 @@
                     echo '</div>';
                 } else{
                     echo '<div>';
-                    echo '<a class="editButton" id="nodisplay-button" href="index.php?modifierUtilisateur&user=' . $row['id'] . '"><ion-icon class="edit-icon" name="create-outline"></ion-icon></a>';
-                    echo '<a class="deleteButton" id="nodisplay-button" style="--id:' . $row['id'] . '"><ion-icon class="delete-icon" name="trash-outline"></ion-icon></a>';
+                    echo '<a class="editButton" href="index.php?modifierUtilisateur&user=' . $row['id'] . '"><ion-icon class="edit-icon" name="create-outline"></ion-icon></a>';
+                    echo '<button class="deleteButton" id="supprimerUser-' . $row['id'] . '"><ion-icon class="delete-icon" name="trash-outline"></ion-icon></button>';
                     echo '</div>';
                 }
                 if($row['role'] == 'etudiant') {
@@ -181,6 +181,7 @@
 </div>
 
     <script type="text/javascript" src="wishlist.js"></script>
+    <script type="text/javascript" src="supprimer.js"></script>
 
 <?php $content=ob_get_clean(); ?>
 <?php require('view/template.php');?>
