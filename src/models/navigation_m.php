@@ -35,12 +35,22 @@ function getOffresResult()
 
 function getEntreprisesResult()
 {
-    $recherche = $_GET['q'];
-    $entreprisepage = $_GET['entreprisepage'];
-    $bdd=dbConnect();
-    $req = $bdd->prepare('SELECT idEnt,name, activity, scorePilot FROM entreprise where name like "%'.$recherche.'%" or activity like "%'.$recherche.'%" or scorePilot like "%'.$recherche.'%" LIMIT 5 OFFSET '.($entreprisepage-1)*5);
-    $req->execute();
-    return $req->fetchAll();
+    if(isStudentSession()){
+        $recherche = $_GET['q'];
+        $entreprisepage = $_GET['entreprisepage'];
+        $bdd=dbConnect();
+        $req = $bdd->prepare('SELECT idEnt,name, activity, scorePilot FROM entreprise where visibility = 1 and (name like "%'.$recherche.'%" or activity like "%'.$recherche.'%" or scorePilot like "%'.$recherche.'%") LIMIT 5 OFFSET '.($entreprisepage-1)*5);
+        $req->execute();
+        return $req->fetchAll();
+    }
+    else{
+        $recherche = $_GET['q'];
+        $entreprisepage = $_GET['entreprisepage'];
+        $bdd=dbConnect();
+        $req = $bdd->prepare('SELECT idEnt,name, activity, scorePilot FROM entreprise where name like "%'.$recherche.'%" or activity like "%'.$recherche.'%" or scorePilot like "%'.$recherche.'%" LIMIT 5 OFFSET '.($entreprisepage-1)*5);
+        $req->execute();
+        return $req->fetchAll();
+    }
 }
 
 function totalPagesUser()
