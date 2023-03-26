@@ -235,3 +235,11 @@
     color: var(--clear-white);
     text-decoration: none;
 }
+
+.wishlistButton{
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin:10px;
+}
