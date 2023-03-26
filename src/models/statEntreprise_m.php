@@ -1,5 +1,6 @@
 <?php
 include_once("src/models/init.php");
+
 function gettest($idEnt)
 {
     if (isset($_SESSION['id']) && isset($_GET["idEnt"]) && $_GET['idEnt'] != null) {

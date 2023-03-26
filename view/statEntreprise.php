@@ -28,6 +28,7 @@
     <div id="adresseBox">
         <label>Adresse</label>
         <div class="value"><?= $data[0]['address'] ?></div>
+
 </form>
 
 <?php $content=ob_get_clean(); ?>
