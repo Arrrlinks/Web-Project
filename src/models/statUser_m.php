@@ -13,7 +13,7 @@ function gettest($id)
         ));
         $resultat = $req->fetchAll();
         if($resultat){
-            if($resultat[0]['role'] === "admin" || $resultat[0]['role'] === "pilote"){
+            if($resultat[0]['role'] === "admin" || $resultat[0]['role'] === "pilote" && !isAdminSession()){
                 header("Location: index.php");
             }
             return $resultat;

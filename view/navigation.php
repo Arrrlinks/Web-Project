@@ -96,10 +96,14 @@
                     echo '</div>';
                 }
                 if($row['role'] == 'etudiant') {
-                    echo '<a href="?statEtudiant&id='.$row['id'].'"><button class="stats-button" >Statistiques</button></a>';
+                    echo '<a href="?statUser&id='.$row['id'].'"><button class="stats-button">Statistiques</button></a>';
                 }
                 if($row['role'] == 'pilote') {
-                    echo '<button class="stats-button-off">Statistiques</button>';
+                    if(isAdminSession()){
+                        echo '<a href="?statUser&id='.$row['id'].'"><button class="stats-button" >Statistiques</button></a>';
+                    } else {
+                        echo '<button class="stats-button-off">Statistiques</button>';
+                    }
                 }
                 echo '</div>';
                 echo '</div>';

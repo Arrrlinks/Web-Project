@@ -1,5 +1,5 @@
 <?php $title = "". strtoupper($data[0]['nom']) . ' ' . ucfirst(strtolower($data[0]['prenom'])) .""; ?>
-<?php $css = "statEtudiant.css"; ?>
+<?php $css = "statUser.css"; ?>
 <?php $navbar = 1; ?>
 <?php $sidenav = 1; ?>
 <?php ob_start(); ?>
