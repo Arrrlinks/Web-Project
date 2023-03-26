@@ -38,7 +38,7 @@ function getEntreprisesResult()
     $recherche = $_GET['q'];
     $entreprisepage = $_GET['entreprisepage'];
     $bdd=dbConnect();
-    $req = $bdd->prepare('SELECT name, activity, scorePilot FROM entreprise where name like "%'.$recherche.'%" or activity like "%'.$recherche.'%" or scorePilot like "%'.$recherche.'%" LIMIT 5 OFFSET '.($entreprisepage-1)*5);
+    $req = $bdd->prepare('SELECT idEnt,name, activity, scorePilot FROM entreprise where name like "%'.$recherche.'%" or activity like "%'.$recherche.'%" or scorePilot like "%'.$recherche.'%" LIMIT 5 OFFSET '.($entreprisepage-1)*5);
     $req->execute();
     return $req->fetchAll();
 }
@@ -84,6 +84,24 @@ function isWishlisted($offre){
         ));
         $result = $req->fetch();
         if($result){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+}
+
+function isMasked($entreprise){
+    if (isset($_SESSION['id'])) {
+        $entrepriseid = $entreprise;
+        $db = dbConnect();
+        $req = $db->prepare('SELECT visibility FROM entreprise WHERE idEnt = :entrepriseId');
+        $req->execute(array(
+            'entrepriseId' => $entrepriseid
+        ));
+        $result = $req->fetch();
+        if($result && is_array($result) && $result['visibility'] == 0){
             return true;
         }
         else{

@@ -99,11 +99,7 @@
                     echo '<a href="?statUser&id='.$row['id'].'"><button class="stats-button">Statistiques</button></a>';
                 }
                 if($row['role'] == 'pilote') {
-                    if(isAdminSession()){
-                        echo '<a href="?statUser&id='.$row['id'].'"><button class="stats-button" >Statistiques</button></a>';
-                    } else {
                         echo '<button class="stats-button-off">Statistiques</button>';
-                    }
                 }
                 echo '</div>';
                 echo '</div>';
@@ -153,7 +149,11 @@
             if(isPilotSession() or isAdminSession()) {
                 echo '<div>';
                 echo '<ion-icon class="edit-icon" name="create-outline"></ion-icon>';
-                echo '<ion-icon class="eye-icon" name="eye-outline"></ion-icon>';
+                if(isMasked($row['idEnt'])) {
+                    echo '<button class="setDisplayButton" style="--id:' . $row['idEnt'] . '"><ion-icon class="eye-icon" name="eye-off-outline"></ion-icon></button>';
+                } else {
+                    echo '<button class="setDisplayButton" style="--id:' . $row['idEnt'] . '"><ion-icon class="eye-icon" name="eye-outline"></ion-icon></button>';
+                }
                 echo '</div>';
             }
             if(isStudentSession()) {
@@ -186,6 +186,6 @@
 
     <script type="text/javascript" src="wishlist.js"></script>
     <script type="text/javascript" src="supprimer.js"></script>
-
+    <script type="text/javascript" src="script/displayEntreprise.js"></script>
 <?php $content=ob_get_clean(); ?>
 <?php require('view/template.php');?>
