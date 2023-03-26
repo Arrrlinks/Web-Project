@@ -11,27 +11,34 @@ for (let i = 0; i < displayBtn.length; i++) {
             if (xhr.status === 200) {
                 if (xhr.responseText === 'masked') {
                     displayBtn[i].innerHTML = '<ion-icon class="eye-icon" name="eye-off-outline"></ion-icon>';
-                    Swal.fire({
+                    wishlistBtn[i].innerHTML = '<ion-icon name="heart-outline" class="like-icon"></ion-icon>';
+                    const WL = Swal.mixin({
+                        toast: true,
                         position: 'bottom-end',
-                        width: '300px',
-                        icon: 'info',
-                        title: "L'entreprise a été masquée",
                         showConfirmButton: false,
-                        timer: 1000,
-                        backdrop: false,
-                    });
+                        timer: 2000,
+                        timerProgressBar: true
+                    })
+
+                    WL.fire({
+                        icon: 'info',
+                        title: 'L\'entreprise a été masquée'
+                    })
                 }
                 else if (xhr.responseText === 'unmasked') {
                     displayBtn[i].innerHTML = '<ion-icon class="eye-icon" name="eye-outline"></ion-icon>';
-                    Swal.fire({
+                    const WL = Swal.mixin({
+                        toast: true,
                         position: 'bottom-end',
-                        width: '300px',
-                        icon: 'info',
-                        title: "L'entreprise est maintenant visible",
                         showConfirmButton: false,
-                        timer: 1000,
-                        backdrop: false,
-                    });
+                        timer: 2000,
+                        timerProgressBar: true
+                    })
+
+                    WL.fire({
+                        icon: 'info',
+                        title: 'L\'entreprise est désormais visible'
+                    })
 
                 }
                 else {
