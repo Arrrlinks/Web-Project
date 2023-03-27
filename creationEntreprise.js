@@ -1,8 +1,38 @@
 const adrBox = document.getElementById('adresseBox');
 
-function addAdr() {
-    adrBox.insertAdjacentHTML('beforeend', `<label for="Adr"></label><input type="text" name="Adr[]" id="Adr" class="adresse">`);
+function initAutocomplete() {
+    const inputs = document.querySelectorAll('.adresse');
+
+    for (let i = 0; i < inputs.length; i++) {
+        const autocomplete = new google.maps.places.Autocomplete(inputs[i]);
+    }
 }
+
+
+function addAdr() {
+    const adrBox = document.getElementById('adresseBox');
+    const inputCount = adrBox.querySelectorAll('.adresse').length;
+
+    if (inputCount >= 5) {
+        alert('Vous avez atteint le nombre maximum d\'adresses');
+        return;
+    }
+
+    const newInput = document.createElement('input');
+    newInput.type = 'text';
+    newInput.name = 'Adr[]';
+    newInput.id = `Adr-${inputCount}`;
+    newInput.classList.add('adresse');
+
+    const label = document.createElement('label');
+    label.htmlFor = `Adr-${inputCount}`;
+
+    adrBox.insertBefore(newInput, adrBox.lastElementChild);
+    adrBox.insertBefore(label, adrBox.lastElementChild);
+
+    initAutocomplete(); // Call the initAutocomplete function to update the Autocomplete instances
+}
+
 
 function removeAdr() {
     const inputs = adrBox.querySelectorAll('input[type="text"]');

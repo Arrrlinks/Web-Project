@@ -73,6 +73,9 @@ include 'element/sidenav/sidenav.php';
     </div>
 </form>
 <script src="../creationEntreprise.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo file_get_contents('key.txt');?>&libraries=places"></script>
+<script> initAutocomplete(); </script>
+
 <?php
 if($isEntrepriseCreated){ ?>
     <script>showSuccessAlert();</script>
