@@ -74,6 +74,8 @@
     <?php $updateEntreprise ?>
 </form>
 <script src="../creationEntreprise.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo file_get_contents('key.txt');?>&libraries=places"></script>
+<script> initAutocomplete(); </script>
 
 <?php $content=ob_get_clean(); ?>
 <?php require('view/template.php');?>

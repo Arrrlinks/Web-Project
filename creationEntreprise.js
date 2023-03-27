@@ -14,7 +14,18 @@ function addAdr() {
     const inputCount = adrBox.querySelectorAll('.adresse').length;
 
     if (inputCount >= 5) {
-        alert('Vous avez atteint le nombre maximum d\'adresses');
+        const WL = Swal.mixin({
+            toast: true,
+            position: 'bottom-end',
+            showConfirmButton: false,
+            timer: 2000,
+            timerProgressBar: true
+        })
+
+        WL.fire({
+            icon: 'error',
+            title: 'Vous avez atteint le nombre maximum d\'adresses',
+        })
         return;
     }
 
