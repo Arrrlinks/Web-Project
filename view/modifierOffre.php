@@ -6,7 +6,7 @@
 
 <img src="../svg/br-tl%201.svg" alt="tl logo" id="tl1">
 <img src="../svg/br-tl%202.svg" alt="tl logo" id="tl2">
-<form method="post" class ="Box">
+<form method="post" class ="Box" onsubmit="return submitForm(event, this);">
     <h1>Modifier Offre</h1>
     <div class="navbarc">
         <a href="?creationEntreprise">
@@ -68,7 +68,29 @@
         const entrepriseSelect = document.getElementById('entreprise');
         const adrSelect = document.getElementById('Adr');
         const entrepriseOptions = <?php echo json_encode($entreprise); ?>;
+        const entreprise = entrepriseSelect.value;
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'creationOffreAddress.php');
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                // Traitement de la réponse du script PHP
+                const response = JSON.parse(xhr.responseText);
+                adrSelect.innerHTML = '';
+                response.forEach(function (value) {
+                    const option = document.createElement('option');
+                    option.value = value;
+                    option.innerHTML = value;
+                    adrSelect.appendChild(option);
+                });
+            }
+            else {
+                console.log('Erreur lors de la requête.');
+            }
+        };
+        xhr.send('Entr=' + entreprise);
     </script>
-
+    <script type="text/javascript" src="creationOffre.js"></script>
+    <script type="text/javascript" src="script/modifierOffre.js"></script>
 <?php $content=ob_get_clean(); ?>
 <?php require('view/template.php');?>

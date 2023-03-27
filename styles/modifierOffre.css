@@ -104,8 +104,9 @@ select.CreationOffreInput{
     }
 }
 #entreprise{
-    padding-top:10px;
+    display: flex;
     justify-content: center;
+    align-items: center;
 }
 .selected ion-icon{
     color: var(--dark-blue);

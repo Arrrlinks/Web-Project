@@ -7,7 +7,7 @@
 
 <img src="../svg/br-tl%201.svg" alt="tl logo" id="tl1">
 <img src="../svg/br-tl%202.svg" alt="tl logo" id="tl2">
-<form method="post" class="rectangle">
+<form method="post" class="rectangle" onsubmit="return submitForm(event, this);">
     <h1>Modifier une entreprise </h1>
     <div class="navbarc">
         <a href="modifierEntreprise.php"><ion-icon name="home-sharp"></ion-icon></a>
@@ -74,6 +74,7 @@
     <?php $updateEntreprise ?>
 </form>
 <script src="../creationEntreprise.js"></script>
+<script src="script/modifierEntreprise.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo file_get_contents('key.txt');?>&libraries=places"></script>
 <script> initAutocomplete(); </script>
 

@@ -31,7 +31,7 @@
                 } else {
                     foreach ($studentNotifications as $row){
                         echo '<div class="notification">';
-                        echo '<div class="description"> Vous avez postulé à l\'offre <a class="offre" href="?postuler&id='. $row['idOffre'] .'"> '. $row['nomOffre'] .'</a> le '. date('d/m/Y', strtotime($row['date'])) .'</div>';
+                        echo '<div class="description"> Vous avez postulé pour l\'offre <a class="offre" href="?postuler&id='. $row['idOffre'] .'"> '. $row['nomOffre'] .'</a> le '. date('d/m/Y', strtotime($row['date'])) .'</div>';
                         echo '</div>';
                     }
                 }
