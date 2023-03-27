@@ -181,3 +181,56 @@
 .offre{
     color: var(--blue);
 }
+
+.hasBeenAccepted{
+    padding: 10px 20px;
+    background-color: var(--blue);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: fit-content;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.delete{
+    padding: 10px 20px;
+    background-color: #ed4337;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: fit-content;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.rating {
+    transform: rotateY(180deg);
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.rating input[type="radio"] {
+    display: none;
+}
+
+.rating label {
+    display: inline-block;
+    font-size: 40px;
+    color: var(--input-bg);
+    cursor: pointer;
+    transform: scaleX(-1);
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input[type="radio"]:checked ~ label {
+    color: var(--orange);
+}

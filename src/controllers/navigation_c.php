@@ -4,6 +4,8 @@ $pageUser = $_GET['userpage'];
 $pageOffre = $_GET['offrepage'];
 $pageEntreprise = $_GET['entreprisepage'];
 
+isInternshipStarted();
+
 $usersResult = getUsersResult();
 $offresResult = getOffresResult();
 $entreprisesResult = getEntreprisesResult();

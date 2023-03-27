@@ -22,12 +22,23 @@
             echo '<div class="description">Compétences requises : '. $row['skills'] .'</div>';
             echo '<div class="bas-boxstage">';
             echo '<div class="stars-icon">';
-            echo '<div class="confiance">Confiance du pilote :</div>';
-            for ($i = 1; $i <= 5; $i++) {
-                if ($i <= floor($row['scorePilot'])) {
-                    echo '<ion-icon name="star"></ion-icon>';
-                } else {
-                    echo '<ion-icon name="star-outline"></ion-icon>';
+            echo '<div class="confiance">Note attribuée :</div>';
+            if($row['score'] == null){
+                for ($i = 1; $i <= 5; $i++) {
+                    if ($i <= floor($row['scorePilot']) ) {
+                        echo '<ion-icon name="star"></ion-icon>';
+                    } else {
+                        echo '<ion-icon name="star-outline"></ion-icon>';
+                    }
+                }
+            }
+            else{
+                for ($i = 1; $i <= 5; $i++) {
+                    if ($i <= floor(($row['scorePilot'] + $row['score'] )/ 2)) {
+                        echo '<ion-icon name="star"></ion-icon>';
+                    } else {
+                        echo '<ion-icon name="star-outline"></ion-icon>';
+                    }
                 }
             }
             echo '</div>';
@@ -142,11 +153,23 @@
             echo '<div class="name">' . $row['name'] . '</div>';
             echo '<div class="localisation">' . $row['activity'] . '</div>';
             echo '<div class="stars-icon">';
-            for ($i = 1; $i <= 5; $i++) {
-                if ($i <= floor($row['scorePilot'])) {
-                    echo '<ion-icon name="star"></ion-icon>';
-                } else {
-                    echo '<ion-icon name="star-outline"></ion-icon>';
+            echo '<div class="confiance">Note attribuée :</div>';
+            if($row['score'] == null){
+                for ($i = 1; $i <= 5; $i++) {
+                    if ($i <= floor($row['scorePilot']) ) {
+                        echo '<ion-icon name="star"></ion-icon>';
+                    } else {
+                        echo '<ion-icon name="star-outline"></ion-icon>';
+                    }
+                }
+            }
+            else{
+                for ($i = 1; $i <= 5; $i++) {
+                    if ($i <= floor(($row['scorePilot'] + $row['score'] )/ 2)) {
+                        echo '<ion-icon name="star"></ion-icon>';
+                    } else {
+                        echo '<ion-icon name="star-outline"></ion-icon>';
+                    }
                 }
             }
             echo'</div>';
