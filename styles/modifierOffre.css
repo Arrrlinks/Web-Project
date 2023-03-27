@@ -18,7 +18,7 @@
 .Box label{
     color: var(--blue);
 }
-.Mbutton{
+.Cbutton{
     background-color:var(--blue) ;
     color: var(--clear-white);
     border-radius: 10px;
@@ -26,13 +26,14 @@
     height: 50px;
 }
 .button{
+    width: 200%;
     color: var(--blue);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.ModifierOffreInput{
+.CreationOffreInput{
     display:flex;
     flex-direction: column;
     width: 80%;
@@ -45,7 +46,15 @@
     padding: 0 1rem 0 1rem;
 }
 
-.ModifierOffreInput:focus{
+select.CreationOffreInput{
+    height: 40px;
+    width: calc(80% + 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.CreationOffreInput:focus{
     transition: .3s;
     border: 2px solid var(--blue);
     outline: none;
@@ -78,11 +87,38 @@
     .Box{
         width: 100%;
         display: block;
+        padding: 5%;
     }
     .button{
+        width: 50%;
         margin-top: 10px;
         display: block;
         margin-left: 50%;
         transform: translateX(-40%);
     }
+    .Box div{
+        margin-top: 20px;
+    }
+    .navbarc{
+        margin-left: 0;
+    }
+}
+
+.selected ion-icon{
+    color: var(--dark-blue);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.error{
+    border: red 2px solid;
 }
