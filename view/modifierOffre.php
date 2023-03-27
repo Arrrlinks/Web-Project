@@ -9,43 +9,65 @@
 <form method="post" class ="Box">
     <h1>Modifier Offre</h1>
     <div class="navbarc">
-        <a href="modifierEntreprise.php"><ion-icon name="home-sharp"></ion-icon></a>
-        <a href="modifierUtilisateur.php"><ion-icon name="person-add"></ion-icon></a>
-        <a href="modifierOffre.php"><ion-icon name="create"></ion-icon></a>
+        <a href="?creationEntreprise">
+            <ion-icon name="home-sharp"></ion-icon>
+        </a>
+        <a href="?creationUser">
+            <ion-icon name="person-add"></ion-icon>
+        </a>
+        <a href="?creationOffre" class="selected">
+            <ion-icon name="create"></ion-icon>
+        </a>
     </div>
-    <div class="Nom">
-        <label for="nom">Intitulé du poste</label>
-        <input type="text" name="nom" id="nom" class="ModifierOffreInput">
+    <div>
+        <label for="nomPoste">Intitulé du poste</label>
+        <input type="text" name="nomPoste" id="nomPoste" class="CreationOffreInput" required>
     </div>
-    <div class="Nombre">
+    <div>
         <label for="nombre">Nombre de place disponible</label>
-        <input type="number" id="nombre" class="ModifierOffreInput">
+        <input type="number" id="nombre" name="nombre" class="CreationOffreInput" required>
     </div>
-    <div class="Competence">
-        <label for="competence">Conpétence</label>
-        <input type="text" id="competence" class="ModifierOffreInput">
+    <div>
+        <label for="entreprise">Entreprise</label>
+        <select id="entreprise" name="entreprise" class="CreationOffreInput" required>
+            <option value="" disabled selected></option>
+            <?php
+            foreach ($entreprise as $value) {
+                echo '<option value="' . $value['name'] . '">' . $value['name'] . '</option>';
+            }
+            ?>
+        </select>
     </div>
-    <div class="Duree">
-        <label for="duree">Durée du stage</label>
-        <input type="date" id="duree" class="ModifierOffreInput">
+    <div>
+        <label for="skills">Compétences</label>
+        <input type="text" id="skills" name="skills" class="CreationOffreInput" required>
+        <br>
     </div>
-    <div class="Adr">
+    <div>
         <label for="Adr">Adresse</label>
-        <input type="text" id="Adr" class="ModifierOffreInput">
+        <select id="Adr" name="Adr" class="CreationOffreInput" required>
+        </select>
+        <br>
+        <label for="salary">Rémunération</label>
+        <input type="text" id="salary" name="salary" class="CreationOffreInput" required>
     </div>
-    <div class="Promotion">
-        <label for="Pro">Promotion</label>
-        <input type="text" id="Pro" class="ModifierOffreInput">
+    <div>
+        <label for="fromDate">Du</label>
+        <input type="date" id="fromDate" name="fromDate" class="CreationOffreInput" required>
+        <br>
+        <label for="toDate">Au</label>
+        <input type="date" id="toDate" name="toDate" class="CreationOffreInput" required>
     </div>
-    <div class="remuneration">
-        <label for="Re">Rémunération</label>
-        <input type="text" id="Re" class="ModifierOffreInput">
-    </div>
-    <?= $isOffreCreated ?>
     <div class="button">
-        <button type="submit" class="Mbutton">Modifier</button>
+        <button type="submit" class="Cbutton">Creer</button>
     </div>
+
 </form>
+    <script>
+        const entrepriseSelect = document.getElementById('entreprise');
+        const adrSelect = document.getElementById('Adr');
+        const entrepriseOptions = <?php echo json_encode($entreprise); ?>;
+    </script>
 
 <?php $content=ob_get_clean(); ?>
 <?php require('view/template.php');?>
