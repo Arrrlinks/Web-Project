@@ -267,3 +267,7 @@
 .group-likeapply div a ion-icon{
     color: var(--blue);
 }
+
+.group-likeapply div button ion-icon{
+    color: darkred;
+}

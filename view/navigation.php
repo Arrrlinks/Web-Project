@@ -33,18 +33,17 @@
             echo '</div>';
             echo '<div class="group-likeapply">';
             if (isStudentSession() or isAdminSession()) {
+                echo '</button>';
+                echo '<div>';
+                echo '<a class="editButton" href="index.php?modifierOffre&offre=' . $row['idOffre'] . '"><ion-icon class="edit-icon" name="create-outline"></ion-icon></a>';
+                echo '<button class="deleteButtonuser" id="supprimerOffre-' . $row['idOffre'] . '"><ion-icon class="delete-icon" name="trash-outline"></ion-icon></button>';
+                echo '</div>';
                 echo '<button class="wishlistButton" id="nodisplay-button" style="--id:' . $row['idOffre'] . '">';
                 if (isWishlisted($row['idOffre']))
                     echo '<ion-icon class="like-icon" name="heart"></ion-icon>';
                 else
                     echo '<ion-icon class="like-icon" name="heart-outline"></ion-icon>';
-                echo '</button>';
-            }
-            if (isPilotSession() or isAdminSession()){
-                echo '<div>';
-                echo '<a class="editButton" href="index.php?modifierOffre&offre=' . $row['idOffre'] . '"><ion-icon class="edit-icon" name="create-outline"></ion-icon></a>';
-                echo '<button class="deleteButtonuser" id="supprimerOffre-' . $row['idOffre'] . '"><ion-icon class="delete-icon" name="trash-outline"></ion-icon></button>';
-                echo '</div>';
+
             }
             echo '<button class="apply-button" style="--id:'. $row['idOffre'] .'"><a class="offre" href="?postuler&id='. $row['idOffre'] .'">';
             if (isPilotSession())
