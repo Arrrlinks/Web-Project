@@ -9,7 +9,7 @@
             <input type="hidden" name="offrepage" value="1">
         </label>
     </form>
-    <div class="icon-group">
+    <div class="nav-icon-group">
         <?php
         session_start();
         if(isset($_SESSION['id'])) {

@@ -271,3 +271,104 @@
 .group-likeapply div button ion-icon{
     color: darkred;
 }
+
+
+@media (max-width: 950px) {
+    .box-stage{
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .stage .title{
+        width: 100%;
+    }
+
+    .box-entreprise{
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .entreprise .title{
+        width: 100%;
+    }
+
+    .entreprise{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .entreprise .localisation{
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .entreprise .stars-icon{
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .entreprise .icon{
+        display: grid;
+        grid-column: 2;
+        grid-row: 4;
+        justify-content: end;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .box-personne{
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .personne .title{
+        width: 100%;
+    }
+
+    .personne{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .personne .promotion{
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .personne .role{
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .personne .icon{
+        display: grid;
+        grid-column: 2;
+        grid-row: 4;
+        justify-content: end;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .bas-boxstage{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .group-likeapply{
+        justify-content: end;
+    }
+
+    .icon-groupz, .icon-group{
+        display: flex;
+        margin-right: 0;
+    }
+
+    .setDisplayButton{
+        color: black;
+    }
+
+
+}
