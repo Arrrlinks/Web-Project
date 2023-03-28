@@ -190,9 +190,17 @@
     }
 }
 
+@media screen and (max-width:768px){
+    .burger1,
+    .burger2,
+    .burger3 {
+        background: var(--blue);
+    }
+}
+
 @media screen and (max-width: 450px) {
     .sidenav {
-        width: 100vw;
+        width: 75%;
         left:-100vw;
     }
     .sidenav ul{
@@ -202,14 +210,79 @@
         font-size: 18px;
     }
     .sidenav ul.down{
-        width: 100vw;
+        width: 100%;
+        position: unset;
     }
-}
+    .sidenav-box {
+        background-color: var(--blue);
+        width: 100%;
+        height: 10%;
+        display: flex;
+        position: fixed;
+        z-index: 999;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
 
-@media screen and (max-width:768px){
     .burger1,
     .burger2,
     .burger3 {
-        background: var(--blue);
+        background: var(--clear-white);
+    }
+
+    .burger {
+        left: 10px;
+        top: 3px;
+        transform: scale(0.5);
+    }
+
+    #title-navbar {
+        top: 35%;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        z-index: 0;
+        user-select: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    .title-navbar{
+        display: block;
+    }
+
+    #title-navbar span.title-navbar{
+        color: var(--clear-white);
+        width: 90vw;
+        font-size: 30px;
+        position: fixed;
+        text-align: center;
+        font-weight: 900;
+        top: 2.5%;
+    }
+
+    #title-navbar span.title-navbar span{
+        margin: 0 -2.5px;
+    }
+
+    #title-navbar span.title-navbar span:nth-child(1){
+        color: var(--clear-white);
+    }
+
+    #title-navbar span.title-navbar span:nth-child(2){
+        color: var(--home-title);
+    }
+
+    #title-navbar p{
+        color: var(--blue);
+        font-style: italic;
+        position: absolute;
+        top: 50px;
+        font-size: 20px;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .title-navbar {
+        display: block !important; /* définit la propriété display sur block */
     }
 }
