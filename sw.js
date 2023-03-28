@@ -1,11 +1,10 @@
 // Service worker script
 const cacheName = 'CesiEnFait';
 const staticAssets = [
-    '/',
     '/accueil.php',
     '/styles.css',
     '/img/logo.png',
-    '/site.webmanifest'
+    '/manifest.json'
 ];
 
 self.addEventListener('install', async function () {

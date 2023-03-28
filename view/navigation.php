@@ -152,7 +152,7 @@
     }else{
         foreach ($entreprisesResult as $row){
             echo '<div class="entreprise">';
-            echo '<div class="name">' . $row['name'] . '</div>';
+            echo '<div class="name">' . ucwords($row['name']) . '</div>';
             echo '<div class="localisation">' . $row['activity'] . '</div>';
             echo '<div class="stars-icon">';
             echo '<div class="confiance">Note attribuée :</div>';

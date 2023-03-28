@@ -28,9 +28,10 @@
             <?php if(isset($_SESSION['id'])){
                 if(isPilotSession()){?>
                     <button type="submit" class="Postuler"><a href=<?= 'mailto:'.$offre['email'][0] ?>>Contacter</a></button>
-                <?php }else{
+                <?php }elseif($offre['isVisible']){
                     echo "<button type='submit' id='postuler' style='--id:". $_GET['id'] ."' class='Postuler'><a href='mailto:".$offre['email'][0]."'>Postuler</a></button>";
-                    }} ?>
+                    }}
+            ?>
 
         </div>
     </div>

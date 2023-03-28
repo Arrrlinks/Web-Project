@@ -1,4 +1,4 @@
-<?php $title = "statistique Entreprise"; ?>
+<?php $title = ucwords($data[0]['name']) ?>
 <?php $css = "statEntreprise.css"; ?>
 <?php $navbar = 1; ?>
 <?php $sidenav = 1; ?>
@@ -6,12 +6,12 @@
 <img src="../svg/br-tl%201.svg" alt="tl logo" id="tl1">
 <img src="../svg/br-tl%202.svg" alt="tl logo" id="tl2">
 <form method="post" class="rectangle">
-    <h1>Stat Entreprise </h1>
+    <h1><?= ucwords($data[0]['name']) ?></h1>
     <div>
     </div>
     <div>
         <label for="nameEntr">Nom de l'entreprise</label>
-        <div class="value"><?= $data[0]['name'] ?></div>
+        <div class="value"><?= ucwords($data[0]['name']) ?></div>
     </div>
     <div>
         <label for="numberOfEmployee">Nombre de personne</label>
