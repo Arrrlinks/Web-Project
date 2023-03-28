@@ -21,7 +21,7 @@
     </div><br>
     <div class="Donnees">
         <label>Données personnelles</label><br>
-        <p> Le traitement de vos données à caractère personnel est régi par notre Charte du respect de la vie privée, disponible depuis la section "Charte de Protection des Données Personnelles", conformément au Règlement Général sur la Protection des Données 2016/679 du 27 avril 2016<a class="editButton" href="?rgpd"> RGPD </a>.</p>
+        <p> Le traitement de vos données à caractère personnel est régi par notre Charte du respect de la vie privée, disponible depuis la section "Charte de Protection des Données Personnelles", conformément au Règlement Général sur la Protection des Données 2016/679 du 27 avril 2016<a class="editButton" href="?rgpd"> RGPD </a></p>
     </div>
     <div class="Mention">
         <label>Mentions légales</label><br>
