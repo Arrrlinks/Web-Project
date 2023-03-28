@@ -1,0 +1,19 @@
+{
+  "name": "CESIEnFait",
+  "short_name": "CESIEnFait",
+  "description": "Parce que c'est votre projet !",
+  "orientation": "portrait-primary",
+  "lang": "fr",
+  "theme_color": "#3963ad",
+  "background_color": "#f2f3fd",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "img/logo.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="manifest" href="../site.webmanifest">
+    <link rel="manifest" href="manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://tse2.mm.bing.net/th?id=OIP.yn1B-MtM4jVkQ_O4dL4o0AHaHa&pid=Api&P=0">
     <title><?= $title ?></title>
