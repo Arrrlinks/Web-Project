@@ -234,3 +234,11 @@
 .rating input[type="radio"]:checked ~ label {
     color: var(--orange);
 }
+
+@media screen and (max-width: 768px) {
+    .box-stage{
+        width: 100%;
+        border-radius: 0;
+        margin: 75px auto 50px auto;
+    }
+}

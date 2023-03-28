@@ -273,10 +273,11 @@
 }
 
 
-@media (max-width: 950px) {
+@media (max-width: 768px) {
     .box-stage{
         width: 100%;
         border-radius: 0;
+        margin: 75px auto 25px auto;
     }
 
     .stage .title{
@@ -286,6 +287,7 @@
     .box-entreprise{
         width: 100%;
         border-radius: 0;
+        margin: 0 auto 25px auto;
     }
 
     .entreprise .title{
@@ -320,6 +322,7 @@
     .box-personne{
         width: 100%;
         border-radius: 0;
+        margin: 0 auto 25px auto;
     }
 
     .personne .title{

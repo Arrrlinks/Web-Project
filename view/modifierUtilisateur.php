@@ -10,17 +10,6 @@
 <form method="post" class="Box" onsubmit="return submitForm(event, this);">
     <h1>Modifier d'utilisateur</h1>
     <div class="Ensemble"></div>
-    <div class="navbarc">
-        <a href="modifierEntreprise.php">
-            <ion-icon name="home-sharp"></ion-icon>
-        </a>
-        <a href="modifierUtilisateur.php">
-            <ion-icon name="person-add"></ion-icon>
-        </a>
-        <a href="modifierOffre.php">
-            <ion-icon name="create"></ion-icon>
-        </a>
-    </div>
     <div style="grid-column:1; grid-row:2">
         <label for="prenomU">Prénom</label>
         <input type="text" id="prenomU" name="prenomU" value ="<?php echo $getUser['prenom'] ?>" class="UserCreationInput" required>
