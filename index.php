@@ -53,6 +53,9 @@ elseif (isset($_GET['postuler'])){
 elseif (isset($_GET['notifications'])){
     require_once('src/controllers/notifications_c.php');
 }
+elseif (isset($_GET['aPropos'])){
+    require_once('src/controllers/aPropos_c.php');
+}
 else {
     require_once('src/controllers/accueil_c.php');
 }

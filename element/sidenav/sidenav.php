@@ -15,7 +15,6 @@
                 if (strtolower($_SESSION['role']) === 'admin') {
                     echo '<li><a href="?wishlist&wishlistpage=1"><ion-icon name="heart-outline"></ion-icon>Wishlist</a></li>';
                     echo '<li><a href="?creationEntreprise"><ion-icon name="add-circle-outline"></ion-icon>Creation</a></li>';
-
                 }
                 echo '<li><a href="?notifications"><ion-icon name="notifications-outline"></ion-icon>Notification</a></li>';
             }
@@ -28,6 +27,8 @@
             echo '<li><a href="?account"><ion-icon name="person-outline"></ion-icon>Mon compte</a></li>';
             ?>
 
+            <li><a href="?aPropos"><ion-icon name="at-outline"></ion-icon>À propos</a></li>
+
             <?php
             if (isset($_SESSION['id'])) {
                 echo '<li><a href="?logout"><ion-icon name="log-out-outline"></ion-icon>Déconnexion</a></li>';
@@ -35,7 +36,6 @@
                 echo '<li><a href="?login"><ion-icon name="enter-outline"></ion-icon>Connexion</a></li>';
             }
             ?>
-
         </ul>
     </div>
     <div class="burger" id="openBtn">
