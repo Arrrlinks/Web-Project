@@ -1,5 +1,6 @@
 const adrBox = document.getElementById('adresseBox');
 
+
 function initAutocomplete() {
     const inputs = document.querySelectorAll('.adresse');
 
@@ -7,6 +8,7 @@ function initAutocomplete() {
         const autocomplete = new google.maps.places.Autocomplete(inputs[i]);
     }
 }
+
 
 
 function addAdr() {

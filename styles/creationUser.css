@@ -55,7 +55,6 @@
     grid-row-end: 2;
     display: flex;
     margin-top: -75px;
-    margin-left: 40px;
     align-items: center;
     width: 20%;
 }
@@ -167,7 +166,7 @@
         display: block;
     }
     .Box input[type="radio"].demo5 + label {
-        top: 80px;
+
     }
     .Box div{
         margin-top: 20px;

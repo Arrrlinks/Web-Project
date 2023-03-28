@@ -9,6 +9,17 @@
 <form method="post" class="Box">
     <h1>Créer un utilisateur</h1>
     <div class="Ensemble"></div>
+    <div class="navbarc">
+        <a href="?creationEntreprise">
+            <ion-icon name="home-sharp"></ion-icon>
+        </a>
+        <a href="?creationUser" class="selected">
+            <ion-icon name="person-add"></ion-icon>
+        </a>
+        <a href="?creationOffre">
+            <ion-icon name="create"></ion-icon>
+        </a>
+    </div>
     <div class="ButtonR">
         <input type="radio" name="role" class="demo5" id="demo5-a" value="etudiant" checked required>
         <label for="demo5-a">Etudiant</label>
@@ -21,17 +32,7 @@
         }
         ?>
     </div>
-    <div class="navbarc">
-        <a href="?creationEntreprise">
-            <ion-icon name="home-sharp"></ion-icon>
-        </a>
-        <a href="?creationUser" class="selected">
-            <ion-icon name="person-add"></ion-icon>
-        </a>
-        <a href="?creationOffre">
-            <ion-icon name="create"></ion-icon>
-        </a>
-    </div>
+
     <div>
         <label for="prenomU">Prénom</label>
         <input type="text" id="prenomU" name="prenomU" class="UserCreationInput" required>
