@@ -35,7 +35,7 @@ include 'element/sidenav/sidenav.php';
     </div>
 
     <div id="adresseBox">
-        <label>Adresse</label>
+        <label>Adresse(s)</label>
         <span class="iconAdr">
             <button type="button" class="addAdr" onclick="removeAdr()"><ion-icon name="remove-outline"></ion-icon></button>
             <button type="button" class="addAdr" onclick="addAdr()"><ion-icon name="add-outline"></ion-icon></button>
