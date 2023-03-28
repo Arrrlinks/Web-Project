@@ -7,3 +7,10 @@ window.addEventListener('scroll', () => {
         navbar.classList.remove('navbar-scroll');
     }
 });
+
+const input = document.getElementById('navbar-search-input');
+
+input.addEventListener('click', function() {
+    input.value = '';
+    input.placeholder='';
+});
