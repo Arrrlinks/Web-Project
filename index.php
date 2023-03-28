@@ -56,6 +56,12 @@ elseif (isset($_GET['notifications'])){
 elseif (isset($_GET['aPropos'])){
     require_once('src/controllers/aPropos_c.php');
 }
+elseif (isset($_GET['mentionLegale'])){
+    require_once('src/controllers/mentionlegal_c.php');
+}
+elseif (isset($_GET['rgpd'])){
+    require_once('src/controllers/rgpd_c.php');
+}
 else {
     require_once('src/controllers/accueil_c.php');
 }
