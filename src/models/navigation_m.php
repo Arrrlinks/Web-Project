@@ -22,11 +22,11 @@ function getOffresResult()
     $recherche = $_GET['q'];
     $offrepage = $_GET['offrepage'];
     $bdd = dbConnect();
-    $req = $bdd->prepare('SELECT offre.idOffre, offre.nomOffre, offre.entreprise, offre.skills, offre.address, offre.isVisible, entreprise.score, entreprise.scorePilot 
-    FROM offre INNER JOIN entreprise ON entreprise.name = offre.entreprise 
+    $req = $bdd->prepare('SELECT offre.idOffre, offre.nomOffre, entreprise.name, offre.skills, offre.address, offre.isVisible, entreprise.score, entreprise.scorePilot 
+    FROM offre INNER JOIN entreprise ON entreprise.idEnt = offre.idEntreprise 
     WHERE isVisible = 1
     AND (offre.nomOffre LIKE "%' . $recherche . '%" 
-    OR offre.entreprise LIKE "%' . $recherche . '%" 
+    OR entreprise.name LIKE "%' . $recherche . '%" 
     OR offre.skills LIKE "%' . $recherche . '%" 
     OR offre.address LIKE "%' . $recherche . '%" )
     LIMIT 5 OFFSET ' . ($offrepage - 1) * 5);
@@ -113,10 +113,10 @@ function totalPagesOffre()
     $recherche = $_GET['q'];
     $bdd = dbConnect();
     $req = $bdd->prepare('SELECT count(*) as total 
-                                FROM offre INNER JOIN entreprise ON entreprise.name = offre.entreprise 
+                                FROM offre INNER JOIN entreprise ON entreprise.idEnt = offre.idEntreprise 
                                     WHERE isVisible = 1
                                         AND (offre.nomOffre LIKE "%' . $recherche . '%" 
-                                        OR offre.entreprise LIKE "%' . $recherche . '%" 
+                                        OR entreprise.name LIKE "%' . $recherche . '%" 
                                         OR offre.skills LIKE "%' . $recherche . '%" 
                                         OR offre.address LIKE "%' . $recherche . '%" ) ');
     $req->execute();

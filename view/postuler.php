@@ -12,7 +12,7 @@
 <form method="post" class="Rectangle">
     <h1><?= $offre['nomOffre'] ?></h1>
     <div class="Box">
-        <span><?= $offre['entreprise'] ?></span>
+        <span><?= $offre['name'] ?></span>
         <span>Durée : Du <?= date('d/m/Y', strtotime($offre['fromDate'])) ?> au <?= date('d/m/Y', strtotime($offre['toDate'])) ?></span>
         <span><?php
             echo '<a target="_blank" href="https://www.google.com/maps/search/'.$offre['address'].'">';

@@ -28,8 +28,11 @@ function getAdresse($entreprise){
 function createOffre(){
     if(isset($_POST['nomPoste']) && isset($_POST['nombre']) && isset($_POST['entreprise']) && isset($_POST['skills']) && isset($_POST['Adr']) && isset($_POST['salary']) && isset($_POST['fromDate']) && isset($_POST['toDate'])){
         $db = dbConnect();
-        $req = $db->prepare('INSERT INTO offre (nomOffre, numberOfPlaces, entreprise, skills, address, salary, fromDate, toDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?)');
-        $req->execute(array($_POST['nomPoste'], $_POST['nombre'], $_POST['entreprise'], $_POST['skills'], $_POST['Adr'], $_POST['salary'], $_POST['fromDate'], $_POST['toDate']));
+        $req = $db->prepare('select idEnt from entreprise where name=?');
+        $req->execute(array($_POST['entreprise']));
+        $entreprise = $req->fetch();
+        $req = $db->prepare('INSERT INTO offre (nomOffre, numberOfPlaces, idEntreprise, skills, address, salary, fromDate, toDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?)');
+        $req->execute(array($_POST['nomPoste'], $_POST['nombre'], $entreprise['idEnt'], $_POST['skills'], $_POST['Adr'], $_POST['salary'], $_POST['fromDate'], $_POST['toDate']));
         $req = $db->prepare('select * from offre');
         $resultat = $req->execute();
         if($resultat){

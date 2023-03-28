@@ -46,7 +46,7 @@ function updateOffre() {
 }
 function getEntreprise(){
     $db = dbConnect();
-    $req = $db->prepare('SELECT entreprise FROM offre WHERE idOffre = :offre');
+    $req = $db->prepare('SELECT entreprise.name FROM offre INNER JOIN entreprise ON offre.idEntreprise = entreprise.idEnt WHERE offre.idOffre = :offre');
     $req->execute(array(
         'offre' => $_GET['offre']
     ));

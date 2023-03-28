@@ -39,7 +39,7 @@
                     echo '<ion-icon class="like-icon" name="heart-outline"></ion-icon>';
                 }
                 echo '</button>';
-                echo '<button class="apply-button" style="--id:'. $row['idOffre'] .'"><a class="offre" href="?postuler&id='. $row['idOffre'] .'">Postuler</a></button>';
+                echo '<button class="apply-button" style="--id:'. $row['idOffre'] .'"><a class="offre" href="?postuler&id='. $row['idOffre'] .'">Voir l\'offre</a></button>';
                 echo '</div>';
                 echo '</div>';
                 echo '</div>';

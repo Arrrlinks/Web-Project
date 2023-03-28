@@ -50,7 +50,7 @@ function acceptStudent()
             'idOffre' => $_POST['idOffre']
         ));
     }
-    $req = $db->prepare("SELECT entreprise.idEnt FROM offre INNER JOIN entreprise ON offre.entreprise = entreprise.name WHERE offre.idOffre = :idOffre");
+    $req = $db->prepare("SELECT entreprise.idEnt FROM offre INNER JOIN entreprise ON offre.idEntreprise = entreprise.idEnt WHERE offre.idOffre = :idOffre");
     $req->execute(array(
         'idOffre' => $_POST['idOffre']
     ));
@@ -76,7 +76,7 @@ function rate()
 {
     $db = dbConnect();
     $rating = $_POST['rating'];
-    $req = $db->prepare("SELECT entreprise.idEnt,entreprise.score FROM offre INNER JOIN entreprise ON offre.entreprise = entreprise.name WHERE offre.idOffre = :idOffre");
+    $req = $db->prepare("SELECT entreprise.idEnt,entreprise.score FROM offre INNER JOIN entreprise ON offre.idEntreprise = entreprise.idEnt WHERE offre.idOffre = :idOffre");
     $req->execute(array(
         'idOffre' => $_POST['idOffre']
     ));
