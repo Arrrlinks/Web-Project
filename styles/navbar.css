@@ -33,13 +33,13 @@
     color: var(--white);
 }
 
-.icon-group {
+.nav-icon-group {
     display: flex;
     align-items: center;
     margin-right: 10px; /* Espacement entre les icônes et le bloc d'info utilisateur */
 }
 
-.icon-group ion-icon {
+.nav-icon-group ion-icon {
     color: var(--blue);
     margin-right: 10px; /* Espacement entre les icônes */
 }

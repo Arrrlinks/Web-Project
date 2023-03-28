@@ -143,4 +143,6 @@ ion-icon{
     #bl3{
         display: none;
     }
+    body{
+    background-color: var(--clear-white);}
 }
