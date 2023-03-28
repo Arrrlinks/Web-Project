@@ -150,5 +150,6 @@ ion-icon{
         display: none;
     }
     body{
-    background-color: var(--clear-white);}
+    background-color: var(--clear-white);
+    }
 }

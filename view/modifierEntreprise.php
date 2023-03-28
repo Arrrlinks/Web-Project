@@ -9,14 +9,7 @@
 <img src="../svg/br-tl%202.svg" alt="tl logo" id="tl2">
 <form method="post" class="rectangle" onsubmit="return submitForm(event, this);">
     <h1>Modifier une entreprise </h1>
-    <div class="navbarc">
-        <a href="modifierEntreprise.php"><ion-icon name="home-sharp"></ion-icon></a>
-        <a href="modifierUtilisateur.php"><ion-icon name="person-add"></ion-icon></a>
-        <a href="modifierOffre.php"><ion-icon name="create"></ion-icon></a>
-    </div>
     <div>
-        <label for="nameEntr">Nom de l'entreprise</label>
-        <input type="text" name="nameEntr" id="nameEntr" class="Cform" value="<?php echo $getEntreprise['name'] ?>" required>
     </div>
     <div>
         <label for="numberOfEmployee">Nombre d'employés</label>
@@ -68,6 +61,7 @@
             </label>
         </div>
     </div>
+    <div></div>
     <div class="button">
         <button type="submit" class="Mbutton">Modifier</button>
     </div>

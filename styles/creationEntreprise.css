@@ -1,6 +1,6 @@
 .rectangle h1{
  padding-left: 10px;
- color: var(--home-title);
+ color: dark;
 }
 
 .rectangle{
@@ -72,12 +72,20 @@
 }
 
 .Cbutton{
-    background-color:var(--blue) ;
     color: var(--clear-white);
-    border-radius: 10px;
     margin-top: 50px;
     padding: 10px 50px;
     height: 50px;
+    background-color: var(--blue);
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.Cbutton:hover {
+    background-color: var(--dark-blue);
 }
 
 .rating {
@@ -123,12 +131,6 @@
 .error{
     border: red 2px solid;
 }
-
-@media screen and (max-width: 768px){
-    .rating label {
-        font-size: 20px;
-    }
-}
 .navbarc {
     display:flex;
     flex-direction: row;
@@ -152,18 +154,19 @@
 }
 
 @media (max-width: 768px){
+    .rating label {
+        font-size: 20px;
+    }
     .rectangle{
         width: 100%;
+        border-radius: 0;
+        margin: 75px auto 50px auto;
         display: block;
         padding: 5%;
     }
     .button{
-        margin-top: -60px;
-        margin-bottom: -40px;
+        margin: 0 25% 0 25%;
         display: block;
-        margin-left: 50%;
-        transform: translate(-40%,-40px);
-        width: 40%;
     }
     .rectangle div:not(.rating){
         margin-top: 20px;
@@ -176,6 +179,7 @@
     }
     .navbarc{
         margin-left: 0;
+        padding: 50px 0 0 0;
     }
     #adresseBox{
         margin-top: 10px;

@@ -1,6 +1,6 @@
 .rectangle h1{
     padding-left: 10px;
-    color: var(--home-title);
+    color: dark;
 }
 
 .rectangle{
@@ -12,7 +12,7 @@
     width: 60%;
     border-radius:20px ;
     position: relative;
-    margin: 135px auto;
+    margin: 150px auto;
 }
 
 .rectangle label{
@@ -40,6 +40,8 @@
 
 #adresseBox{
     margin-top: -20px;
+    grid-column: 1;
+    grid-row: 4;
 }
 
 .adresse{
@@ -64,20 +66,27 @@
 
 .button{
     width: 200%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: var(--blue);
-    margin-top: -20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .Mbutton{
-    background-color:var(--blue) ;
     color: var(--clear-white);
-    border-radius: 10px;
     margin-top: 50px;
     padding: 10px 50px;
     height: 50px;
+    background-color: var(--blue);
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.MButton:hover {
+    background-color: var(--dark-blue);
 }
 
 .rating {
@@ -153,17 +162,14 @@
 
 @media (max-width: 768px){
     .rectangle{
+        margin: 75px auto;
         width: 100%;
         display: block;
         padding: 5%;
     }
     .button{
-        margin-top: -60px;
-        margin-bottom: -40px;
+        margin: 20px 25% 0 25%;
         display: block;
-        margin-left: 50%;
-        transform: translate(-40%,-40px);
-        width: 40%;
     }
     .rectangle div:not(.rating){
         margin-top: 20px;
@@ -179,6 +185,9 @@
     }
     #adresseBox{
         margin-top: 10px;
+    }
+    .CButton{
+        margin-top: unset;
     }
 }
 

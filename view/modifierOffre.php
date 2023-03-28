@@ -8,17 +8,7 @@
 <img src="../svg/br-tl%202.svg" alt="tl logo" id="tl2">
 <form method="post" class ="Box" onsubmit="return submitForm(event, this);">
     <h1>Modifier Offre</h1>
-    <div class="navbarc">
-        <a href="?creationEntreprise">
-            <ion-icon name="home-sharp"></ion-icon>
-        </a>
-        <a href="?creationUser">
-            <ion-icon name="person-add"></ion-icon>
-        </a>
-        <a href="?creationOffre" class="selected">
-            <ion-icon name="create"></ion-icon>
-        </a>
-    </div>
+    <div></div>
     <div>
         <label for="nomPoste">Intitulé du poste</label>
         <input type="text" name="nomPoste" id="nomPoste" class="CreationOffreInput" value="<?php echo $getOffre['nomOffre'] ?>"required>
