@@ -118,7 +118,7 @@ ion-icon{
     z-index: 0;
 }
 
-@media (max-width: 768px ) {
+@media (max-width: 1200px ) {
     #tl1{
         display: none;
     }
