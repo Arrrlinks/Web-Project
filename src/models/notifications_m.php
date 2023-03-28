@@ -50,6 +50,16 @@ function acceptStudent()
             'idOffre' => $_POST['idOffre']
         ));
     }
+    $req = $db->prepare("SELECT entreprise.idEnt FROM offre INNER JOIN entreprise ON offre.entreprise = entreprise.name WHERE offre.idOffre = :idOffre");
+    $req->execute(array(
+        'idOffre' => $_POST['idOffre']
+    ));
+    $result = $req->fetchAll();
+    $idEnt = $result[0]['idEnt'];
+    $req = $db->prepare("UPDATE entreprise SET entreprise.numberOfInternship = entreprise.numberOfInternship + 1 WHERE idEnt = :idEnt");
+    $req->execute(array(
+        'idEnt' => $idEnt
+    ));
 }
 
 function deleteStudent()
@@ -62,7 +72,8 @@ function deleteStudent()
     ));
 }
 
-function rate(){
+function rate()
+{
     $db = dbConnect();
     $rating = $_POST['rating'];
     $req = $db->prepare("SELECT entreprise.idEnt,entreprise.score FROM offre INNER JOIN entreprise ON offre.entreprise = entreprise.name WHERE offre.idOffre = :idOffre");
@@ -71,17 +82,16 @@ function rate(){
     ));
     $result = $req->fetchAll();
     $score = $result[0]['score'];
-    if($score == null){
+    if ($score == null) {
         $req = $db->prepare("UPDATE entreprise SET score = :rating WHERE idEnt = :idEnt");
         $req->execute(array(
             'rating' => $rating,
             'idEnt' => $result[0]['idEnt']
         ));
-    }
-    elseif ($score != null){
+    } elseif ($score != null) {
         $req = $db->prepare("UPDATE entreprise SET score = :rating WHERE idEnt = :idEnt");
         $req->execute(array(
-            'rating' => ($score + $rating)/2,
+            'rating' => ($score + $rating) / 2,
             'idEnt' => $result[0]['idEnt']
         ));
     }
@@ -90,7 +100,7 @@ function rate(){
         'idUser' => $_POST['idUser'],
         'idOffre' => $_POST['idOffre']
     ));
-    }
+}
 
 if (isset($_POST['hasBeenAccepted'])) {
     acceptStudent();
