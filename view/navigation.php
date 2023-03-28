@@ -108,7 +108,7 @@
                     echo '<ion-icon class="delete-icon" name="trash-outline" style="display:none"></ion-icon>';
                     echo '</div>';
                 } else{
-                    echo '<div>';
+                    echo '<div class="icon-group">';
                     echo '<a class="editButton" href="index.php?modifierUtilisateur&user=' . $row['id'] . '"><ion-icon class="edit-icon" name="create-outline"></ion-icon></a>';
                     echo '<button class="deleteButtonuser" id="supprimerUser-' . $row['id'] . '"><ion-icon class="delete-icon" name="trash-outline"></ion-icon></button>';
                     echo '</div>';
@@ -177,7 +177,7 @@
             echo'</div>';
             echo '<div class="icon">';
             if(isPilotSession() or isAdminSession()) {
-                echo '<div>';
+                echo '<div class="icon-groupz">';
                 echo '<a class="editButton" href="index.php?modifierEntreprise&entreprise=' . $row['idEnt'] . '"><ion-icon class="edit-icon" name="create-outline"></ion-icon></a>';
                 if(isMasked($row['idEnt'])) {
                     echo '<button class="setDisplayButton" style="--id:' . $row['idEnt'] . '"><ion-icon class="eye-icon" name="eye-off-outline"></ion-icon></button>';
