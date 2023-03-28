@@ -1,0 +1,17 @@
+.rectangle{
+    position: relative;
+    width: 78%;
+    height: auto;
+    margin: 150px auto;
+    background-color: var(--clear-white);
+    border-radius: 20px;
+}
+.rectangle h1 {
+    padding-left: 40px;
+}
+.rectangle strong {
+    padding-left: 5px;
+}
+.rectangle p {
+    padding-left: 5px;
+}
