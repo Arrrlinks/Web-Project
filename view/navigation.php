@@ -48,7 +48,7 @@
                 if(isAdminSession() or isPilotSession()){
                     echo '<div>';
                     echo '<a class="editButton" href="index.php?modifierOffre&offre=' . $row['idOffre'] . '"><ion-icon class="edit-icon" name="create-outline"></ion-icon></a>';
-                    echo '<button class="deleteButtonuser" id="supprimerOffre-' . $row['idOffre'] . '"><ion-icon class="delete-icon" name="trash-outline"></ion-icon></button>';
+                    echo '<button class="deleteButtonOffre" id="supprimerOffre-' . $row['idOffre'] . '"><ion-icon class="delete-icon" name="trash-outline"></ion-icon></button>';
                     echo '</div>';
                 }
                 echo '<button class="wishlistButton" id="nodisplay-button" style="--id:' . $row['idOffre'] . '">';
@@ -216,6 +216,7 @@
 
     <script type="text/javascript" src="wishlist.js"></script>
     <script type="text/javascript" src="supprimer.js"></script>
+    <script type="text/javascript" src="supprimerOffre.js"></script>
     <script type="text/javascript" src="script/displayEntreprise.js"></script>
 <?php $content=ob_get_clean(); ?>
 <?php require('view/template.php');?>
