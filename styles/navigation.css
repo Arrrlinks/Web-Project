@@ -225,7 +225,7 @@
     border-radius: 20px;
 }
 
-.deleteButtonuser{
+.deleteButtonuser ,.deleteButtonOffre{
     background: none;
     border: none;
     cursor: pointer;
