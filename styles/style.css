@@ -28,6 +28,11 @@ ion-icon{
     pointer-events: none;
 }
 
+::selection{
+    background-color: var(--blue);
+    color: var(--clear-white);
+}
+
 #tl1{
     position: absolute;
     transform: rotate(180deg);
