@@ -1,5 +1,5 @@
-<?= $title='Login' ?>
-<?= $css='login.css' ?>
+<?php $title='Login' ?>
+<?php $css='login.css' ?>
 <?php $navbar = 0; ?>
 <?php $sidenav = 1; ?>
 
