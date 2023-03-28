@@ -23,6 +23,8 @@ function isLogin()
             $_SESSION['promo'] = $resultat['promo'];
             $_SESSION['centre'] = $resultat['centre'];
             $_SESSION['role'] = $resultat['role'];
+            session_set_cookie_params(84400);
+            session_regenerate_id();
         }
     }
     ifSessionExit();

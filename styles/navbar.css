@@ -108,11 +108,6 @@
     color: var(--blue);
 }
 
-.nav-searchbar input:focus, input:hover {
-    outline: none;
-    color: var(--blue);
-}
-
 @media screen and (max-width: 520px) {
     .navbar{
         display: none;
