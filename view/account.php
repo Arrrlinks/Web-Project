@@ -20,7 +20,7 @@
       <div class="label">Rôle:</div>
       <div class="value"><?= ucfirst(strtolower($data['role']))?></div>
       <button><a href="?pwdReset">Modifier le mot de passe</a></button>
-      <button style="background-color: red; border: 1.8px solid red;"><a href="?logout">Déconnection</a></button>
+      <button style="background-color: red; border: 1.8px solid red;"><a href="?logout">Déconnexion</a></button>
   </div>
     <img src="../svg/user-illustration.svg" alt="user illustration" id="user_illustration">
   </div>
