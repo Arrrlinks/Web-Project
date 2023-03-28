@@ -16,17 +16,17 @@
     <div class="Sommes">
         <label>Qui sommes-nous ?</label> <br>
         <p>Nous sommes une équipe de développeurs web, nous avons réalisé ce site pour les étudiants
-            CESI qui sont à la recherche d'un stage. Notre équipe est composée de trois personnes. De Romain Morel
+            CESI qui sont à la recherche d'un stage. Notre équipe est composée de trois personnes : De Romain Morel
             Antoine Faure et Quentin Bessot</p>
     </div><br>
     <div class="Donnees">
         <label>Données personnelles</label><br>
-        <p> Le traitement de vos données à caractère personnel est régi par notre Charte du respect de la vie privée, disponible depuis la section "Charte de Protection des Données Personnelles", conformément au Règlement Général sur la Protection des Données 2016/679 du 27 avril 2016<a class="editButton" href="?rgpd"> règlement général sur la protection des données </a>.</p>
+        <p> Le traitement de vos données à caractère personnel est régi par notre Charte du respect de la vie privée, disponible depuis la section "Charte de Protection des Données Personnelles", conformément au Règlement Général sur la Protection des Données 2016/679 du 27 avril 2016<a class="editButton" href="?rgpd"> RGPD </a>.</p>
     </div>
     <div class="Mention">
-        <label>Mention legal</label><br>
+        <label>Mentions légales</label><br>
         <p>Vous trouverez les mentions legal en cliquant sur le lien ci-dessous : </p>
-        <a class="editButton" href="?mentionLegale">Mention legal </a>
+        <a class="editButton" href="?mentionLegale">Mentions légales </a>
     </div>
 </div>
 </body>

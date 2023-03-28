@@ -1,24 +1,25 @@
 .rectangle{
     position: relative;
-    width: 78%;
+    width: 70%;
     height: auto;
     margin: 150px auto;
     background-color: var(--clear-white);
     border-radius: 20px;
+    padding: 40px;
 }
 .rectangle h1 {
     font-weight: bold;
-    margin-left: 60px;
+    margin-left: 20px;
     margin-top: 20px;
 }
 .Edition  {
     margin-top: -20px;
 }
 .rectangle h2 {
-    padding-left: 40px;
+    padding-left: 20px;
 }
-p {
-    padding-left: 15px;
+.rectangle p {
+    padding-left: 45px;
     padding-top: 15px;
     margin-top: -30px;
 }

@@ -1,10 +1,11 @@
 .rectangle{
     position: relative;
-    width: 70%;
+    width: 60%;
     height: auto;
-    margin: 150px auto;
+    margin: 120px auto 0 auto;
     background-color: var(--clear-white);
     border-radius: 20px;
+    padding: 40px;
 }
 .rectangle h1 {
     font-weight: bold;
