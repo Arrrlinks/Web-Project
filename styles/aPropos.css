@@ -11,14 +11,17 @@
     font-weight: bold;
     margin-left: 40px;
     margin-top: 20px;
+    text-align: justify;
 }
 .rectangle label {
     font-weight: 700;
     margin-left: 40px;
     margin-top: 15px;
+    text-align: justify;
 }
 p {
     margin-left: 5px;
+    text-align: justify;
 }
 .rectangle a {
     display: flex;
