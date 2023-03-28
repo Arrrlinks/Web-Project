@@ -272,12 +272,15 @@
     color: darkred;
 }
 
+.searchbar {
+    display: none;
+}
 
 @media (max-width: 768px) {
     .box-stage{
         width: 100%;
         border-radius: 0;
-        margin: 75px auto 25px auto;
+        margin: 0 auto 25px auto;
     }
 
     .stage .title{
@@ -372,6 +375,44 @@
     .setDisplayButton{
         color: black;
     }
+
+    .searchbar {
+        display: flex;
+        line-height: 28px;
+        align-items: center;
+        justify-content: center;
+        max-width: unset;
+        margin-top: 100px;
+    }
+
+    .searchbar input {
+        width: 100%;
+        height: 40px;
+        line-height: 28px;
+        padding: 0 1rem 0 2.5rem;
+        border: 2px solid transparent;
+        background-color: var(--white);
+        border-radius: 20px;
+        outline: none;
+        color: var(--text-color);
+        transition: .3s ease
+    }
+
+    .searchbar input::placeholder {
+        color: var(--blue);
+    }
+
+    .searchbar svg {
+        position: absolute;
+        fill: var(--blue);
+        width: 5%;
+        height: 5%;
+        margin-right: 175px;
+        z-index: 998;
+    }
+
+
+
 
 
 }
