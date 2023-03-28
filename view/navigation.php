@@ -59,10 +59,7 @@
 
             }
             echo '<button class="apply-button" style="--id:'. $row['idOffre'] .'"><a class="offre" href="?postuler&id='. $row['idOffre'] .'">';
-            if (isPilotSession())
-                echo 'Voir';
-            else
-                echo 'Postuler';
+            echo 'Voir l\'offre';
             echo'</a></button>';
             echo '</div>';
             echo '</div>';
