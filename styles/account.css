@@ -38,7 +38,6 @@
 
 .box-account button{
     width: 75%;
-    grid-column: span 2;
     font-weight: bold;
     color: var(--clear-white);
     background-color: var(--blue);
