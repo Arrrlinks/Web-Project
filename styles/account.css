@@ -42,9 +42,9 @@
     color: var(--clear-white);
     background-color: var(--blue);
     display: inline-block;
-    padding: 10px 24px;
+    padding: 7px 24px;
     border: 1.8px solid var(--blue);
-    border-radius: 25px;
+    border-radius: 10px;
     text-align: center;
     font-size: 12px;
     cursor: pointer;
