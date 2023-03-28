@@ -1,3 +1,10 @@
+<div class="sidenav-box">
+    <div id="title-navbar">
+    <span class="title-navbar" style="display: none">
+    <span >Cesi</span>
+    <span>EnFait</span>
+    </span>
+    </div>
 <div class="burger-menu">
     <div id="sidenav" class="sidenav">
         <ul>
@@ -43,5 +50,6 @@
         <div class="burger2" id="burger2"></div>
         <div class="burger3" id="burger3"></div>
     </div>
+</div>
 </div>
 <script src="/element/sidenav/sidenav.js"></script>
