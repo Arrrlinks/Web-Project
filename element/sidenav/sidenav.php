@@ -30,14 +30,12 @@
         <?php
         ?>
         <ul class="down">
-            <?php
-            echo '<li><a href="?account"><ion-icon name="person-outline"></ion-icon>Mon compte</a></li>';
-            ?>
 
             <li><a href="?aPropos"><ion-icon name="at-outline"></ion-icon>À propos</a></li>
 
             <?php
             if (isset($_SESSION['id'])) {
+                echo '<li><a href="?account"><ion-icon name="person-outline"></ion-icon>Mon compte</a></li>';
                 echo '<li><a href="?logout"><ion-icon name="log-out-outline"></ion-icon>Déconnexion</a></li>';
             } else {
                 echo '<li><a href="?login"><ion-icon name="enter-outline"></ion-icon>Connexion</a></li>';
